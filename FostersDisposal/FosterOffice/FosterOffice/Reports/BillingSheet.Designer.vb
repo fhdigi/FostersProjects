@@ -1,0 +1,401 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Public Class BillingSheet
+    Inherits DevExpress.XtraReports.UI.XtraReport
+
+    'XtraReport overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Designer
+    'It can be modified using the Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc6 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelDesc7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt6 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabelAmt7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
+        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+        '
+        'Detail
+        '
+        Me.Detail.HeightF = 0.0!
+        Me.Detail.MultiColumn.ColumnCount = 2
+        Me.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount
+        Me.Detail.Name = "Detail"
+        Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.Detail.Visible = False
+        '
+        'XrLabel1
+        '
+        Me.XrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingDate", "Billing Date: {0:M/d/yyyy}")})
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 86.45834!)
+        Me.XrLabel1.Name = "XrLabel1"
+        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel1.SizeF = New System.Drawing.SizeF(313.5416!, 23.0!)
+        Me.XrLabel1.StylePriority.UseTextAlignment = False
+        Me.XrLabel1.Text = "XrLabel1"
+        Me.XrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel10
+        '
+        Me.XrLabel10.CanGrow = False
+        Me.XrLabel10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AccountNumber")})
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(436.0417!, 288.0!)
+        Me.XrLabel10.Name = "XrLabel10"
+        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(100.0!, 16.0!)
+        Me.XrLabel10.StylePriority.UseTextAlignment = False
+        Me.XrLabel10.Text = "XrLabel10"
+        Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel8
+        '
+        Me.XrLabel8.CanGrow = False
+        Me.XrLabel8.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Total", "{0:c2}")})
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(250.6249!, 288.0!)
+        Me.XrLabel8.Name = "XrLabel8"
+        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel8.SizeF = New System.Drawing.SizeF(72.91667!, 16.0!)
+        Me.XrLabel8.StylePriority.UseTextAlignment = False
+        Me.XrLabel8.Text = "XrLabel8"
+        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabel9
+        '
+        Me.XrLabel9.CanGrow = False
+        Me.XrLabel9.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AccountNumber")})
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(85.0001!, 288.0!)
+        Me.XrLabel9.Name = "XrLabel9"
+        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel9.SizeF = New System.Drawing.SizeF(62.5!, 16.0!)
+        Me.XrLabel9.StylePriority.UseTextAlignment = False
+        Me.XrLabel9.Text = "XrLabel9"
+        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelAmt1
+        '
+        Me.XrLabelAmt1.CanGrow = False
+        Me.XrLabelAmt1.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 129.8333!)
+        Me.XrLabelAmt1.Name = "XrLabelAmt1"
+        Me.XrLabelAmt1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt1.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt1.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelDesc1
+        '
+        Me.XrLabelDesc1.CanGrow = False
+        Me.XrLabelDesc1.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 129.8333!)
+        Me.XrLabelDesc1.Name = "XrLabelDesc1"
+        Me.XrLabelDesc1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc1.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc1.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.CanGrow = False
+        Me.XrLabel4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "CSZ")})
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(358.0!, 192.1188!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(223.9583!, 23.0!)
+        Me.XrLabel4.StylePriority.UseTextAlignment = False
+        Me.XrLabel4.Text = "XrLabel4"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.CanGrow = False
+        Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Address")})
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(358.0!, 169.1189!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(223.9583!, 23.0!)
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "XrLabel3"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.CanGrow = False
+        Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "FullName")})
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(358.0!, 146.119!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(223.9583!, 23.0!)
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "XrLabel2"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabel7
+        '
+        Me.XrLabel7.CanGrow = False
+        Me.XrLabel7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Tax", "{0:c2}")})
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(250.6249!, 272.0!)
+        Me.XrLabel7.Name = "XrLabel7"
+        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel7.SizeF = New System.Drawing.SizeF(72.91664!, 16.0!)
+        Me.XrLabel7.StylePriority.UseTextAlignment = False
+        Me.XrLabel7.Text = "XrLabel7"
+        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelAmt2
+        '
+        Me.XrLabelAmt2.CanGrow = False
+        Me.XrLabelAmt2.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 146.119!)
+        Me.XrLabelAmt2.Name = "XrLabelAmt2"
+        Me.XrLabelAmt2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt2.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt2.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelDesc2
+        '
+        Me.XrLabelDesc2.CanGrow = False
+        Me.XrLabelDesc2.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 146.119!)
+        Me.XrLabelDesc2.Name = "XrLabelDesc2"
+        Me.XrLabelDesc2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc2.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc2.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelDesc3
+        '
+        Me.XrLabelDesc3.CanGrow = False
+        Me.XrLabelDesc3.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 162.4047!)
+        Me.XrLabelDesc3.Name = "XrLabelDesc3"
+        Me.XrLabelDesc3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc3.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc3.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelAmt3
+        '
+        Me.XrLabelAmt3.CanGrow = False
+        Me.XrLabelAmt3.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 162.4047!)
+        Me.XrLabelAmt3.Name = "XrLabelAmt3"
+        Me.XrLabelAmt3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt3.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt3.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelAmt4
+        '
+        Me.XrLabelAmt4.CanGrow = False
+        Me.XrLabelAmt4.LocationFloat = New DevExpress.Utils.PointFloat(237.0832!, 178.6903!)
+        Me.XrLabelAmt4.Name = "XrLabelAmt4"
+        Me.XrLabelAmt4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt4.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt4.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelDesc4
+        '
+        Me.XrLabelDesc4.CanGrow = False
+        Me.XrLabelDesc4.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 178.6903!)
+        Me.XrLabelDesc4.Name = "XrLabelDesc4"
+        Me.XrLabelDesc4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc4.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc4.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelDesc6
+        '
+        Me.XrLabelDesc6.CanGrow = False
+        Me.XrLabelDesc6.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 211.2619!)
+        Me.XrLabelDesc6.Name = "XrLabelDesc6"
+        Me.XrLabelDesc6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc6.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc6.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelDesc5
+        '
+        Me.XrLabelDesc5.CanGrow = False
+        Me.XrLabelDesc5.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 194.976!)
+        Me.XrLabelDesc5.Name = "XrLabelDesc5"
+        Me.XrLabelDesc5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc5.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc5.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelDesc8
+        '
+        Me.XrLabelDesc8.CanGrow = False
+        Me.XrLabelDesc8.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 243.8334!)
+        Me.XrLabelDesc8.Name = "XrLabelDesc8"
+        Me.XrLabelDesc8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc8.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc8.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelDesc7
+        '
+        Me.XrLabelDesc7.CanGrow = False
+        Me.XrLabelDesc7.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 227.5476!)
+        Me.XrLabelDesc7.Name = "XrLabelDesc7"
+        Me.XrLabelDesc7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelDesc7.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
+        Me.XrLabelDesc7.StylePriority.UseTextAlignment = False
+        Me.XrLabelDesc7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        '
+        'XrLabelAmt6
+        '
+        Me.XrLabelAmt6.CanGrow = False
+        Me.XrLabelAmt6.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 211.2619!)
+        Me.XrLabelAmt6.Name = "XrLabelAmt6"
+        Me.XrLabelAmt6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt6.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt6.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelAmt5
+        '
+        Me.XrLabelAmt5.CanGrow = False
+        Me.XrLabelAmt5.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 194.976!)
+        Me.XrLabelAmt5.Name = "XrLabelAmt5"
+        Me.XrLabelAmt5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt5.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt5.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelAmt8
+        '
+        Me.XrLabelAmt8.CanGrow = False
+        Me.XrLabelAmt8.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 243.8334!)
+        Me.XrLabelAmt8.Name = "XrLabelAmt8"
+        Me.XrLabelAmt8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt8.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt8.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabelAmt7
+        '
+        Me.XrLabelAmt7.CanGrow = False
+        Me.XrLabelAmt7.LocationFloat = New DevExpress.Utils.PointFloat(237.0833!, 227.5476!)
+        Me.XrLabelAmt7.Name = "XrLabelAmt7"
+        Me.XrLabelAmt7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabelAmt7.SizeF = New System.Drawing.SizeF(86.45831!, 16.0!)
+        Me.XrLabelAmt7.StylePriority.UseTextAlignment = False
+        Me.XrLabelAmt7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'XrLabel5
+        '
+        Me.XrLabel5.CanGrow = False
+        Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Total", "{0:c2}")})
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(500.0!, 226.0417!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(72.91667!, 16.0!)
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        Me.XrLabel5.Text = "XrLabel8"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
+        '
+        'TopMargin
+        '
+        Me.TopMargin.HeightF = 0.0!
+        Me.TopMargin.Name = "TopMargin"
+        Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'BottomMargin
+        '
+        Me.BottomMargin.HeightF = 0.0!
+        Me.BottomMargin.Name = "BottomMargin"
+        Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'GroupHeader1
+        '
+        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel1, Me.XrLabelAmt7, Me.XrLabelAmt8, Me.XrLabelAmt5, Me.XrLabelAmt6, Me.XrLabelDesc7, Me.XrLabelDesc8, Me.XrLabelDesc5, Me.XrLabelDesc6, Me.XrLabelDesc4, Me.XrLabelAmt4, Me.XrLabelAmt3, Me.XrLabelDesc3, Me.XrLabelDesc2, Me.XrLabelAmt2, Me.XrLabel7, Me.XrLabel2, Me.XrLabel3, Me.XrLabel4, Me.XrLabelDesc1, Me.XrLabelAmt1, Me.XrLabel9, Me.XrLabel8, Me.XrLabel10, Me.XrLabel5})
+        Me.GroupHeader1.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("SequenceNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
+        Me.GroupHeader1.HeightF = 370.0!
+        Me.GroupHeader1.Name = "GroupHeader1"
+        '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataSource = GetType(FosterOffice.CCustomerBill)
+        '
+        'BillingSheet
+        '
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.GroupHeader1})
+        Me.DataSource = Me.BindingSource1
+        Me.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margins = New System.Drawing.Printing.Margins(0, 0, 0, 0)
+        Me.PageWidth = 1200
+        Me.PaperKind = System.Drawing.Printing.PaperKind.Custom
+        Me.Version = "11.2"
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
+
+    End Sub
+    Friend WithEvents Detail As DevExpress.XtraReports.UI.DetailBand
+    Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
+    Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
+    Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel9 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel10 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt1 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc1 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt8 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt6 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc8 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc6 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelDesc2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabelAmt2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents GroupHeader1 As DevExpress.XtraReports.UI.GroupHeaderBand
+End Class

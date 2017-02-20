@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94FB5615-C1D2-4780-A2BC-A04462011BF3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FosterOffice.My.MyApplication</StartupObject>
+    <RootNamespace>FosterOffice</RootNamespace>
+    <AssemblyName>FosterOffice</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FosterOffice.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DefineConstants>RentalProgram=True</DefineConstants>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FosterOffice.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DefineConstants>RentalProgram=False</DefineConstants>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fosters.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - Commercial|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\Binaries\Fosters\Commercial\</OutputPath>
+    <DefineConstants>RentalProgram=True</DefineConstants>
+    <DocumentationFile>FosterOffice.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\RentalProgram\AddRecycleListing.Designer.vb">
+      <DependentUpon>AddRecycleListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\AddRecycleListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\CommercialInvoiceDetails.Designer.vb">
+      <DependentUpon>CommercialInvoiceDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\CommercialInvoiceDetails.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerContainerReport.Designer.vb">
+      <DependentUpon>RentalCustomerContainerReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerContainerReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\CRentalCustomerBill.vb" />
+    <Compile Include="GUI\RentalProgram\CommercialInvoice.Designer.vb">
+      <DependentUpon>CommercialInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\CommercialInvoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerNotes.Designer.vb">
+      <DependentUpon>RentalCustomerNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerNotes.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalMakePayment.Designer.vb">
+      <DependentUpon>RentalMakePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalMakePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ManualRentalCustomerDataEntry.Designer.vb">
+      <DependentUpon>ManualRentalCustomerDataEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ManualRentalCustomerDataEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerMasterOfficeRoute.Designer.vb">
+      <DependentUpon>RentalCustomerMasterOfficeRoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerMasterOfficeRoute.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerRecycleListing.Designer.vb">
+      <DependentUpon>RentalCustomerRecycleListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerRecycleListing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerBillingReview.Designer.vb">
+      <DependentUpon>RentalCustomerBillingReview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerBillingReview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ReportDisplayRental.Designer.vb">
+      <DependentUpon>ReportDisplayRental.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ReportDisplayRental.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ScheduleOnCalls.Designer.vb">
+      <DependentUpon>ScheduleOnCalls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ScheduleOnCalls.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ViewRentalBills.Designer.vb">
+      <DependentUpon>ViewRentalBills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ViewRentalBills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ViewRentalPickupItems.Designer.vb">
+      <DependentUpon>ViewRentalPickupItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ViewRentalPickupItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\AddNewItem.Designer.vb">
+      <DependentUpon>AddNewItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\AddNewItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingForm.Designer.vb">
+      <DependentUpon>BillingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingReview.Designer.vb">
+      <DependentUpon>BillingReview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingReview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingTypes.Designer.vb">
+      <DependentUpon>BillingTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\BillingTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CCustomerBill.vb" />
+    <Compile Include="GUI\RentalProgram\ContainerRouteListing.Designer.vb">
+      <DependentUpon>ContainerRouteListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\ContainerRouteListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conversion\CCustomerFilePro.vb" />
+    <Compile Include="Conversion\ConversionForm.Designer.vb">
+      <DependentUpon>ConversionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Conversion\ConversionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\EnterRentalCustomerData.Designer.vb">
+      <DependentUpon>EnterRentalCustomerData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\EnterRentalCustomerData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerEntry.Designer.vb">
+      <DependentUpon>RentalCustomerEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueCredit.Designer.vb">
+      <DependentUpon>IssueCredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IssueCredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\CustomerEntry.Designer.vb">
+      <DependentUpon>CustomerEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\CustomerEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\EditPickupItems.Designer.vb">
+      <DependentUpon>EditPickupItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\EditPickupItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FosterOfficeModule.vb" />
+    <Compile Include="GUI\RetailProgram\PaymentHistory.Designer.vb">
+      <DependentUpon>PaymentHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\PaymentHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDisplay.Designer.vb">
+      <DependentUpon>ReportDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\LastBillReport.Designer.vb">
+      <DependentUpon>LastBillReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LastBillReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AgingReport.Designer.vb">
+      <DependentUpon>AgingReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AgingReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BillingSheet.Designer.vb">
+      <DependentUpon>BillingSheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingSheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BillingSheetCustom.Designer.vb">
+      <DependentUpon>BillingSheetCustom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingSheetCustom.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AgingReportDel.Designer.vb">
+      <DependentUpon>AgingReportDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AgingReportDel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerRouteListing.Designer.vb">
+      <DependentUpon>RentalCustomerRouteListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RentalProgram\RentalCustomerRouteListing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AgingReportRental.Designer.vb">
+      <DependentUpon>AgingReportRental.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AgingReportRental.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LastBillReportFilter.Designer.vb">
+      <DependentUpon>LastBillReportFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LastBillReportFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RentalCustomerWithPO.Designer.vb">
+      <DependentUpon>RentalCustomerWithPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RentalCustomerWithPO.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerListingGrouped.Designer.vb">
+      <DependentUpon>CustomerListingGrouped.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerListingGrouped.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerListingSpecial.Designer.vb">
+      <DependentUpon>CustomerListingSpecial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerListingSpecial.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerHistory.Designer.vb">
+      <DependentUpon>CustomerHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerHistory.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainOfficeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainOfficeForm.Designer.vb">
+      <DependentUpon>MainOfficeForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\MakePayment.Designer.vb">
+      <DependentUpon>MakePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\MakePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\PriceList.Designer.vb">
+      <DependentUpon>PriceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\PriceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerListing.Designer.vb">
+      <DependentUpon>CustomerListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerListing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerNoteFilter.Designer.vb">
+      <DependentUpon>CustomerNoteFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerNoteFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerNotes.Designer.vb">
+      <DependentUpon>CustomerNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerNotes.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentListing.Designer.vb">
+      <DependentUpon>PaymentListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentListing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentReceipt.Designer.vb">
+      <DependentUpon>PaymentReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentReceipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ResidentialRouteReport.Designer.vb">
+      <DependentUpon>ResidentialRouteReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ResidentialRouteReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RevenueReport.Designer.vb">
+      <DependentUpon>RevenueReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RevenueReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\YellowTabReport.Designer.vb">
+      <DependentUpon>YellowTabReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\YellowTabReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\ReprintBill.Designer.vb">
+      <DependentUpon>ReprintBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\ReprintBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\ReviewPickedUpItems.Designer.vb">
+      <DependentUpon>ReviewPickedUpItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\ReviewPickedUpItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\SequenceNumberAdjust.Designer.vb">
+      <DependentUpon>SequenceNumberAdjust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\SequenceNumberAdjust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupForm.Designer.vb">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\UploadWarning.Designer.vb">
+      <DependentUpon>UploadWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\UploadWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\VacationCredit.Designer.vb">
+      <DependentUpon>VacationCredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\VacationCredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.vb">
+      <DependentUpon>WaitForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\RentalProgram\AddRecycleListing.resx">
+      <DependentUpon>AddRecycleListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\CommercialInvoice.resx">
+      <DependentUpon>CommercialInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\CommercialInvoiceDetails.resx">
+      <DependentUpon>CommercialInvoiceDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerContainerReport.resx">
+      <DependentUpon>RentalCustomerContainerReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerNotes.resx">
+      <DependentUpon>RentalCustomerNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalMakePayment.resx">
+      <DependentUpon>RentalMakePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ManualRentalCustomerDataEntry.resx">
+      <DependentUpon>ManualRentalCustomerDataEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerMasterOfficeRoute.resx">
+      <DependentUpon>RentalCustomerMasterOfficeRoute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerRecycleListing.resx">
+      <DependentUpon>RentalCustomerRecycleListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerBillingReview.resx">
+      <DependentUpon>RentalCustomerBillingReview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ReportDisplayRental.resx">
+      <DependentUpon>ReportDisplayRental.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ScheduleOnCalls.resx">
+      <DependentUpon>ScheduleOnCalls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ViewRentalBills.resx">
+      <DependentUpon>ViewRentalBills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ViewRentalPickupItems.resx">
+      <DependentUpon>ViewRentalPickupItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\AddNewItem.resx">
+      <DependentUpon>AddNewItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\BillingForm.resx">
+      <DependentUpon>BillingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\BillingReview.resx">
+      <DependentUpon>BillingReview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\BillingTypes.resx">
+      <DependentUpon>BillingTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\ContainerRouteListing.resx">
+      <DependentUpon>ContainerRouteListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conversion\ConversionForm.resx">
+      <DependentUpon>ConversionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\EnterRentalCustomerData.resx">
+      <DependentUpon>EnterRentalCustomerData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerEntry.resx">
+      <DependentUpon>RentalCustomerEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueCredit.resx">
+      <DependentUpon>IssueCredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\CustomerEntry.resx">
+      <DependentUpon>CustomerEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\EditPickupItems.resx">
+      <DependentUpon>EditPickupItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\PaymentHistory.resx">
+      <DependentUpon>PaymentHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="ReportDisplay.resx">
+      <DependentUpon>ReportDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LastBillReport.resx">
+      <DependentUpon>LastBillReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AgingReport.resx">
+      <DependentUpon>AgingReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingSheet.resx">
+      <DependentUpon>BillingSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingSheetCustom.resx">
+      <DependentUpon>BillingSheetCustom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AgingReportDel.resx">
+      <DependentUpon>AgingReportDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RentalProgram\RentalCustomerRouteListing.resx">
+      <DependentUpon>RentalCustomerRouteListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AgingReportRental.resx">
+      <DependentUpon>AgingReportRental.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LastBillReportFilter.resx">
+      <DependentUpon>LastBillReportFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RentalCustomerWithPO.resx">
+      <DependentUpon>RentalCustomerWithPO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerListingGrouped.resx">
+      <DependentUpon>CustomerListingGrouped.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerListingSpecial.resx">
+      <DependentUpon>CustomerListingSpecial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerHistory.resx">
+      <DependentUpon>CustomerHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOfficeForm.resx">
+      <DependentUpon>MainOfficeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\MakePayment.resx">
+      <DependentUpon>MakePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\PriceList.resx">
+      <DependentUpon>PriceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerListing.resx">
+      <DependentUpon>CustomerListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerNoteFilter.resx">
+      <DependentUpon>CustomerNoteFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerNotes.resx">
+      <DependentUpon>CustomerNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentListing.resx">
+      <DependentUpon>PaymentListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentReceipt.resx">
+      <DependentUpon>PaymentReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ResidentialRouteReport.resx">
+      <DependentUpon>ResidentialRouteReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RevenueReport.resx">
+      <DependentUpon>RevenueReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\YellowTabReport.resx">
+      <DependentUpon>YellowTabReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\ReprintBill.resx">
+      <DependentUpon>ReprintBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\ReviewPickedUpItems.resx">
+      <DependentUpon>ReviewPickedUpItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\SequenceNumberAdjust.resx">
+      <DependentUpon>SequenceNumberAdjust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupForm.resx">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\UploadWarning.resx">
+      <DependentUpon>UploadWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\VacationCredit.resx">
+      <DependentUpon>VacationCredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\CCustomerBill.datasource" />
+    <None Include="My Project\DataSources\CRentalBillLineItems.datasource" />
+    <None Include="My Project\DataSources\CRentalCustomerBill.datasource" />
+    <None Include="My Project\DataSources\EditPickupItems.CPickup.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.BillingTypes.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.CBillingData.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.CollectionRecord+PickupRecords.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Customer+CCustomerHistory+CCustomerHistoryLineItems.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Customer+CCustomerHistory.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Customer+CCustomerList.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Customer+CCustomerRouteCounts.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Customer.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.ItemsCollected.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Payments+CRevenueReport.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Payments+PaymentListingReport.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Payments+RevenueListingReport.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.Payments.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.RentalCustomer+CRentalCustomerList.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.RentalCustomer+RentalCustomerData.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.RentalCustomer+RentalRouteInformation.datasource" />
+    <None Include="My Project\DataSources\PickupTransaction.RentalCustomer.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FTPHelper\FTPHelper.csproj">
+      <Project>{2296c054-8f71-42b7-ac4e-74e0b5efe742}</Project>
+      <Name>FTPHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PickupTransaction\PickupTransaction.vbproj">
+      <Project>{622A52DD-DD43-4B0D-A453-B4167F3E7543}</Project>
+      <Name>PickupTransaction</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fosters.ico" />
+    <Content Include="Resources\Bank.png" />
+    <None Include="Resources\Billing.png" />
+    <Content Include="Resources\Credit.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Database.png" />
+    <Content Include="Resources\delete_12x12.png" />
+    <Content Include="Resources\Filter.png" />
+    <None Include="Resources\Form-Wizard.png" />
+    <Content Include="Resources\FunctionHS.png" />
+    <Content Include="Resources\List_BulletsHS.png" />
+    <Content Include="Resources\Man Green-Add.png" />
+    <Content Include="Resources\Man Green-Edit.png" />
+    <None Include="Resources\Preview.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Print16.png" />
+    <None Include="Resources\Receipt-Edit.png" />
+    <Content Include="Resources\Receipt-Options.png" />
+    <None Include="Resources\Users.png" />
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

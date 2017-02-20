@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterRollOff", "FosterRollOff\FosterRollOff\FosterRollOff.vbproj", "{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterOffice", "FosterOffice\FosterOffice\FosterOffice.vbproj", "{94FB5615-C1D2-4780-A2BC-A04462011BF3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PickupTransaction", "FosterOffice\PickupTransaction\PickupTransaction.vbproj", "{622A52DD-DD43-4B0D-A453-B4167F3E7543}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - Commercial|Any CPU = Debug - Commercial|Any CPU
+		Debug - Commercial|x86 = Debug - Commercial|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug - Commercial|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug - Commercial|Any CPU.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug - Commercial|x86.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug - Commercial|x86.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|x86.Build.0 = Release|Any CPU
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug - Commercial|Any CPU.ActiveCfg = Debug - Commercial|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug - Commercial|x86.ActiveCfg = Debug - Commercial|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug - Commercial|x86.Build.0 = Debug - Commercial|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug|x86.ActiveCfg = Debug|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Debug|x86.Build.0 = Debug|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Release|Any CPU.ActiveCfg = Release|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Release|x86.ActiveCfg = Release|x86
+		{94FB5615-C1D2-4780-A2BC-A04462011BF3}.Release|x86.Build.0 = Release|x86
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug - Commercial|Any CPU.ActiveCfg = Debug - Commercial|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug - Commercial|Any CPU.Build.0 = Debug - Commercial|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug - Commercial|x86.ActiveCfg = Debug - Commercial|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug - Commercial|x86.Build.0 = Debug - Commercial|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Debug|x86.Build.0 = Debug|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|x86.ActiveCfg = Release|Any CPU
+		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FosterRollOff.My.MyApplication</StartupObject>
+    <RootNamespace>FosterRollOff</RootNamespace>
+    <AssemblyName>FosterRollOff</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FosterRollOff.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FosterRollOff.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CAddressBlock.vb" />
+    <Compile Include="Classes\CBillingObject.vb" />
+    <Compile Include="Classes\CCharges.vb" />
+    <Compile Include="Classes\CCustomer.vb" />
+    <Compile Include="Classes\CDataExtender.vb" />
+    <Compile Include="Classes\CFPConversion.vb" />
+    <Compile Include="Classes\CDeposits.vb" />
+    <Compile Include="Classes\CPayments.vb" />
+    <Compile Include="Classes\CReportObjects.vb" />
+    <Compile Include="Classes\CRollOff.vb" />
+    <Compile Include="Classes\CWaitingList.vb" />
+    <Compile Include="GUI\CollectionAccounts.Designer.vb">
+      <DependentUpon>CollectionAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CollectionAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerBillingLog.Designer.vb">
+      <DependentUpon>CustomerBillingLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerBillingLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerRollOffLog.Designer.vb">
+      <DependentUpon>CustomerRollOffLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerRollOffLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditCustomerRecord.Designer.vb">
+      <DependentUpon>EditCustomerRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditCustomerRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PaymentReports.Designer.vb">
+      <DependentUpon>PaymentReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PaymentReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReportFrames.Designer.vb">
+      <DependentUpon>ReportFrames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReportFrames.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RollOffServiceEdit.Designer.vb">
+      <DependentUpon>RollOffServiceEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RollOffServiceEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ShowStatusForm.Designer.vb">
+      <DependentUpon>ShowStatusForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ShowStatusForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WaitingList\AddToWaitingList.Designer.vb">
+      <DependentUpon>AddToWaitingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WaitingList\AddToWaitingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BillingForm.Designer.vb">
+      <DependentUpon>BillingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BillingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerDeposits.Designer.vb">
+      <DependentUpon>CustomerDeposits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerDeposits.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerHistory.Designer.vb">
+      <DependentUpon>CustomerHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerPayments.Designer.vb">
+      <DependentUpon>CustomerPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CreateRollOff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CreateRollOff.Designer.vb">
+      <DependentUpon>CreateRollOff.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerCharges.Designer.vb">
+      <DependentUpon>CustomerCharges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerCharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerData.Designer.vb">
+      <DependentUpon>CustomerData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CustomerList.Designer.vb">
+      <DependentUpon>CustomerList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CustomerList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InactiveRollOffs.Designer.vb">
+      <DependentUpon>InactiveRollOffs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InactiveRollOffs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainScreen.Designer.vb">
+      <DependentUpon>MainScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RollOffFees.Designer.vb">
+      <DependentUpon>RollOffFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RollOffFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WaitingList\PrintedWaitingList.Designer.vb">
+      <DependentUpon>PrintedWaitingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WaitingList\PrintedWaitingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\WaitingList\WaitingList.Designer.vb">
+      <DependentUpon>WaitingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WaitingList\WaitingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ITransaction.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Modules\RollOffModule.vb" />
+    <Compile Include="PrintRibbonControllerResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AppliedPaymentReport.Designer.vb">
+      <DependentUpon>AppliedPaymentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AppliedPaymentReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerPaymentReport.Designer.vb">
+      <DependentUpon>CustomerPaymentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerPaymentReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerBillLogReport.Designer.vb">
+      <DependentUpon>CustomerBillLogReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerBillLogReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerHistoryReport.Designer.vb">
+      <DependentUpon>CustomerHistoryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerHistoryReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentListingReport.Designer.vb">
+      <DependentUpon>PaymentListingReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentListingReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentReceipt.Designer.vb">
+      <DependentUpon>PaymentReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentReceipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaymentReportCreditsIssued.Designer.vb">
+      <DependentUpon>PaymentReportCreditsIssued.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PaymentReportCreditsIssued.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RevenueAllocation.Designer.vb">
+      <DependentUpon>RevenueAllocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RevenueAllocation.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RollOffBill.Designer.vb">
+      <DependentUpon>RollOffBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RollOffBill.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WaitingListPrintedReport.Designer.vb">
+      <DependentUpon>WaitingListPrintedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\WaitingListPrintedReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\CollectionAccounts.resx">
+      <DependentUpon>CollectionAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerBillingLog.resx">
+      <DependentUpon>CustomerBillingLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerRollOffLog.resx">
+      <DependentUpon>CustomerRollOffLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditCustomerRecord.resx">
+      <DependentUpon>EditCustomerRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PaymentReports.resx">
+      <DependentUpon>PaymentReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportFrames.resx">
+      <DependentUpon>ReportFrames.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RollOffServiceEdit.resx">
+      <DependentUpon>RollOffServiceEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ShowStatusForm.resx">
+      <DependentUpon>ShowStatusForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WaitingList\AddToWaitingList.resx">
+      <DependentUpon>AddToWaitingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BillingForm.resx">
+      <DependentUpon>BillingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerDeposits.resx">
+      <DependentUpon>CustomerDeposits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerHistory.resx">
+      <DependentUpon>CustomerHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerPayments.resx">
+      <DependentUpon>CustomerPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CreateRollOff.resx">
+      <DependentUpon>CreateRollOff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerCharges.resx">
+      <DependentUpon>CustomerCharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerDAta.resx">
+      <DependentUpon>CustomerData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CustomerList.resx">
+      <DependentUpon>CustomerList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InactiveRollOffs.resx">
+      <DependentUpon>InactiveRollOffs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainScreen.resx">
+      <DependentUpon>MainScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RollOffFees.resx">
+      <DependentUpon>RollOffFees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WaitingList\PrintedWaitingList.resx">
+      <DependentUpon>PrintedWaitingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\WaitingList\WaitingList.resx">
+      <DependentUpon>WaitingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AppliedPaymentReport.resx">
+      <DependentUpon>AppliedPaymentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerPaymentReport.resx">
+      <DependentUpon>CustomerPaymentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerBillLogReport.resx">
+      <DependentUpon>CustomerBillLogReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerHistoryReport.resx">
+      <DependentUpon>CustomerHistoryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentListingReport.resx">
+      <DependentUpon>PaymentListingReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentReceipt.resx">
+      <DependentUpon>PaymentReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaymentReportCreditsIssued.resx">
+      <DependentUpon>PaymentReportCreditsIssued.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RevenueAllocation.resx">
+      <DependentUpon>RevenueAllocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RollOffBill.resx">
+      <DependentUpon>RollOffBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WaitingListPrintedReport.resx">
+      <DependentUpon>WaitingListPrintedReport.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\CBillingObject.datasource" />
+    <None Include="My Project\DataSources\CCharges.datasource" />
+    <None Include="My Project\DataSources\CCustomer.datasource" />
+    <None Include="My Project\DataSources\CDeposits.datasource" />
+    <None Include="My Project\DataSources\CPayments.datasource" />
+    <None Include="My Project\DataSources\CReportObjects.AppliedPaymentReport.datasource" />
+    <None Include="My Project\DataSources\CReportObjects.CCreditsIssuedSummary.datasource" />
+    <None Include="My Project\DataSources\CReportObjects.CPaymentSummary.datasource" />
+    <None Include="My Project\DataSources\CReportObjects.CRevenueReport.datasource" />
+    <None Include="My Project\DataSources\CRollOff.datasource" />
+    <None Include="My Project\DataSources\CRollOffFee.datasource" />
+    <None Include="My Project\DataSources\CRollOffHistory.datasource" />
+    <None Include="My Project\DataSources\CRollOffHistoryBilling.datasource" />
+    <None Include="My Project\DataSources\CWaitingList.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbTable-Add.png" />
+    <None Include="Resources\Billing.png" />
+    <Content Include="Resources\005_Task_16x16_72.png" />
+    <Content Include="Resources\005_Task_48x48_72.png" />
+    <Content Include="Resources\112_RefreshArrow_Green_16x16_72.png" />
+    <Content Include="Resources\AppIcon.ico" />
+    <Content Include="Resources\Bank.png" />
+    <Content Include="Resources\Calculator.png" />
+    <Content Include="Resources\Datasheet View.png" />
+    <Content Include="Resources\Delete.png" />
+    <None Include="Resources\Refresh-All.png" />
+    <None Include="Resources\History.png" />
+    <None Include="Resources\Save.png" />
+    <Content Include="Resources\FunctionHS.png" />
+    <Content Include="Resources\Ledger.png" />
+    <Content Include="Resources\Note Book-Search.png" />
+    <Content Include="Resources\Print.png" />
+    <Content Include="Resources\To Do-Edit.png" />
+    <Content Include="Resources\Worker-Add.png" />
+    <Content Include="Resources\Worker-Details.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
