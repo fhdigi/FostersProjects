@@ -644,7 +644,7 @@ Public Class CDataExtender
             tempObj.BilledDate = rollOffReader("BilledDate")
             tempObj.Taxable = rollOffReader("Taxable")
             tempObj.CreditCardTransaction = rollOffReader("CreditCard")
-            tempObj.CreditCardAuthNumber = rollOffReader("CreditCardAuthNumber")
+            tempObj.CreditCardAuthNumber = rollOffReader("CreditCardAuthNumber").ToString()
             tempObj.TransactionId = rollOffReader("TransactionId").ToString()
         End If
 

@@ -19,6 +19,8 @@
     Public Property Subtotal As Double = 0.0
     Public Property Total As Double = 0.0
 
+    Public Property PurchaseOrderNumber As string = ""
+
     Public Property LineItems As New List(Of CRentalBillLineItems)
 
     Public ReadOnly Property BillingFullName As String

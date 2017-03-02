@@ -2988,6 +2988,7 @@ Public Class RentalCustomer
                                               .BillingCity = c.Billing_City,
                                               .BillingState = c.Billing_State,
                                               .BillingZipCode = c.Billing_ZipCode,
+                                              .PurchaseOrderNumber = c.PONumber,
                                               .ListHeader = .AccountNumber.ToString & " - " & .CustomerName,
                                               .TaxRate = c.TaxRate,
                                               .DumpsterCharge = If(c.DumpsterCharge.ToString = "", 0.0, c.DumpsterCharge),
@@ -3887,4 +3888,6 @@ Public Class CRentalBillingData
     Public Property AdditionalItemCost As Double = 0.0
     Public Property TaxRate As Double = 0.0
     Public Property DelinquentAccount As Boolean = False
+    Public property PurchaseOrderNumber As String = ""
+
 End Class

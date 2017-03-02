@@ -23,8 +23,8 @@ Public Class RentalCustomerBillingReview
         Cursor = Cursors.WaitCursor
 
         ' ----- Highlight the delete bill button 
-        ButtonResetData.Enabled = If(FillMode = 1, False, True)
-        ButtonCreateBills.Enabled = If(FillMode = 1, True, False)
+        ButtonResetData.Enabled = FillMode <> 1
+        ButtonCreateBills.Enabled = FillMode = 1
 
 
         Dim customerListMonth As New List(Of PickupTransaction.CRentalBillingData)
@@ -605,6 +605,9 @@ Public Class RentalCustomerBillingReview
             tempBillObj.PickUpCity = obj.PickupCity
             tempBillObj.PickUpState = obj.PickupState
             tempBillObj.PickUpZipCode = obj.PickupZipCode
+
+            ' ----- Added 01-Mar-2017
+            tempBillObj.PurchaseOrderNumber = obj.PurchaseOrderNumber 
 
             Dim billTotal As Double = 0.0
             Dim billSubTotal As Double = 0.0
