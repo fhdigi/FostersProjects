@@ -27,6 +27,19 @@
             Return Date.Today - New TimeSpan(Date.Today.DayOfWeek - 1, 0, 0, 0)
         ElseIf RadioButtonCurrentMonth.Checked Then
             Return New Date(Date.Today.Year, Date.Today.Month, 1)
+
+        ElseIf RadioButtonLastMonth.Checked then
+
+            Dim reportMonth as integer = Date.Today.Month-1
+            Dim reportYear as Integer = Date.Today.Year
+
+            If reportMonth = 0 Then
+                reportMonth = 12
+                reportYear -= 1
+            End If
+
+            Return New Date(reportYear, reportMonth, 1)
+
         ElseIf RadioButtonCurrentYear.Checked Then
             Return New Date(Date.Now.Year, 1, 1)
         ElseIf RadioButtonCustom.Checked Then
@@ -47,6 +60,19 @@
             Return Date.Today + New TimeSpan(5 - Date.Today.DayOfWeek, 0, 0, 0)
         ElseIf RadioButtonCurrentMonth.Checked Then
             Return New Date(Date.Today.Year, Date.Today.Month, Date.DaysInMonth(Date.Today.Year, Date.Today.Month))
+
+        ElseIf RadioButtonLastMonth.Checked then
+
+            Dim reportMonth as integer = Date.Today.Month-1
+            Dim reportYear as Integer = Date.Today.Year
+
+            If reportMonth = 0 Then
+                reportMonth = 12
+                reportYear -= 1
+            End If
+
+            Return New Date(reportYear, reportMonth, Date.DaysInMonth(reportYear, reportMonth))
+
         ElseIf RadioButtonCurrentYear.Checked Then
             Return New Date(Date.Now.Year, 12, 31)
         ElseIf RadioButtonCustom.Checked Then

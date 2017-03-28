@@ -6,9 +6,9 @@
 
         Dim wlDataSource As List(Of CWaitingList) = CWaitingList.GetCustomersOnList(CWaitingList.WaitListStatusTypes.OnWaitList)
         rpt.BindingSourceWaitingList.DataSource = wlDataSource
+        rpt.XrLabelTotalNumber.Text = String.Format("Total Number People on List : {0}", wlDataSource.Count)
         rpt.CreateDocument()
 
-        rpt.XrLabelTotalNumber.Text = String.Format("Total Number People on List : {0}", wlDataSource.Count)
         DocumentViewerWaitingList.DocumentSource = rpt
 
     End Sub

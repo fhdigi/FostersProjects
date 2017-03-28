@@ -276,10 +276,13 @@ Public Class ReportFrames
         RevenueListingReport = New RevenueAllocation
         RevenueListingReport.BindingSourceRevenue.DataSource = revenueReportList
 
-        Dim rptSub As New AppliedPaymentReport
-        rptSub.BindingSource1.DataSource = appPayList
+        '--------------------------------------------------------------------------
+        '     Asked by Foster to remove the Applied Payment report - 28-March-2017
+        '--------------------------------------------------------------------------
+        'Dim rptSub As New AppliedPaymentReport
+        'rptSub.BindingSource1.DataSource = appPayList
+        'RevenueListingReport.XrSubreportAppliedPayments.ReportSource = rptSub
 
-        RevenueListingReport.XrSubreportAppliedPayments.ReportSource = rptSub
         RevenueListingReport.CreateDocument()
         DocumentViewerReport.DocumentSource = RevenueListingReport
 
