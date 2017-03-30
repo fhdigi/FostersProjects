@@ -25,6 +25,7 @@ Partial Class ReportFrames
         Me.components = New System.ComponentModel.Container()
         Me.CPaymentSummaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RadioButtonLastMonth = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePickerCustomEnd = New System.Windows.Forms.DateTimePicker()
@@ -43,11 +44,11 @@ Partial Class ReportFrames
         Me.RadioButtonToday = New System.Windows.Forms.RadioButton()
         Me.CRevenueReportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DocumentViewerReport = New DevExpress.XtraPrinting.Preview.DocumentViewer()
-        Me.RadioButtonLastMonth = New System.Windows.Forms.RadioButton()
-        CType(Me.CPaymentSummaryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.CRevenueReportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.CheckBoxShowApplyPaymentReport = New System.Windows.Forms.CheckBox()
+        CType(Me.CPaymentSummaryBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel1.SuspendLayout
+        CType(Me.CRevenueReportBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'CPaymentSummaryBindingSource
         '
@@ -55,8 +56,9 @@ Partial Class ReportFrames
         '
         'Panel1
         '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.CheckBoxShowApplyPaymentReport)
         Me.Panel1.Controls.Add(Me.RadioButtonLastMonth)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -74,16 +76,28 @@ Partial Class ReportFrames
         Me.Panel1.Controls.Add(Me.RadioButtonYesterday)
         Me.Panel1.Controls.Add(Me.ButtonRefreshReport)
         Me.Panel1.Controls.Add(Me.RadioButtonToday)
-        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 10!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Panel1.Location = New System.Drawing.Point(14, 16)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(285, 624)
         Me.Panel1.TabIndex = 1
         '
+        'RadioButtonLastMonth
+        '
+        Me.RadioButtonLastMonth.AutoSize = true
+        Me.RadioButtonLastMonth.Location = New System.Drawing.Point(21, 163)
+        Me.RadioButtonLastMonth.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.RadioButtonLastMonth.Name = "RadioButtonLastMonth"
+        Me.RadioButtonLastMonth.Size = New System.Drawing.Size(98, 23)
+        Me.RadioButtonLastMonth.TabIndex = 16
+        Me.RadioButtonLastMonth.TabStop = true
+        Me.RadioButtonLastMonth.Text = "Last Month"
+        Me.RadioButtonLastMonth.UseVisualStyleBackColor = true
+        '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(34, 371)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 19)
@@ -92,7 +106,7 @@ Partial Class ReportFrames
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(34, 314)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 19)
@@ -101,7 +115,7 @@ Partial Class ReportFrames
         '
         'DateTimePickerCustomEnd
         '
-        Me.DateTimePickerCustomEnd.Enabled = False
+        Me.DateTimePickerCustomEnd.Enabled = false
         Me.DateTimePickerCustomEnd.Location = New System.Drawing.Point(34, 393)
         Me.DateTimePickerCustomEnd.Name = "DateTimePickerCustomEnd"
         Me.DateTimePickerCustomEnd.Size = New System.Drawing.Size(233, 25)
@@ -109,7 +123,7 @@ Partial Class ReportFrames
         '
         'DateTimePickerCustomStart
         '
-        Me.DateTimePickerCustomStart.Enabled = False
+        Me.DateTimePickerCustomStart.Enabled = false
         Me.DateTimePickerCustomStart.Location = New System.Drawing.Point(34, 336)
         Me.DateTimePickerCustomStart.Name = "DateTimePickerCustomStart"
         Me.DateTimePickerCustomStart.Size = New System.Drawing.Size(233, 25)
@@ -117,39 +131,39 @@ Partial Class ReportFrames
         '
         'RadioButtonCustomRange
         '
-        Me.RadioButtonCustomRange.AutoSize = True
+        Me.RadioButtonCustomRange.AutoSize = true
         Me.RadioButtonCustomRange.Location = New System.Drawing.Point(16, 287)
         Me.RadioButtonCustomRange.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonCustomRange.Name = "RadioButtonCustomRange"
         Me.RadioButtonCustomRange.Size = New System.Drawing.Size(117, 23)
         Me.RadioButtonCustomRange.TabIndex = 11
-        Me.RadioButtonCustomRange.TabStop = True
+        Me.RadioButtonCustomRange.TabStop = true
         Me.RadioButtonCustomRange.Text = "Custom Range"
-        Me.RadioButtonCustomRange.UseVisualStyleBackColor = True
+        Me.RadioButtonCustomRange.UseVisualStyleBackColor = true
         '
         'ButtonClose
         '
-        Me.ButtonClose.Location = New System.Drawing.Point(60, 553)
+        Me.ButtonClose.Location = New System.Drawing.Point(60, 583)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(164, 29)
         Me.ButtonClose.TabIndex = 10
         Me.ButtonClose.Text = "Close"
-        Me.ButtonClose.UseVisualStyleBackColor = True
+        Me.ButtonClose.UseVisualStyleBackColor = true
         '
         'ButtonPrintReport
         '
         Me.ButtonPrintReport.Image = Global.FosterRollOff.My.Resources.Resources.Print
         Me.ButtonPrintReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonPrintReport.Location = New System.Drawing.Point(60, 507)
+        Me.ButtonPrintReport.Location = New System.Drawing.Point(60, 537)
         Me.ButtonPrintReport.Name = "ButtonPrintReport"
         Me.ButtonPrintReport.Size = New System.Drawing.Size(164, 29)
         Me.ButtonPrintReport.TabIndex = 9
         Me.ButtonPrintReport.Text = "Print Report..."
-        Me.ButtonPrintReport.UseVisualStyleBackColor = True
+        Me.ButtonPrintReport.UseVisualStyleBackColor = true
         '
         'DateTimePickerReportDate
         '
-        Me.DateTimePickerReportDate.Enabled = False
+        Me.DateTimePickerReportDate.Enabled = false
         Me.DateTimePickerReportDate.Location = New System.Drawing.Point(38, 255)
         Me.DateTimePickerReportDate.Name = "DateTimePickerReportDate"
         Me.DateTimePickerReportDate.Size = New System.Drawing.Size(233, 25)
@@ -157,20 +171,20 @@ Partial Class ReportFrames
         '
         'RadioButtonSpecificDate
         '
-        Me.RadioButtonSpecificDate.AutoSize = True
+        Me.RadioButtonSpecificDate.AutoSize = true
         Me.RadioButtonSpecificDate.Location = New System.Drawing.Point(21, 225)
         Me.RadioButtonSpecificDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonSpecificDate.Name = "RadioButtonSpecificDate"
         Me.RadioButtonSpecificDate.Size = New System.Drawing.Size(104, 23)
         Me.RadioButtonSpecificDate.TabIndex = 7
-        Me.RadioButtonSpecificDate.TabStop = True
+        Me.RadioButtonSpecificDate.TabStop = true
         Me.RadioButtonSpecificDate.Text = "Specific Date"
-        Me.RadioButtonSpecificDate.UseVisualStyleBackColor = True
+        Me.RadioButtonSpecificDate.UseVisualStyleBackColor = true
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.AutoSize = true
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Blue
         Me.Label1.Location = New System.Drawing.Point(17, 8)
         Me.Label1.Name = "Label1"
@@ -180,74 +194,74 @@ Partial Class ReportFrames
         '
         'RadioButtonCurrentYear
         '
-        Me.RadioButtonCurrentYear.AutoSize = True
+        Me.RadioButtonCurrentYear.AutoSize = true
         Me.RadioButtonCurrentYear.Location = New System.Drawing.Point(21, 194)
         Me.RadioButtonCurrentYear.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonCurrentYear.Name = "RadioButtonCurrentYear"
-        Me.RadioButtonCurrentYear.Size = New System.Drawing.Size(105, 23)
+        Me.RadioButtonCurrentYear.Size = New System.Drawing.Size(104, 23)
         Me.RadioButtonCurrentYear.TabIndex = 5
-        Me.RadioButtonCurrentYear.TabStop = True
+        Me.RadioButtonCurrentYear.TabStop = true
         Me.RadioButtonCurrentYear.Text = "Current Year"
-        Me.RadioButtonCurrentYear.UseVisualStyleBackColor = True
+        Me.RadioButtonCurrentYear.UseVisualStyleBackColor = true
         '
         'RadioButtonCurrentMonth
         '
-        Me.RadioButtonCurrentMonth.AutoSize = True
+        Me.RadioButtonCurrentMonth.AutoSize = true
         Me.RadioButtonCurrentMonth.Location = New System.Drawing.Point(21, 132)
         Me.RadioButtonCurrentMonth.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonCurrentMonth.Name = "RadioButtonCurrentMonth"
         Me.RadioButtonCurrentMonth.Size = New System.Drawing.Size(120, 23)
         Me.RadioButtonCurrentMonth.TabIndex = 4
-        Me.RadioButtonCurrentMonth.TabStop = True
+        Me.RadioButtonCurrentMonth.TabStop = true
         Me.RadioButtonCurrentMonth.Text = "Current Month"
-        Me.RadioButtonCurrentMonth.UseVisualStyleBackColor = True
+        Me.RadioButtonCurrentMonth.UseVisualStyleBackColor = true
         '
         'RadioButtonCurrentWeek
         '
-        Me.RadioButtonCurrentWeek.AutoSize = True
+        Me.RadioButtonCurrentWeek.AutoSize = true
         Me.RadioButtonCurrentWeek.Location = New System.Drawing.Point(21, 101)
         Me.RadioButtonCurrentWeek.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonCurrentWeek.Name = "RadioButtonCurrentWeek"
-        Me.RadioButtonCurrentWeek.Size = New System.Drawing.Size(112, 23)
+        Me.RadioButtonCurrentWeek.Size = New System.Drawing.Size(111, 23)
         Me.RadioButtonCurrentWeek.TabIndex = 3
-        Me.RadioButtonCurrentWeek.TabStop = True
+        Me.RadioButtonCurrentWeek.TabStop = true
         Me.RadioButtonCurrentWeek.Text = "Current Week"
-        Me.RadioButtonCurrentWeek.UseVisualStyleBackColor = True
+        Me.RadioButtonCurrentWeek.UseVisualStyleBackColor = true
         '
         'RadioButtonYesterday
         '
-        Me.RadioButtonYesterday.AutoSize = True
+        Me.RadioButtonYesterday.AutoSize = true
         Me.RadioButtonYesterday.Location = New System.Drawing.Point(21, 70)
         Me.RadioButtonYesterday.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonYesterday.Name = "RadioButtonYesterday"
-        Me.RadioButtonYesterday.Size = New System.Drawing.Size(87, 23)
+        Me.RadioButtonYesterday.Size = New System.Drawing.Size(86, 23)
         Me.RadioButtonYesterday.TabIndex = 2
-        Me.RadioButtonYesterday.TabStop = True
+        Me.RadioButtonYesterday.TabStop = true
         Me.RadioButtonYesterday.Text = "Yesterday"
-        Me.RadioButtonYesterday.UseVisualStyleBackColor = True
+        Me.RadioButtonYesterday.UseVisualStyleBackColor = true
         '
         'ButtonRefreshReport
         '
         Me.ButtonRefreshReport.Image = Global.FosterRollOff.My.Resources.Resources.Refresh_All
         Me.ButtonRefreshReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonRefreshReport.Location = New System.Drawing.Point(60, 459)
+        Me.ButtonRefreshReport.Location = New System.Drawing.Point(60, 489)
         Me.ButtonRefreshReport.Name = "ButtonRefreshReport"
         Me.ButtonRefreshReport.Size = New System.Drawing.Size(164, 29)
         Me.ButtonRefreshReport.TabIndex = 1
         Me.ButtonRefreshReport.Text = "Refresh Report"
-        Me.ButtonRefreshReport.UseVisualStyleBackColor = True
+        Me.ButtonRefreshReport.UseVisualStyleBackColor = true
         '
         'RadioButtonToday
         '
-        Me.RadioButtonToday.AutoSize = True
+        Me.RadioButtonToday.AutoSize = true
         Me.RadioButtonToday.Location = New System.Drawing.Point(21, 39)
         Me.RadioButtonToday.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButtonToday.Name = "RadioButtonToday"
-        Me.RadioButtonToday.Size = New System.Drawing.Size(64, 23)
+        Me.RadioButtonToday.Size = New System.Drawing.Size(63, 23)
         Me.RadioButtonToday.TabIndex = 0
-        Me.RadioButtonToday.TabStop = True
+        Me.RadioButtonToday.TabStop = true
         Me.RadioButtonToday.Text = "Today"
-        Me.RadioButtonToday.UseVisualStyleBackColor = True
+        Me.RadioButtonToday.UseVisualStyleBackColor = true
         '
         'CRevenueReportBindingSource
         '
@@ -255,46 +269,46 @@ Partial Class ReportFrames
         '
         'DocumentViewerReport
         '
-        Me.DocumentViewerReport.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DocumentViewerReport.IsMetric = False
+        Me.DocumentViewerReport.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.DocumentViewerReport.IsMetric = false
         Me.DocumentViewerReport.Location = New System.Drawing.Point(305, 16)
         Me.DocumentViewerReport.Name = "DocumentViewerReport"
         Me.DocumentViewerReport.Size = New System.Drawing.Size(659, 623)
         Me.DocumentViewerReport.TabIndex = 2
         '
-        'RadioButtonLastMonth
+        'CheckBoxShowApplyPaymentReport
         '
-        Me.RadioButtonLastMonth.AutoSize = True
-        Me.RadioButtonLastMonth.Location = New System.Drawing.Point(21, 163)
-        Me.RadioButtonLastMonth.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.RadioButtonLastMonth.Name = "RadioButtonLastMonth"
-        Me.RadioButtonLastMonth.Size = New System.Drawing.Size(98, 23)
-        Me.RadioButtonLastMonth.TabIndex = 16
-        Me.RadioButtonLastMonth.TabStop = True
-        Me.RadioButtonLastMonth.Text = "Last Month"
-        Me.RadioButtonLastMonth.UseVisualStyleBackColor = True
+        Me.CheckBoxShowApplyPaymentReport.AutoSize = true
+        Me.CheckBoxShowApplyPaymentReport.Font = New System.Drawing.Font("Segoe UI", 10!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.CheckBoxShowApplyPaymentReport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.CheckBoxShowApplyPaymentReport.Location = New System.Drawing.Point(21, 443)
+        Me.CheckBoxShowApplyPaymentReport.Name = "CheckBoxShowApplyPaymentReport"
+        Me.CheckBoxShowApplyPaymentReport.Size = New System.Drawing.Size(227, 23)
+        Me.CheckBoxShowApplyPaymentReport.TabIndex = 17
+        Me.CheckBoxShowApplyPaymentReport.Text = "Show Apply Payments Report"
+        Me.CheckBoxShowApplyPaymentReport.UseVisualStyleBackColor = true
         '
         'ReportFrames
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(979, 655)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DocumentViewerReport)
-        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "ReportFrames"
         Me.Text = "Report Viewer"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.CPaymentSummaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.CRevenueReportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        CType(Me.CPaymentSummaryBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Panel1.ResumeLayout(false)
+        Me.Panel1.PerformLayout
+        CType(Me.CRevenueReportBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
+End Sub
     Friend WithEvents CPaymentSummaryBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents RadioButtonToday As System.Windows.Forms.RadioButton
@@ -316,4 +330,5 @@ Partial Class ReportFrames
     Friend WithEvents DateTimePickerCustomStart As System.Windows.Forms.DateTimePicker
     Friend WithEvents RadioButtonCustomRange As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonLastMonth As System.Windows.Forms.RadioButton
+    Friend WithEvents CheckBoxShowApplyPaymentReport As CheckBox
 End Class

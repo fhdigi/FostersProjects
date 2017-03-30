@@ -16,6 +16,9 @@ Public Class ReportFrames
 
     Private Sub PaymentSummaryFrame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RadioButtonToday.Checked = True
+
+        ' ----- Show or hide the apply payment report 
+        CheckBoxShowApplyPaymentReport.Visible = ReportType = ReportTypeFlags.RevenueReport
     End Sub
 
     Private Sub GeneratePaymentSummaryReport()
@@ -278,10 +281,13 @@ Public Class ReportFrames
 
         '--------------------------------------------------------------------------
         '     Asked by Foster to remove the Applied Payment report - 28-March-2017
+        '     --> Edit on 30 Mar 2017 --- make it selectable 
         '--------------------------------------------------------------------------
-        'Dim rptSub As New AppliedPaymentReport
-        'rptSub.BindingSource1.DataSource = appPayList
-        'RevenueListingReport.XrSubreportAppliedPayments.ReportSource = rptSub
+        if CheckBoxShowApplyPaymentReport.Checked then
+            Dim rptSub As New AppliedPaymentReport
+            rptSub.BindingSource1.DataSource = appPayList
+            RevenueListingReport.XrSubreportAppliedPayments.ReportSource = rptSub
+        End If 
 
         RevenueListingReport.CreateDocument()
         DocumentViewerReport.DocumentSource = RevenueListingReport
@@ -364,6 +370,12 @@ Public Class ReportFrames
             rptPrintTl.PrintDialog()
         End If
 
+    End Sub
+
+    Private Sub CheckBoxShowApplyPaymentReport_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxShowApplyPaymentReport.CheckedChanged
+        if CheckBoxShowApplyPaymentReport.Focused Then 
+            ButtonRefreshReport.PerformClick()
+        End If
     End Sub
 
 End Class
