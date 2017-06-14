@@ -48,6 +48,7 @@ Partial Public Class CommercialInvoice
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.GroupHeaderCustomer = New DevExpress.XtraReports.UI.GroupHeaderBand()
+        Me.XrLabel25 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel26 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabelPrintDate = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel24 = New DevExpress.XtraReports.UI.XRLabel()
@@ -64,7 +65,6 @@ Partial Public Class CommercialInvoice
         Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPanelSubTotal = New DevExpress.XtraReports.UI.XRPanel()
         Me.XrLabel21 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel25 = New DevExpress.XtraReports.UI.XRLabel()
         Me.BindingSourceMain = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.BindingSourceMain,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me,System.ComponentModel.ISupportInitialize).BeginInit
@@ -487,13 +487,28 @@ Partial Public Class CommercialInvoice
         Me.GroupHeaderCustomer.Name = "GroupHeaderCustomer"
         Me.GroupHeaderCustomer.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand
         '
+        'XrLabel25
+        '
+        Me.XrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel25.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "PurchaseOrderNumber", "PO # : {0}")})
+        Me.XrLabel25.Dpi = 100!
+        Me.XrLabel25.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel25.LocationFloat = New DevExpress.Utils.PointFloat(500!, 260!)
+        Me.XrLabel25.Name = "XrLabel25"
+        Me.XrLabel25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
+        Me.XrLabel25.SizeF = New System.Drawing.SizeF(292.375!, 20!)
+        Me.XrLabel25.StylePriority.UseBorders = false
+        Me.XrLabel25.StylePriority.UseFont = false
+        Me.XrLabel25.StylePriority.UseTextAlignment = false
+        Me.XrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
         'XrLabel26
         '
         Me.XrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabel26.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AccountNumber", "ACCT # {0}")})
         Me.XrLabel26.Dpi = 100!
         Me.XrLabel26.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.XrLabel26.LocationFloat = New DevExpress.Utils.PointFloat(500!, 279.6198!)
+        Me.XrLabel26.LocationFloat = New DevExpress.Utils.PointFloat(500!, 280!)
         Me.XrLabel26.Name = "XrLabel26"
         Me.XrLabel26.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
         Me.XrLabel26.SizeF = New System.Drawing.SizeF(292.9999!, 20!)
@@ -508,7 +523,7 @@ Partial Public Class CommercialInvoice
         Me.XrLabelPrintDate.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.XrLabelPrintDate.Dpi = 100!
         Me.XrLabelPrintDate.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.XrLabelPrintDate.LocationFloat = New DevExpress.Utils.PointFloat(500!, 299.6198!)
+        Me.XrLabelPrintDate.LocationFloat = New DevExpress.Utils.PointFloat(500!, 300!)
         Me.XrLabelPrintDate.Name = "XrLabelPrintDate"
         Me.XrLabelPrintDate.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
         Me.XrLabelPrintDate.SizeF = New System.Drawing.SizeF(292.375!, 20!)
@@ -718,21 +733,6 @@ Partial Public Class CommercialInvoice
         Me.XrLabel21.StylePriority.UseTextAlignment = false
         Me.XrLabel21.Text = "XrLabelSubTotal"
         Me.XrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
-        '
-        'XrLabel25
-        '
-        Me.XrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel25.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "PurchaseOrderNumber", "PO # : {0}")})
-        Me.XrLabel25.Dpi = 100!
-        Me.XrLabel25.Font = New System.Drawing.Font("Arial", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.XrLabel25.LocationFloat = New DevExpress.Utils.PointFloat(125!, 279.6198!)
-        Me.XrLabel25.Name = "XrLabel25"
-        Me.XrLabel25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
-        Me.XrLabel25.SizeF = New System.Drawing.SizeF(261.4583!, 20!)
-        Me.XrLabel25.StylePriority.UseBorders = false
-        Me.XrLabel25.StylePriority.UseFont = false
-        Me.XrLabel25.StylePriority.UseTextAlignment = false
-        Me.XrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'BindingSourceMain
         '

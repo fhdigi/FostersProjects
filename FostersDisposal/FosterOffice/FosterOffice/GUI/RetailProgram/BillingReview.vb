@@ -786,7 +786,7 @@ Public Class BillingReview
         Next
 
         Dim rpt As New BillingSheet
-        rpt.BindingSource1.DataSource = From b In billingListing Where b.Total > 0.0 Select b
+        rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
 
         rpt.ShowPreview()
 
