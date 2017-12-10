@@ -2808,9 +2808,9 @@ Public Class RentalCustomer
 
         '----- Now get all of the customers that have non-dumpsters (there will be duplicates)
         Dim rentalCustListNonDumpsters As List(Of RentalRouteInformation) = (From c In db.RentalCustomers
-                                                 Join d In db.RentalPickupInformations On c.CustomerNumber Equals d.CustomerNumber
-                                                 Where d.DaysIndex = RentalCustomerDayArray(dayIndex) And d.DumpsterIndex <> "Dumpster" And c.Inactive = False
-                                                 Select New RentalRouteInformation With
+                                                                             Join d In db.RentalPickupInformations On c.CustomerNumber Equals d.CustomerNumber
+                                                                             Where d.DaysIndex = RentalCustomerDayArray(dayIndex) And d.DumpsterIndex <> "Dumpster" And c.Inactive = False
+                                                                             Select New RentalRouteInformation With
                                                         {
                                                             .CustomerNumber = c.CustomerNumber,
                                                             .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
@@ -2827,6 +2827,7 @@ Public Class RentalCustomer
                                                             .DayOfTheWeek = d.DaysIndex,
                                                             .HasRecycleContainer = True,
                                                             .SequenceNumber = d.SequenceNumber,
+                                                            .SpecialRoute = c.SpecialRoute,
                                                             .Is90GallonCart = If(d.DumpsterIndex = "90-Gallon Cart" Or d.DumpsterIndex = "95-Gallon Cart", True, False),
                                                             .RecycleRouteNumber = d.RecycleRoute,
                                                             .RecycleSequenceNumber = d.RecycleSequenceNumber,
