@@ -26,7 +26,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>FosterOffice.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DefineConstants>RentalProgram=True</DefineConstants>
+    <DefineConstants>RentalProgram=False</DefineConstants>
     <WarningsAsErrors>
     </WarningsAsErrors>
   </PropertyGroup>
@@ -353,6 +353,12 @@
     <Compile Include="ReportDisplay.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\BillingSheetSingle.Designer.vb">
+      <DependentUpon>BillingSheetSingle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingSheetSingle.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\LastBillReport.Designer.vb">
       <DependentUpon>LastBillReport.vb</DependentUpon>
     </Compile>
@@ -627,6 +633,9 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="ReportDisplay.resx">
       <DependentUpon>ReportDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingSheetSingle.resx">
+      <DependentUpon>BillingSheetSingle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LastBillReport.resx">
       <DependentUpon>LastBillReport.vb</DependentUpon>

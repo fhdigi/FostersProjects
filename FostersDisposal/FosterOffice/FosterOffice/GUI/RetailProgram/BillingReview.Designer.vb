@@ -55,6 +55,8 @@ Partial Class BillingReview
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ButtonSearch = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBoxClosedAccounts = New System.Windows.Forms.PictureBox()
         Me.LabelSaved = New System.Windows.Forms.Label()
         Me.PictureBoxSaved = New System.Windows.Forms.PictureBox()
         Me.LabelGenerate = New System.Windows.Forms.Label()
@@ -71,15 +73,14 @@ Partial Class BillingReview
         Me.ButtonSaveCurrentBill = New System.Windows.Forms.Button()
         Me.ButtonCreateBills = New System.Windows.Forms.Button()
         Me.ButtonResetData = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBoxClosedAccounts = New System.Windows.Forms.PictureBox()
+        Me.ButtonPreviewSelectedBill = New System.Windows.Forms.Button()
         CType(Me.DataGridViewItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxSaved, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxGenerate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewItems
@@ -304,6 +305,28 @@ Partial Class BillingReview
         Me.Panel1.Size = New System.Drawing.Size(128, 784)
         Me.Panel1.TabIndex = 18
         '
+        'Label3
+        '
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 225)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(122, 22)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Closed Accounts"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBoxClosedAccounts
+        '
+        Me.PictureBoxClosedAccounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxClosedAccounts.Image = Global.FosterOffice.My.Resources.Resources.Receipt_Edit
+        Me.PictureBoxClosedAccounts.Location = New System.Drawing.Point(48, 187)
+        Me.PictureBoxClosedAccounts.Name = "PictureBoxClosedAccounts"
+        Me.PictureBoxClosedAccounts.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBoxClosedAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBoxClosedAccounts.TabIndex = 2
+        Me.PictureBoxClosedAccounts.TabStop = False
+        '
         'LabelSaved
         '
         Me.LabelSaved.Cursor = System.Windows.Forms.Cursors.Hand
@@ -351,7 +374,7 @@ Partial Class BillingReview
         'LabelHeader
         '
         Me.LabelHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.LabelHeader.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelHeader.ForeColor = System.Drawing.Color.Blue
@@ -369,7 +392,7 @@ Partial Class BillingReview
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridViewHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewHistory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridViewHistory.AutoGenerateColumns = False
         Me.DataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewHistory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colTransID, Me.colCustomerID, Me.TransactionDateDataGridViewTextBoxColumn, Me.TransactionDescDataGridViewTextBoxColumn, Me.TransactionAmountDataGridViewTextBoxColumn, Me.RunningBalanceDataGridViewTextBoxColumn})
@@ -474,33 +497,23 @@ Partial Class BillingReview
         Me.ButtonResetData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ButtonResetData.UseVisualStyleBackColor = True
         '
-        'Label3
+        'ButtonPreviewSelectedBill
         '
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 225)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(122, 22)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Closed Accounts"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBoxClosedAccounts
-        '
-        Me.PictureBoxClosedAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxClosedAccounts.Image = Global.FosterOffice.My.Resources.Resources.Receipt_Edit
-        Me.PictureBoxClosedAccounts.Location = New System.Drawing.Point(48, 187)
-        Me.PictureBoxClosedAccounts.Name = "PictureBoxClosedAccounts"
-        Me.PictureBoxClosedAccounts.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBoxClosedAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBoxClosedAccounts.TabIndex = 2
-        Me.PictureBoxClosedAccounts.TabStop = False
+        Me.ButtonPreviewSelectedBill.Image = Global.FosterOffice.My.Resources.Resources.Preview
+        Me.ButtonPreviewSelectedBill.Location = New System.Drawing.Point(967, 308)
+        Me.ButtonPreviewSelectedBill.Name = "ButtonPreviewSelectedBill"
+        Me.ButtonPreviewSelectedBill.Size = New System.Drawing.Size(156, 30)
+        Me.ButtonPreviewSelectedBill.TabIndex = 21
+        Me.ButtonPreviewSelectedBill.Text = "   Preview Selected Bill..."
+        Me.ButtonPreviewSelectedBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ButtonPreviewSelectedBill.UseVisualStyleBackColor = True
         '
         'BillingReview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1135, 697)
+        Me.Controls.Add(Me.ButtonPreviewSelectedBill)
         Me.Controls.Add(Me.DataGridViewHistory)
         Me.Controls.Add(Me.LabelHeader)
         Me.Controls.Add(Me.Panel1)
@@ -542,11 +555,11 @@ Partial Class BillingReview
         CType(Me.DataGridViewItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxSaved, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxGenerate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -595,4 +608,5 @@ Partial Class BillingReview
     Friend WithEvents CCustomerHistoryLineItemsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PictureBoxClosedAccounts As System.Windows.Forms.PictureBox
+    Friend WithEvents ButtonPreviewSelectedBill As Button
 End Class

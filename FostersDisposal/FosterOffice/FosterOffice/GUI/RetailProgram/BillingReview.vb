@@ -55,7 +55,7 @@ Public Class BillingReview
         Try
             ' ----- We need this list to get all of the transactions for a billing date
             Dim transList As List(Of Integer) = (From c In PickupTransaction.Transactions.ReturnAllTransactions(My.Settings.DatabaseLocation, DateTimePickerBillingDate.Value)
-                                                Select c.CustomerID Distinct).ToList
+                                                 Select c.CustomerID Distinct).ToList
 
             If Not ManualBillingMode Then
 
@@ -578,8 +578,8 @@ Public Class BillingReview
             customerBillingObj.AdditionalItemCost = 0.0
 
             Dim tempList As List(Of PickupTransaction.CAdditionalItems) = (From i In itemListOfCollected
-                                                                          Where i.CustomerID = customerBillingObj.AccountNumber And i.ItemID <> 1
-                                                                          Select New PickupTransaction.CAdditionalItems With
+                                                                           Where i.CustomerID = customerBillingObj.AccountNumber And i.ItemID <> 1
+                                                                           Select New PickupTransaction.CAdditionalItems With
                                                                                  {
                                                                                      .AdditionalItems = i.ItemDescription,
                                                                                      .AdditionalItemCost = i.ItemPrice
@@ -792,6 +792,59 @@ Public Class BillingReview
 
     End Sub
 
+    Private Sub ButtonPreviewSelectedBill_Click(sender As Object, e As EventArgs) Handles ButtonPreviewSelectedBill.Click
+
+        Dim billingListing As New List(Of CCustomerBill)
+
+        ' ----- This will give a list of transactions 
+        Dim transActionList As List(Of PickupTransaction.Transactions) = PickupTransaction.Transactions.ReturnAllTransactions(My.Settings.DatabaseLocation, DateTimePickerBillingDate.Value)
+
+        ' ----- Get the selected customer 
+        Dim selectedCustomer As PickupTransaction.CBillingData = ListBoxCustomers.SelectedItem
+
+        If Not selectedCustomer Is Nothing Then
+
+            Dim tempBillObj As New CCustomerBill
+            tempBillObj.AccountNumber = selectedCustomer.AccountNumber
+            tempBillObj.SequenceNumber = selectedCustomer.SequenceNumber
+            tempBillObj.BillingDate = DateTimePickerBillingDate.Value
+            tempBillObj.FirstName = selectedCustomer.FirstName
+            tempBillObj.LastName = selectedCustomer.LastName
+            tempBillObj.Address = selectedCustomer.Address
+            tempBillObj.City = selectedCustomer.City
+            tempBillObj.State = selectedCustomer.State
+            tempBillObj.ZipCode = selectedCustomer.ZipCode
+
+            Dim billTotal As Double = 0.0
+
+            For Each transOBj As PickupTransaction.Transactions In (From f In transActionList Where f.CustomerID = tempBillObj.AccountNumber Select f).ToList
+
+                Dim newLineItem As New CBillLineItems
+
+                If transOBj.Description = "Sales Tax" Then
+                    tempBillObj.Tax = transOBj.Amount
+                Else
+                    newLineItem.Description = transOBj.Description
+                    newLineItem.Amount = transOBj.Amount
+                    tempBillObj.LineItems.Add(newLineItem)
+                End If
+
+                billTotal += transOBj.Amount
+
+            Next
+
+            tempBillObj.Total = billTotal
+            billingListing.Add(tempBillObj)
+
+        End If
+
+        Dim rpt As New BillingSheetSingle
+        rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
+
+        rpt.ShowPreview()
+
+    End Sub
+
     Private Sub ButtonCreateBills_Click(sender As System.Object, e As System.EventArgs) Handles ButtonCreateBills.Click
 
         Dim tempCounter As Integer = 0
@@ -809,7 +862,7 @@ Public Class BillingReview
             Dim tmpCust As PickupTransaction.CBillingData = obj
 
             Dim custTrans As List(Of PickupTransaction.Transactions) = (From t In transList
-                                                                         Where t.CustomerID = tmpCust.AccountNumber Select t).ToList
+                                                                        Where t.CustomerID = tmpCust.AccountNumber Select t).ToList
 
             ' ------ See if the customer has a bill saved for this billing day                      
             If custTrans.Count = 0 Then
