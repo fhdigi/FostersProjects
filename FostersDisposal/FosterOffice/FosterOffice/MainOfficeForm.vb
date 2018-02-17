@@ -868,9 +868,9 @@ Public Class MainOfficeForm
 
         Dim rpt As New RentalCustomerWithPO
         rpt.DataSource = (From c In PickupTransaction.RentalCustomer.ReturnCustomer(My.Settings.DatabaseLocation)
-                         Where c.UsePONumberForAll = True
-                         Order By c.Billing_FirstName, c.Billing_LastName
-                         Select c).ToList
+                          Where c.UsePONumberForAll = True
+                          Order By c.CustomerNumber
+                          Select c).ToList
         rpt.ShowPreview()
 
     End Sub

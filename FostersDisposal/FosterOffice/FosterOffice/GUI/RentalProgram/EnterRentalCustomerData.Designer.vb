@@ -76,22 +76,24 @@ Partial Class EnterRentalCustomerData
         Me.OnCallRollOff = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OnCallMiscCharge = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OnCallNotes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridViewRentals, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RentalCustomerDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControlRoutes.SuspendLayout()
-        Me.TabPageRoutes.SuspendLayout()
-        Me.TabPageOnCall.SuspendLayout()
-        CType(Me.DataGridViewOnCalls, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.ButtonAutoFill = New System.Windows.Forms.Button()
+        Me.ButtonClearData = New System.Windows.Forms.Button()
+        CType(Me.DataGridViewRentals,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RentalCustomerDataBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.TabControlRoutes.SuspendLayout
+        Me.TabPageRoutes.SuspendLayout
+        Me.TabPageOnCall.SuspendLayout
+        CType(Me.DataGridViewOnCalls,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'DataGridViewRentals
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
         Me.DataGridViewRentals.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewRentals.AutoGenerateColumns = False
+        Me.DataGridViewRentals.AutoGenerateColumns = false
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -178,7 +180,7 @@ Partial Class EnterRentalCustomerData
         '
         Me.colMiscCharge.DataPropertyName = "MiscCharge"
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
         DataGridViewCellStyle9.Format = "N2"
         DataGridViewCellStyle9.NullValue = "0.00"
         Me.colMiscCharge.DefaultCellStyle = DataGridViewCellStyle9
@@ -204,7 +206,7 @@ Partial Class EnterRentalCustomerData
         Me.ButtonClose.Size = New System.Drawing.Size(75, 23)
         Me.ButtonClose.TabIndex = 1
         Me.ButtonClose.Text = "Close"
-        Me.ButtonClose.UseVisualStyleBackColor = True
+        Me.ButtonClose.UseVisualStyleBackColor = true
         '
         'ButtonRefresh
         '
@@ -213,11 +215,11 @@ Partial Class EnterRentalCustomerData
         Me.ButtonRefresh.Size = New System.Drawing.Size(75, 23)
         Me.ButtonRefresh.TabIndex = 2
         Me.ButtonRefresh.Text = "Refresh"
-        Me.ButtonRefresh.UseVisualStyleBackColor = True
+        Me.ButtonRefresh.UseVisualStyleBackColor = true
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.Location = New System.Drawing.Point(12, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 13)
@@ -250,7 +252,7 @@ Partial Class EnterRentalCustomerData
         Me.TabPageRoutes.Size = New System.Drawing.Size(1096, 473)
         Me.TabPageRoutes.TabIndex = 0
         Me.TabPageRoutes.Text = "Routes"
-        Me.TabPageRoutes.UseVisualStyleBackColor = True
+        Me.TabPageRoutes.UseVisualStyleBackColor = true
         '
         'TabPageOnCall
         '
@@ -266,7 +268,7 @@ Partial Class EnterRentalCustomerData
         Me.TabPageOnCall.Size = New System.Drawing.Size(1096, 473)
         Me.TabPageOnCall.TabIndex = 1
         Me.TabPageOnCall.Text = "On Calls"
-        Me.TabPageOnCall.UseVisualStyleBackColor = True
+        Me.TabPageOnCall.UseVisualStyleBackColor = true
         '
         'ButtonManualEntry
         '
@@ -275,7 +277,7 @@ Partial Class EnterRentalCustomerData
         Me.ButtonManualEntry.Size = New System.Drawing.Size(129, 23)
         Me.ButtonManualEntry.TabIndex = 5
         Me.ButtonManualEntry.Text = "Manual Entry..."
-        Me.ButtonManualEntry.UseVisualStyleBackColor = True
+        Me.ButtonManualEntry.UseVisualStyleBackColor = true
         '
         'ButtonClear
         '
@@ -284,7 +286,7 @@ Partial Class EnterRentalCustomerData
         Me.ButtonClear.Size = New System.Drawing.Size(75, 23)
         Me.ButtonClear.TabIndex = 3
         Me.ButtonClear.Text = "Clear"
-        Me.ButtonClear.UseVisualStyleBackColor = True
+        Me.ButtonClear.UseVisualStyleBackColor = true
         '
         'ButtonSearch
         '
@@ -293,7 +295,7 @@ Partial Class EnterRentalCustomerData
         Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSearch.TabIndex = 2
         Me.ButtonSearch.Text = "Search"
-        Me.ButtonSearch.UseVisualStyleBackColor = True
+        Me.ButtonSearch.UseVisualStyleBackColor = true
         '
         'TextBoxSearch
         '
@@ -304,7 +306,7 @@ Partial Class EnterRentalCustomerData
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(6, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
@@ -313,14 +315,14 @@ Partial Class EnterRentalCustomerData
         '
         'DataGridViewOnCalls
         '
-        Me.DataGridViewOnCalls.AllowUserToAddRows = False
-        Me.DataGridViewOnCalls.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridViewOnCalls.AllowUserToAddRows = false
+        Me.DataGridViewOnCalls.AllowUserToDeleteRows = false
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
         Me.DataGridViewOnCalls.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewOnCalls.AutoGenerateColumns = False
+        Me.DataGridViewOnCalls.AutoGenerateColumns = false
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -418,36 +420,56 @@ Partial Class EnterRentalCustomerData
         Me.OnCallNotes.Name = "OnCallNotes"
         Me.OnCallNotes.Width = 110
         '
+        'ButtonAutoFill
+        '
+        Me.ButtonAutoFill.Location = New System.Drawing.Point(928, 23)
+        Me.ButtonAutoFill.Name = "ButtonAutoFill"
+        Me.ButtonAutoFill.Size = New System.Drawing.Size(89, 23)
+        Me.ButtonAutoFill.TabIndex = 4
+        Me.ButtonAutoFill.Text = "Auto Fill..."
+        Me.ButtonAutoFill.UseVisualStyleBackColor = true
+        '
+        'ButtonClearData
+        '
+        Me.ButtonClearData.Location = New System.Drawing.Point(1023, 23)
+        Me.ButtonClearData.Name = "ButtonClearData"
+        Me.ButtonClearData.Size = New System.Drawing.Size(89, 23)
+        Me.ButtonClearData.TabIndex = 5
+        Me.ButtonClearData.Text = "Clear Data..."
+        Me.ButtonClearData.UseVisualStyleBackColor = true
+        '
         'EnterRentalCustomerData
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1131, 602)
+        Me.Controls.Add(Me.ButtonClearData)
+        Me.Controls.Add(Me.ButtonAutoFill)
         Me.Controls.Add(Me.TabControlRoutes)
         Me.Controls.Add(Me.DateTimePickerRouteDate)
         Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ButtonClose)
-        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximizeBox = false
+        Me.MinimizeBox = false
         Me.Name = "EnterRentalCustomerData"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
+        Me.ShowIcon = false
+        Me.ShowInTaskbar = false
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Enter Rental Customer Data"
-        CType(Me.DataGridViewRentals, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RentalCustomerDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControlRoutes.ResumeLayout(False)
-        Me.TabPageRoutes.ResumeLayout(False)
-        Me.TabPageOnCall.ResumeLayout(False)
-        Me.TabPageOnCall.PerformLayout()
-        CType(Me.DataGridViewOnCalls, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.DataGridViewRentals,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RentalCustomerDataBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        Me.TabControlRoutes.ResumeLayout(false)
+        Me.TabPageRoutes.ResumeLayout(false)
+        Me.TabPageOnCall.ResumeLayout(false)
+        Me.TabPageOnCall.PerformLayout
+        CType(Me.DataGridViewOnCalls,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents DataGridViewRentals As System.Windows.Forms.DataGridView
     Friend WithEvents ButtonClose As System.Windows.Forms.Button
     Friend WithEvents ButtonRefresh As System.Windows.Forms.Button
@@ -483,4 +505,6 @@ Partial Class EnterRentalCustomerData
     Friend WithEvents OnCallRollOff As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents OnCallMiscCharge As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents OnCallNotes As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ButtonAutoFill As Button
+    Friend WithEvents ButtonClearData As Button
 End Class

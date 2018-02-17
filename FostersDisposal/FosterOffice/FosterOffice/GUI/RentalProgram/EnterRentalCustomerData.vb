@@ -17,7 +17,6 @@
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
-
         Else
             GetOnCallCustomers()
         End If
@@ -90,17 +89,7 @@
             Exit Sub
         End If
 
-        ' ----- Use the dictionary to find out the customers on this date 
-        Dim newList As List(Of PickupTransaction.RentalCustomer.RentalCustomerData) = (From c In currentCustomerDictionary
-                                                                                       Where (c.Value.RouteNumber > 0 And c.Value.DayOfTheWeek = RentalCustomerDayArray(DateTimePickerRouteDate.Value.DayOfWeek - 1)) Or (c.Value.RecycleRouteNumber > 0 And c.Value.RouteNumber = 0 And c.Value.DayOfTheWeek = RentalCustomerDayArray(DateTimePickerRouteDate.Value.DayOfWeek - 1))
-                                                                                       Order By c.Value.RouteNumber, c.Value.SequenceNumber
-                                                                                       Select New PickupTransaction.RentalCustomer.RentalCustomerData With
-                                                                                                  {
-                                                                                                      .AccountNumber = c.Value.CustomerNumber,
-                                                                                                      .CustomerName = c.Value.CustomerName,
-                                                                                                      .CustomerAddress = c.Value.CustomerAddress,
-                                                                                                      .OrderOnDataSheet = If(c.Value.RouteNumber > 0, c.Value.RouteNumber, c.Value.RecycleRouteNumber * 100)
-                                                                                                  }).ToList
+        Dim newList As List(Of PickupTransaction.RentalCustomer.RentalCustomerData) = GetCustomersForListing()
 
         If currentPickupInformation.Count > 0 Then
             For Each obj As PickupTransaction.RentalCustomer.RentalCustomerData In newList
@@ -119,10 +108,29 @@
             Next
         End If
 
-
         RentalCustomerDataBindingSource.DataSource = newList.OrderBy(Function(c) c.OrderOnDataSheet)
 
     End Sub
+
+    Private Function GetCustomersForListing() As List(Of PickupTransaction.RentalCustomer.RentalCustomerData)
+
+        ' ----- Use the dictionary to find out the customers on this date 
+        Return (From c In currentCustomerDictionary
+                Where (c.Value.RouteNumber > 0 And c.Value.DayOfTheWeek = RentalCustomerDayArray(DateTimePickerRouteDate.Value.DayOfWeek - 1)) Or (c.Value.RecycleRouteNumber > 0 And c.Value.RouteNumber = 0 And c.Value.DayOfTheWeek = RentalCustomerDayArray(DateTimePickerRouteDate.Value.DayOfWeek - 1))
+                Order By c.Value.RouteNumber, c.Value.SequenceNumber
+                Select New PickupTransaction.RentalCustomer.RentalCustomerData With
+                           {
+                               .AccountNumber = c.Value.CustomerNumber,
+                               .CustomerName = c.Value.CustomerName,
+                               .CustomerAddress = c.Value.CustomerAddress,
+                               .HasDumpster = c.Value.HasTrashDumpster,
+                               .HasCardboard = c.Value.HasCardboard,
+                               .HasRecycle = c.Value.HasRecycleBin,
+                               .HasCart = c.Value.Is90GallonCart,
+                               .OrderOnDataSheet = If(c.Value.RouteNumber > 0, c.Value.RouteNumber, c.Value.RecycleRouteNumber * 100)
+                           }).ToList
+
+    End Function
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
         Me.Close()
@@ -277,6 +285,67 @@
         Dim frm As New ManualRentalCustomerDataEntry
         frm.DateTimePickupDate.Value = DateTimePickerRouteDate.Value
         frm.ShowDialog()
+    End Sub
+
+    Private Sub ButtonAutoFill_Click(sender As Object, e As EventArgs) Handles ButtonAutoFill.Click
+
+        Dim msgAnswer As DialogResult =
+                MessageBox.Show(
+                    "Default data will populate each customer's record.  If there is data already entered, there is a chance that data will be overwritten. Once the process completes, it cannot be undone.  Would you like to continue?",
+                    "Continue", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If msgAnswer = DialogResult.Yes Then
+            SetAutoData("1")
+        end if
+
+    End Sub
+
+    Private Sub ButtonClearData_Click(sender As Object, e As EventArgs) Handles ButtonClearData.Click
+
+        Dim msgAnswer As DialogResult =
+                MessageBox.Show(
+                    "This will remove all of the route data for the selected date.  Once the process completes, it cannot be undone.  Would you like to continue?",
+                    "Continue", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+        If msgAnswer = DialogResult.Yes Then
+            SetAutoData("")
+        end if 
+
+    End Sub
+
+    Private Sub SetAutoData(updateVal As String)
+
+        '* show the wait cursor *'
+        Cursor = Cursors.WaitCursor 
+
+        '* pull out the date  *'
+        Dim dteRecord As DateTime = DateTimePickerRouteDate.Value
+
+        '* this will give me the list of customers *' 
+        Dim newList As List(Of PickupTransaction.RentalCustomer.RentalCustomerData) = GetCustomersForListing
+
+        '* save the data to the database first *'
+        For each obj As PickupTransaction.RentalCustomer.RentalCustomerData In newList
+            If obj.HasDumpster Then
+                PickupTransaction.RentalRouteData.UpdatePickupData(My.Settings.DatabaseLocation, dteRecord, obj.AccountNumber, 1, updateVal)
+            End If
+            If obj.HasRecycle Then
+                PickupTransaction.RentalRouteData.UpdatePickupData(My.Settings.DatabaseLocation, dteRecord, obj.AccountNumber, 2, updateVal)
+            End If
+            If obj.HasCardboard Then
+                PickupTransaction.RentalRouteData.UpdatePickupData(My.Settings.DatabaseLocation, dteRecord, obj.AccountNumber, 3, updateVal)
+            End If
+            If obj.HasCart Then
+                PickupTransaction.RentalRouteData.UpdatePickupData(My.Settings.DatabaseLocation, dteRecord, obj.AccountNumber, 4, updateVal)
+            End If
+        Next
+
+        '* refresh the screen *'
+        DateTimePickerRouteDate_ValueChanged(Nothing , nothing)
+
+        '* show the normal cursor *'
+        Cursor = Cursors.Default 
+
     End Sub
 
 End Class

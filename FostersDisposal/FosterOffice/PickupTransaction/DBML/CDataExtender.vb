@@ -2423,6 +2423,11 @@ Public Class RentalCustomer
 
         Public property SpecialRoute as Boolean = false
 
+        ' ----- Added for the auto-fill 
+        Public Property HasCardboard As Boolean = False
+        Public Property HasRecycleBin As Boolean = False
+
+
         Public Overrides Function ToString() As String
             Return CustomerName & " (" & CustomerAddress & ")"
         End Function
@@ -2522,6 +2527,13 @@ Public Class RentalCustomer
         Public Property Notes As String = ""
         Public Property MiscCharge As Double = 0.0
         Public Property OrderOnDataSheet As Integer = 0
+
+        '* Added on 16-Feb-2018 to auto-populate dumpsters *'
+        Public Property HasDumpster As Boolean = False 
+        Public Property HasRecycle As Boolean = False 
+        Public Property HasCardboard As Boolean = False
+        Public Property HasCart As Boolean = false
+
     End Class
 
     Public Class CRentalCustomerList
@@ -2811,28 +2823,30 @@ Public Class RentalCustomer
                                                                              Join d In db.RentalPickupInformations On c.CustomerNumber Equals d.CustomerNumber
                                                                              Where d.DaysIndex = RentalCustomerDayArray(dayIndex) And d.DumpsterIndex <> "Dumpster" And c.Inactive = False
                                                                              Select New RentalRouteInformation With
-                                                        {
-                                                            .CustomerNumber = c.CustomerNumber,
-                                                            .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
-                                                            .CustomerAddress = c.RouteLocation_Address,
-                                                            .Container = ReturnLoadAbbreviation(d.LoadIndex),
-                                                            .ExtraInfo = String.Format("{0} ({1})", d.DumpsterIndex, d.MiscText),
-                                                            .NotesOnly = d.TruckNotes,
-                                                            .Size = d.SizeIndex,
-                                                            .MiscText = d.MiscText,
-                                                            .PickupID = d.ID,
-                                                            .RouteNumber = d.Route,
-                                                            .ReportOrder = If(d.Route = 4, 999, d.Route),
-                                                            .RouteOrBook = If(d.Route >= 4, "Route Containers", "Containers"),
-                                                            .DayOfTheWeek = d.DaysIndex,
-                                                            .HasRecycleContainer = True,
-                                                            .SequenceNumber = d.SequenceNumber,
-                                                            .SpecialRoute = c.SpecialRoute,
-                                                            .Is90GallonCart = If(d.DumpsterIndex = "90-Gallon Cart" Or d.DumpsterIndex = "95-Gallon Cart", True, False),
-                                                            .RecycleRouteNumber = d.RecycleRoute,
-                                                            .RecycleSequenceNumber = d.RecycleSequenceNumber,
-                                                            .HeaderLine = String.Format("{0} {1} {2}", "Route", If(d.Route > 4, d.Route - 4, d.Route), If(d.Route > 4, "Tablet", "Recycling Containers"))
-                                                        }).ToList
+                                                                                {
+                                                                                    .CustomerNumber = c.CustomerNumber,
+                                                                                    .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
+                                                                                    .CustomerAddress = c.RouteLocation_Address,
+                                                                                    .Container = ReturnLoadAbbreviation(d.LoadIndex),
+                                                                                    .ExtraInfo = String.Format("{0} ({1})", d.DumpsterIndex, d.MiscText),
+                                                                                    .NotesOnly = d.TruckNotes,
+                                                                                    .Size = d.SizeIndex,
+                                                                                    .MiscText = d.MiscText,
+                                                                                    .PickupID = d.ID,
+                                                                                    .RouteNumber = d.Route,
+                                                                                    .ReportOrder = If(d.Route = 4, 999, d.Route),
+                                                                                    .RouteOrBook = If(d.Route >= 4, "Route Containers", "Containers"),
+                                                                                    .DayOfTheWeek = d.DaysIndex,
+                                                                                    .HasRecycleContainer = True,
+                                                                                    .HasRecycleBin = If(d.DumpsterIndex = "Recycle", True, False),
+                                                                                    .HasCardboard = If(d.DumpsterIndex = "Cardboard", True, False),
+                                                                                    .SequenceNumber = d.SequenceNumber,
+                                                                                    .SpecialRoute = c.SpecialRoute,
+                                                                                    .Is90GallonCart = If(d.DumpsterIndex = "90-Gallon Cart" Or d.DumpsterIndex = "95-Gallon Cart", True, False),
+                                                                                    .RecycleRouteNumber = d.RecycleRoute,
+                                                                                    .RecycleSequenceNumber = d.RecycleSequenceNumber,
+                                                                                    .HeaderLine = String.Format("{0} {1} {2}", "Route", If(d.Route > 4, d.Route - 4, d.Route), If(d.Route > 4, "Tablet", "Recycling Containers"))
+                                                                                }).ToList
 
 
         ' ----- Modify the dictionary to include this new informaton 
@@ -2849,12 +2863,26 @@ Public Class RentalCustomer
                         obj.CustomerNumber *= -1
                         normalizedList.Add(obj.CustomerNumber, obj)
                     Else
-                        normalizedList(obj.CustomerNumber).Is90GallonCart = obj.Is90GallonCart
+
+                        If normalizedList(obj.CustomerNumber).Is90GallonCart = False then
+                            normalizedList(obj.CustomerNumber).Is90GallonCart = obj.Is90GallonCart
+                        End If 
+
                         normalizedList(obj.CustomerNumber).ExtraInfo &= "+" & obj.ExtraInfo & " "
                         normalizedList(obj.CustomerNumber).HasRecycleContainer = obj.HasRecycleContainer
+
+                        If normalizedList(obj.CustomerNumber).HasRecycleBin = false then
+                            normalizedList(obj.CustomerNumber).HasRecycleBin = obj.HasRecycleBin
+                        End If 
+
+                        If normalizedList(obj.CustomerNumber).HasCardboard = False Then
+                            normalizedList(obj.CustomerNumber).HasCardboard = obj.HasCardboard
+                        End If 
+
                         normalizedList(obj.CustomerNumber).RecycleRouteNumber = obj.RecycleRouteNumber
                         normalizedList(obj.CustomerNumber).RecycleSequenceNumber = obj.RecycleSequenceNumber
                         normalizedList(obj.CustomerNumber).NotesOnly &= " " & obj.NotesOnly
+
                     End If
                 End If
             Catch exKey As KeyNotFoundException
