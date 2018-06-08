@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterRollOff", "FosterRollOff\FosterRollOff\FosterRollOff.vbproj", "{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterOffice", "FosterOffice\FosterOffice\FosterOffice.vbproj", "{94FB5615-C1D2-4780-A2BC-A04462011BF3}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PickupTransaction", "FosterOffice\PickupTransaction\PickupTransaction.vbproj", "{622A52DD-DD43-4B0D-A453-B4167F3E7543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile Application", "Mobile Application", "{6A4FE02B-950F-4965-AC76-882B39BCF4BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FosterCollector", "FosterCollectorV2\FosterCollector\FosterCollector\FosterCollector.csproj", "{3C60F168-38B5-44E6-8FC5-555E8277C0EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FosterCollector.Droid", "FosterCollectorV2\FosterCollector\FosterCollector.Droid\FosterCollector.Droid.csproj", "{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,8 +59,45 @@ Global
 		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|Any CPU.Build.0 = Release|Any CPU
 		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|x86.ActiveCfg = Release|Any CPU
 		{622A52DD-DD43-4B0D-A453-B4167F3E7543}.Release|x86.Build.0 = Release|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug - Commercial|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug - Commercial|Any CPU.Build.0 = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug - Commercial|x86.ActiveCfg = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug - Commercial|x86.Build.0 = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB}.Release|x86.Build.0 = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|Any CPU.Build.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|x86.ActiveCfg = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|x86.Build.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug - Commercial|x86.Deploy.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|x86.Build.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|x86.ActiveCfg = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|x86.Build.0 = Release|Any CPU
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C60F168-38B5-44E6-8FC5-555E8277C0EB} = {6A4FE02B-950F-4965-AC76-882B39BCF4BF}
+		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4} = {6A4FE02B-950F-4965-AC76-882B39BCF4BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53FD578B-17CF-45BC-A272-7A7DF4EB7BA2}
 	EndGlobalSection
 EndGlobal

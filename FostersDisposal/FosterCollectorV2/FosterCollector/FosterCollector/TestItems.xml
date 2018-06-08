@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItemsCollected xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ItemsCollected>
+    <ID>4</ID>
+    <ItemDescription>Bath Tub - Cast Iron</ItemDescription>
+    <MinimumPrice>15</MinimumPrice>
+    <MaximumPrice>15</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>2</ID>
+    <ItemDescription>Bath Tub - Fiberglass</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>3</ID>
+    <ItemDescription>Bath Tub - Tin</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>5</ID>
+    <ItemDescription>Bicycle</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>7</ID>
+    <ItemDescription>Box Spring - Full</ItemDescription>
+    <MinimumPrice>8</MinimumPrice>
+    <MaximumPrice>8</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>6</ID>
+    <ItemDescription>Box Spring - Twin</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>57</ID>
+    <ItemDescription>Box Spring – Queen - $10.00</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>58</ID>
+    <ItemDescription>Box Spring – King - $12.00</ItemDescription>
+    <MinimumPrice>12</MinimumPrice>
+    <MaximumPrice>12</MaximumPrice>
+  </ItemsCollected>  
+  <ItemsCollected>
+    <ID>54</ID>
+    <ItemDescription>Carpet (12x12) - $10.00</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>8</ID>
+    <ItemDescription>Carpet (12x12) - $8.00</ItemDescription>
+    <MinimumPrice>8</MinimumPrice>
+    <MaximumPrice>8</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>9</ID>
+    <ItemDescription>Carpet Padding (12x12)</ItemDescription>
+    <MinimumPrice>8</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>11</ID>
+    <ItemDescription>Chair - Kitchen</ItemDescription>
+    <MinimumPrice>2</MinimumPrice>
+    <MaximumPrice>2</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>10</ID>
+    <ItemDescription>Chair - Lawn</ItemDescription>
+    <MinimumPrice>0</MinimumPrice>
+    <MaximumPrice>0</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>12</ID>
+    <ItemDescription>Chair - Living Room</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>57</ID>
+    <ItemDescription>Chair - Office</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>13</ID>
+    <ItemDescription>Chair - Recliners</ItemDescription>
+    <MinimumPrice>7</MinimumPrice>
+    <MaximumPrice>7</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>14</ID>
+    <ItemDescription>Christmas Tree - $3.00</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>51</ID>
+    <ItemDescription>Christmas Tree - $5.00</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>15</ID>
+    <ItemDescription>Computer Monitor</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>17</ID>
+    <ItemDescription>Couch - Hide-a-Bed</ItemDescription>
+    <MinimumPrice>15</MinimumPrice>
+    <MaximumPrice>15</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>16</ID>
+    <ItemDescription>Couch - Regular</ItemDescription>
+    <MinimumPrice>7</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>18</ID>
+    <ItemDescription>Desk</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>19</ID>
+    <ItemDescription>Dishwasher</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>20</ID>
+    <ItemDescription>Door - Storm</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>21</ID>
+    <ItemDescription>Door - Wood</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>22</ID>
+    <ItemDescription>Dresser</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>23</ID>
+    <ItemDescription>Dryer</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>24</ID>
+    <ItemDescription>Furnace</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>1</ID>
+    <ItemDescription>Garbage Bags</ItemDescription>
+    <MinimumPrice>0</MinimumPrice>
+    <MaximumPrice>0</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>25</ID>
+    <ItemDescription>Gas Grill $3.00 (without tank)</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>52</ID>
+    <ItemDescription>Gas Grill $5.00 (without tank)</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>26</ID>
+    <ItemDescription>Hot Water Tank (Empty)</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>7</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>27</ID>
+    <ItemDescription>Lawnmower</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>29</ID>
+    <ItemDescription>Mattress - Full</ItemDescription>
+    <MinimumPrice>8</MinimumPrice>
+    <MaximumPrice>8</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>28</ID>
+    <ItemDescription>Mattress - Twin</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>59</ID>
+    <ItemDescription>Mattress - Queen - $10.00</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>60</ID>
+    <ItemDescription>Mattress - King - $12.00</ItemDescription>
+    <MinimumPrice>12</MinimumPrice>
+    <MaximumPrice>12</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>30</ID>
+    <ItemDescription>Microwave $3.00</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>53</ID>
+    <ItemDescription>Microwave $5.00</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>33</ID>
+    <ItemDescription>Sink - Cast Iron</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>31</ID>
+    <ItemDescription>Sink - Fiberglass</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>32</ID>
+    <ItemDescription>Sink - Tin</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>34</ID>
+    <ItemDescription>Stove</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>35</ID>
+    <ItemDescription>Swing Set</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>36</ID>
+    <ItemDescription>Table - Kitchen</ItemDescription>
+    <MinimumPrice>7</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>37</ID>
+    <ItemDescription>Table - Picnic</ItemDescription>
+    <MinimumPrice>15</MinimumPrice>
+    <MaximumPrice>15</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>38</ID>
+    <ItemDescription>Tire - Passenger</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>3</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>39</ID>
+    <ItemDescription>Tire - Truck</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>40</ID>
+    <ItemDescription>Toilet</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>41</ID>
+    <ItemDescription>Treadmill</ItemDescription>
+    <MinimumPrice>7</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>43</ID>
+    <ItemDescription>TV - Console</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>42</ID>
+    <ItemDescription>TV - Table Model</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>44</ID>
+    <ItemDescription>Vacuum</ItemDescription>
+    <MinimumPrice>2</MinimumPrice>
+    <MaximumPrice>2</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>45</ID>
+    <ItemDescription>Vanity</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>46</ID>
+    <ItemDescription>Washer</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>47</ID>
+    <ItemDescription>Water Softner - Empty</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>48</ID>
+    <ItemDescription>Water Softner - Full of Salt</ItemDescription>
+    <MinimumPrice>10</MinimumPrice>
+    <MaximumPrice>15</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>49</ID>
+    <ItemDescription>Waterbed Mattress (water drained)</ItemDescription>
+    <MinimumPrice>5</MinimumPrice>
+    <MaximumPrice>5</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>50</ID>
+    <ItemDescription>Window (depends on size)</ItemDescription>
+    <MinimumPrice>3</MinimumPrice>
+    <MaximumPrice>10</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>55</ID>
+    <ItemDescription>Miscellaneous</ItemDescription>
+    <MinimumPrice>0</MinimumPrice>
+    <MaximumPrice>0</MaximumPrice>
+  </ItemsCollected>
+  <ItemsCollected>
+    <ID>56</ID>
+    <ItemDescription>Yard Waste</ItemDescription>
+    <MinimumPrice>0</MinimumPrice>
+    <MaximumPrice>0</MaximumPrice>
+  </ItemsCollected>
+</ArrayOfItemsCollected>

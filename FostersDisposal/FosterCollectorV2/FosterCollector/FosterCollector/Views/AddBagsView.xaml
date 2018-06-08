@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FosterCollector.Views.AddBagsView">
+  
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="NumberButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand">
+                </Setter>
+                <Setter Property="BackgroundColor" Value="Blue">
+                </Setter>
+                <Setter Property="BorderColor" Value="Black">
+                </Setter>
+                <Setter Property="HeightRequest" Value="150">
+                </Setter>
+                <Setter Property="WidthRequest" Value="150">
+                </Setter>
+                <Setter Property="BorderRadius" Value="5">
+                </Setter>
+                <Setter Property="TextColor" Value="White">
+                </Setter>
+                <Setter Property="FontSize" Value="32">
+                </Setter>
+            </Style>
+            <Style x:Key="SmallButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand">
+                </Setter>
+                <Setter Property="BackgroundColor" Value="Blue">
+                </Setter>
+                <Setter Property="BorderColor" Value="Black">
+                </Setter>
+                <Setter Property="HeightRequest" Value="45">
+                </Setter>
+                <Setter Property="WidthRequest" Value="45">
+                </Setter>
+                <Setter Property="BorderRadius" Value="5">
+                </Setter>
+                <Setter Property="TextColor" Value="White">
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <Label Text="Bags" />
+            <StackLayout Orientation="Horizontal" Padding="0,0,0,20">
+                <Button Text="-" Style="{StaticResource SmallButtonStyle}" Clicked="OnMinusBagClicked" />
+                <Button Text="+" Style="{StaticResource SmallButtonStyle}" Clicked="OnPlusBagClicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Button1" Text="1" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnOneBagButtonClicked" />
+                <Button x:Name="Button2" Text="2" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnTwoBagButtonClicked" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Button3" Text="3" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnThreeBagButtonClicked" />
+                <Button x:Name="Button4" Text="4" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnFourBagButtonClicked" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Button5" Text="5" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnFiveBagButtonClicked" />
+                <Button x:Name="Button6" Text="6" Style="{StaticResource NumberButtonStyle}"
+                        Clicked="OnSixBagButtonClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+  
+</ContentView>

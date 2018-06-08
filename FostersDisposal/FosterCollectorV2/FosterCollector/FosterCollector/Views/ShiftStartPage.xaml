@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FosterCollector.Views.ShiftStartPage"
+             Title="Foster's Disposal"
+             BackgroundColor="White">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="40, 20, 40, 0" />
+    </ContentPage.Padding>
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="42" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+          <Style x:Key="ResumeButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="BackgroundColor" Value="Lime" />
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="HeightRequest" Value="42" />
+            <Setter Property="BorderRadius" Value="5" />
+            <Setter Property="TextColor" Value="Black" />
+          </Style>
+
+          <Style x:Key="ClearButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="BackgroundColor" Value="Red" />
+            <Setter Property="BorderColor" Value="White" />
+            <Setter Property="HeightRequest" Value="42" />
+            <Setter Property="BorderRadius" Value="5" />
+            <Setter Property="TextColor" Value="White" />
+          </Style>
+          
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="100,0,100,0" >
+
+            <Label Text="FOSTER'S" FontFamily="Arial" FontSize="48" FontAttributes="Bold" TextColor="Blue"
+                   VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label Text="DISPOSAL SERVICE LLC" FontSize="24" FontAttributes="Bold" VerticalOptions="Center"
+                   HorizontalOptions="Center" TextColor="Gray" />
+
+            <BoxView HeightRequest="2" Color="Green" />
+
+            <StackLayout Orientation="Horizontal" Padding="0,20,0,0">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Day" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                    <Picker WidthRequest="150" x:Name="pickerDay" BackgroundColor="Red" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Route #" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                    <Picker WidthRequest="50" x:Name="pickerRoute" BackgroundColor="Red" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Padding="0,20,0,0">
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="  Begin a New Route  " HeightRequest="75" Style="{StaticResource ButtonStyle}"
+                            Clicked="StartNewRoute" IsVisible="False" />
+                    <Button Text="Go To Route" HeightRequest="75" Style="{StaticResource ResumeButtonStyle}"
+                            Clicked="ResumePreviousRoute" />
+                </StackLayout>
+
+                <Button Text="Update Customer List (Press by Office to Refresh Customer List)" HeightRequest="75" Style="{StaticResource ClearButtonStyle}"
+                        Clicked="ButtonUpdateCustomerList" />
+                <Button Text="Upload Data (Press by Office After Finishing Route)" HeightRequest="75" Style="{StaticResource ButtonStyle}"
+                        Clicked="ButtonUploadData" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Padding="0,20,0,0">
+                <BoxView HeightRequest="2" Color="Green" />
+                <Label Text="DISPOSAL SERVICE LLC" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"
+                       HorizontalOptions="Center" TextColor="Gray" />
+                <Label x:Name="labelVersion" FontSize="12" FontAttributes="Bold" VerticalOptions="Center"
+                       HorizontalOptions="Center" TextColor="Gray" />
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

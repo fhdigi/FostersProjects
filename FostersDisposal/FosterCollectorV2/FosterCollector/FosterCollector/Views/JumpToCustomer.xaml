@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FosterCollector.Views.JumpToCustomer"
+             x:local="clr-namespace:FosterCollector.Views;assembly=FosterCollector"
+             Title="Foster's Disposal">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="42" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" Padding="10, 50, 10, 10">
+
+        <ListView x:Name="lvJumpTo">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding CustomerName}"
+                                       FontSize="Large" />
+                                <Label Text="{Binding CustomerAddress}" FontSize="Large"
+                                       HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <!-- Button to press to leave the screen and pass back the selected customer -->
+        <Button Text="Go To Selected Address" Style="{StaticResource ButtonStyle}" HeightRequest="75" Clicked="ButtonJumpToCustomer" />
+
+    </StackLayout>
+
+</ContentPage>

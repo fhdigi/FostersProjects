@@ -135,6 +135,7 @@ Public Class ReportFrames
                 Else
                     Dim basedAmount As Double = appPayObj.TransactionAmount / (1.0 + prevBal.TaxRate)
                     revenueReportList.CollectionFromTaxedCustomers += basedAmount
+                    Console .WriteLine (prevBal.TaxRate)
                     revenueReportList.TaxCollected += (appPayObj.TransactionAmount - basedAmount)
                 End If
 
@@ -186,6 +187,7 @@ Public Class ReportFrames
                             Else
                                 Dim basedAmount As Double = appPayObj.TransactionAmount/(1.0 + chObject.TaxRate)
                                 revenueReportList.CollectionFromTaxedCustomers += basedAmount
+                                Console .WriteLine (chObject.TaxRate)
                                 revenueReportList.TaxCollected += (appPayObj.TransactionAmount - basedAmount)
                             End If
 
@@ -217,6 +219,7 @@ Public Class ReportFrames
                         Else
                             Dim basedAmount As Double = appPayObj.TransactionAmount / (1.0 + chObject.TaxRate)
                             revenueReportList.CollectionFromTaxedCustomers += basedAmount
+                            Console .WriteLine (chObject.TaxRate)
                             revenueReportList.TaxCollected += (appPayObj.TransactionAmount - basedAmount)
                         End If
 
@@ -259,6 +262,7 @@ Public Class ReportFrames
             Else
                 Dim basedAmount As Double = paymentObj.Amount / (1.0 + paymentObj.RollOffObject.Customer.TaxRate)
                 revenueReportList.CollectionFromTaxedCustomers += basedAmount
+                Console .WriteLine (paymentObj.RollOffObject.Customer.TaxRate)
                 revenueReportList.TaxCollected += (paymentObj.Amount - basedAmount)
             End If
 
