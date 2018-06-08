@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailingLabelApp"
-        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing" x:Class="MailingLabelApp.MainWindow"
+        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
+        xmlns:viewModels="clr-namespace:MailingLabelApp.ViewModels"
+        x:Class="MailingLabelApp.MainWindow"
         mc:Ignorable="d"
         Title="Foster's Disposal Mailing Labels" Height="450" Width="800" WindowState="Maximized">
+
+    <Window.DataContext>
+        <viewModels:MainWindowViewModel/>
+    </Window.DataContext>
 
     <Grid>
 
@@ -17,14 +23,14 @@
 
         <StackPanel Orientation="Vertical" Margin="20,10">
 
-            <Label Content="Route Days" FontWeight="Bold" />
-            <CheckBox Content="Monday" />
-            <CheckBox Content="Tuesday" />
-            <CheckBox Content="Wednesday" />
-            <CheckBox Content="Thursday" />
-            <CheckBox Content="Friday" />
+            <Label Content="Route Days" FontWeight="Bold" Margin="0,0,0,5" />
+            <CheckBox Content="Monday" IsChecked="{Binding ShowMonday}" />
+            <CheckBox Content="Tuesday" IsChecked="{Binding ShowTuesday}" />
+            <CheckBox Content="Wednesday" IsChecked="{Binding ShowWednesday}" />
+            <CheckBox Content="Thursday" IsChecked="{Binding ShowThursday}" />
+            <CheckBox Content="Friday" IsChecked="{Binding ShowFriday}" />
 
-            <Label Content="Order By" FontWeight="Bold" Margin="0,40,0,0"/>
+            <Label Content="Order By" FontWeight="Bold" Margin="0,30,0,5"/>
             <ComboBox />
 
             <Button Content="Refresh" Margin="25,30" Click="ButtonRefresh_Click" />
