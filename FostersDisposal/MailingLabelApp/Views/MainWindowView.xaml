@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailingLabelApp"
+        xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing" x:Class="MailingLabelApp.MainWindow"
+        mc:Ignorable="d"
+        Title="Foster's Disposal Mailing Labels" Height="450" Width="800" WindowState="Maximized">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="20,10">
+
+            <Label Content="Route Days" FontWeight="Bold" />
+            <CheckBox Content="Monday" />
+            <CheckBox Content="Tuesday" />
+            <CheckBox Content="Wednesday" />
+            <CheckBox Content="Thursday" />
+            <CheckBox Content="Friday" />
+
+            <Label Content="Order By" FontWeight="Bold" Margin="0,40,0,0"/>
+            <ComboBox />
+
+            <Button Content="Refresh" Margin="25,30" Click="ButtonRefresh_Click" />
+
+        </StackPanel>
+
+        <dxp:DocumentPreviewControl x:Name="DocumentMailingReport" 
+                                    Grid.Column="1" CommandBarStyle="None" />
+
+    </Grid>
+</Window>

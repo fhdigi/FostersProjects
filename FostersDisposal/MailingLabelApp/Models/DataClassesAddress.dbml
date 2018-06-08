@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DISPOSALDATA" Class="DataClassesAddressDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-JJ1BU5E\SQLEXPRESS;Initial Catalog=DISPOSALDATA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="MailingLabelApp.Properties.Settings" SettingsPropertyName="DISPOSALDATAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RouteLocation_FirstName" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RouteLocation_LastName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RouteLocation_Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RouteLocation_City" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="RouteLocation_State" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RouteLocation_ZipCode" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Billing_FirstName" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Billing_LastName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Billing_Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Billing_City" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Billing_State" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Billing_ZipCode" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="BusinessPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PickupDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillingSameAsRoute" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TaxRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BillingType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecialInstructions" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Route" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastMonthBilled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MonthsToBill" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastPaymentAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LastPaymentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AdditionalChargeDesc1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdditionalChargeDesc2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CurrentBalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurrentBalanceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AgingBalanceCurrent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AgingBalance3Month" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AgingBalance4Month" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AgingBalance5Month" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PreviousMonthBilled" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GoInAfter" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GoInAfterAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SendToCollections" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ContinueBilling" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CollectionNotes" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="YellowTab" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PreviousSequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
