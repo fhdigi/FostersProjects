@@ -24,14 +24,12 @@
         <StackPanel Orientation="Vertical" Margin="20,10">
 
             <Label Content="Route Days" FontWeight="Bold" Margin="0,0,0,5" />
-            <CheckBox Content="Monday" IsChecked="{Binding ShowMonday}" />
-            <CheckBox Content="Tuesday" IsChecked="{Binding ShowTuesday}" />
-            <CheckBox Content="Wednesday" IsChecked="{Binding ShowWednesday}" />
-            <CheckBox Content="Thursday" IsChecked="{Binding ShowThursday}" />
-            <CheckBox Content="Friday" IsChecked="{Binding ShowFriday}" />
+            <ComboBox ItemsSource="{Binding RouteDays}" SelectedItem="{Binding SelectedRoute}"  />
 
+            <!--
             <Label Content="Order By" FontWeight="Bold" Margin="0,30,0,5"/>
-            <ComboBox />
+            <ComboBox/>
+            -->
 
             <Button Content="Refresh" Margin="25,30" Click="ButtonRefresh_Click" />
 

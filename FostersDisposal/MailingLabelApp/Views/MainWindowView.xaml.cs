@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MailingLabelApp.Models;
+using MailingLabelApp.ViewModels;
 
 namespace MailingLabelApp
 {
@@ -15,12 +16,18 @@ namespace MailingLabelApp
 
         private void ButtonRefresh_Click(object sender, RoutedEventArgs e)
         {
-            /* create the report object */
-            XtraReportLabels rpt = new XtraReportLabels { DataSource = Customer.GetCustomers() };
+            if (DataContext is MainWindowViewModel vm)
+            {
+                /* refresh the listing */
+                vm.RefreshListing();
 
-            /* pass the report object to the print preview */
-            DocumentMailingReport.DocumentSource = rpt;
-            rpt.CreateDocument(true);
+                /* create the report object */
+                XtraReportLabels rpt = new XtraReportLabels { DataSource = vm.CustomerListing };
+
+                /* pass the report object to the print preview */
+                DocumentMailingReport.DocumentSource = rpt;
+                rpt.CreateDocument(true);
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using MailingLabelApp.Models;
 
 namespace MailingLabelApp.ViewModels
@@ -6,11 +8,8 @@ namespace MailingLabelApp.ViewModels
     public class MainWindowViewModel : LcBaseViewModel
     {
         private ObservableCollection<Customer> _customerListing;
-        private bool _showMonday;
-        private bool _showTuesday;
-        private bool _showWednesday;
-        private bool _showThursday;
-        private bool _showFriday;
+        private List<string> _routeDays;
+        private string _selectedRoute;
 
         public ObservableCollection<Customer> CustomerListing
         {
@@ -18,39 +17,46 @@ namespace MailingLabelApp.ViewModels
             set => SetProperty(ref _customerListing, value);
         }
 
-        public bool ShowMonday
+        public List<string> RouteDays
         {
-            get => _showMonday;
-            set => SetProperty(ref _showMonday, value);
+            get => _routeDays;
+            set => SetProperty(ref _routeDays, value);
         }
 
-        public bool ShowTuesday
+        public string SelectedRoute
         {
-            get => _showTuesday;
-            set => SetProperty(ref _showTuesday, value);
+            get => _selectedRoute;
+            set => SetProperty(ref _selectedRoute, value);
         }
 
-        public bool ShowWednesday
+        public MainWindowViewModel()
         {
-            get => _showWednesday;
-            set => SetProperty(ref _showWednesday, value);
-        }
+            /* establish the route days */
+            RouteDays = new List<string>
+            {
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+            };
 
-        public bool ShowThursday
-        {
-            get => _showThursday;
-            set => SetProperty(ref _showThursday, value);
-        }
-
-        public bool ShowFriday
-        {
-            get => _showFriday;
-            set => SetProperty(ref _showFriday, value);
+            /* set it to all routes */
+            if (RouteDays.Count > 0) SelectedRoute = RouteDays[0];
         }
 
         public void RefreshListing()
         {
-            CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers());
+            if (SelectedRoute == "Monday")
+                CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers().Where(x => x.SequenceNumber >= 10000 && x.SequenceNumber < 20000));
+            if (SelectedRoute == "Tuesday")
+                CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers().Where(x => x.SequenceNumber >= 20000 && x.SequenceNumber < 30000));
+            if (SelectedRoute == "Wednesday")
+                CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers().Where(x => x.SequenceNumber >= 30000 && x.SequenceNumber < 40000));
+            if (SelectedRoute == "Thursday")
+                CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers().Where(x => x.SequenceNumber >= 40000 && x.SequenceNumber < 50000));
+            if (SelectedRoute == "Friday")
+                CustomerListing = new ObservableCollection<Customer>(Customer.GetCustomers().Where(x => x.SequenceNumber >= 50000 && x.SequenceNumber < 60000));
         }
     }
 }
