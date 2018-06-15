@@ -1064,4 +1064,11 @@ Public Class MainOfficeForm
         End If
     End Sub
 
+    Private Sub MailingLabelsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MailingLabelsToolStripMenuItem.Click
+
+        Dim mailingLabelApp As String = "C:\Business\MailingLabelApp\MailingLabelApp.exe"
+        Process.Start(mailingLabelApp)
+
+    End Sub
+
 End Class

@@ -132,6 +132,7 @@ Partial Class MainOfficeForm
         Me.ToolStripButtonRevenueReport = New System.Windows.Forms.ToolStripButton()
         Me.StatusStripMain = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabelBalancing = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MailingLabelsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.CCustomerListBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
         Me.MenuStrip1.SuspendLayout
         CType(Me.SplitContainerMain,System.ComponentModel.ISupportInitialize).BeginInit
@@ -163,7 +164,7 @@ Partial Class MainOfficeForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.RoutesToolStripMenuItem, Me.CollectionItemsToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.RoutesToolStripMenuItem, Me.CollectionItemsToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.MailingLabelsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1291, 24)
@@ -1004,6 +1005,12 @@ Partial Class MainOfficeForm
         Me.ToolStripStatusLabelBalancing.Name = "ToolStripStatusLabelBalancing"
         Me.ToolStripStatusLabelBalancing.Size = New System.Drawing.Size(0, 17)
         '
+        'MailingLabelsToolStripMenuItem
+        '
+        Me.MailingLabelsToolStripMenuItem.Name = "MailingLabelsToolStripMenuItem"
+        Me.MailingLabelsToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
+        Me.MailingLabelsToolStripMenuItem.Text = "Mailing Labels"
+        '
         'MainOfficeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -1161,5 +1168,5 @@ End Sub
     Friend WithEvents CustomerContainerReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LastBilledReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UploadCurrentRouteDataToFTPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
+    Friend WithEvents MailingLabelsToolStripMenuItem As ToolStripMenuItem
 End Class

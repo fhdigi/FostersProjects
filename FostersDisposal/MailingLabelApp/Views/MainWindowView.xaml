@@ -33,6 +33,8 @@
 
             <Button Content="Refresh" Margin="25,30" Click="ButtonRefresh_Click" />
 
+            <Button Content="Print" Margin="25,50" Click="ButtonPrint_Click" />
+
         </StackPanel>
 
         <dxp:DocumentPreviewControl x:Name="DocumentMailingReport" 
