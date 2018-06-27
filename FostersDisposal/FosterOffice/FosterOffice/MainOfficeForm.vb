@@ -201,24 +201,24 @@ Public Class MainOfficeForm
         RefreshAllCurrentBalancesToolStripMenuItem.Visible = True
         CollectionItemsToolStripMenuItem.Visible = True
         SequenceNumberDistributionToolStripMenuItem.Visible = True
-        UpdateBillingAmountsToolStripMenuItem.Visible = True 
+        UpdateBillingAmountsToolStripMenuItem.Visible = True
         ReprintBillsToolStripMenuItem.Visible = True
-        
+
         ' ----- Reports Menu 
-        CustomerListingTypeDEFBillingToolStripMenuItem.Visible = true
+        CustomerListingTypeDEFBillingToolStripMenuItem.Visible = True
         ResidentialRouteCountsToolStripMenuItem.Visible = True
         YellowTabReportToolStripMenuItem.Visible = True
-        ShowCustomersWithPurchaseOrdersToolStripMenuItem.Visible = false
+        ShowCustomersWithPurchaseOrdersToolStripMenuItem.Visible = False
         LastBilledReportToolStripMenuItem.Visible = True
 
         ' ----- Menus we need not see 
         ContainerRouteListingsToolStripMenuItem.Visible = False
         EnterRentalCustomerRouteDataToolStripMenuItem.Visible = False
-        CopyCommercialDataFromResidentialToolStripMenuItem.Visible = False 
+        CopyCommercialDataFromResidentialToolStripMenuItem.Visible = False
         CustomerContainerReportToolStripMenuItem.Visible = False
 
         ' ----- For new FTP upload
-        UploadCurrentRouteDataToFTPToolStripMenuItem .Visible = true
+        UploadCurrentRouteDataToFTPToolStripMenuItem.Visible = True
 
 #End If
 
@@ -457,21 +457,21 @@ Public Class MainOfficeForm
 
         Try
 
-        ' ----- Create a customer listing object file 
-        Customer.CreateCustomerList(My.Settings.DatabaseLocation)
+            ' ----- Create a customer listing object file 
+            Customer.CreateCustomerList(My.Settings.DatabaseLocation)
 
-        ' ----- Now copy the file to the FTP site
-        Dim ftpClient As New FTPHelper.Client("ftp://www.lccsny.com/foster", "0083045|lccsnycom00", "captmo28")
-        ftpClient.UploadFile(My.Application.Info.DirectoryPath & "\CustomerList.dat", "CustomerList.dat")
+            ' ----- Now copy the file to the FTP site
+            Dim ftpClient As New FTPHelper.Client("ftp://www.lccsny.com/foster", "0083045|lccsnycom00", "captmo28")
+            ftpClient.UploadFile(My.Application.Info.DirectoryPath & "\CustomerList.dat", "CustomerList.dat")
 
-        ' ----- Tell the user
-        MessageBox.Show("The route has been uploaded to the FTP site.")
+            ' ----- Tell the user
+            MessageBox.Show("The route has been uploaded to the FTP site.")
 
         Catch ex As Exception
 
-            Dim errorString As String = String.Format ("There was an error uploading the customer listing.  The error message is {0}.  Please contact LCCS and report this error message.  Thank you", ex.Message)
-            MessageBox .Show (errorString, "Error", MessageBoxButtons.OK ,MessageBoxIcon.Information ) 
-        
+            Dim errorString As String = String.Format("There was an error uploading the customer listing.  The error message is {0}.  Please contact LCCS and report this error message.  Thank you", ex.Message)
+            MessageBox.Show(errorString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         End Try
 
         ' ----- Reset the cursor 
@@ -1066,9 +1066,14 @@ Public Class MainOfficeForm
 
     Private Sub MailingLabelsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MailingLabelsToolStripMenuItem.Click
 
-        Dim mailingLabelApp As String = "C:\Business\MailingLabelApp\MailingLabelApp.exe"
+        Dim mailingLabelApp As String = "..\MailingLabelApp\MailingLabelApp.exe"
         Process.Start(mailingLabelApp)
 
+    End Sub
+
+    Private Sub ButtonBalanceRefresh_Click(sender As Object, e As EventArgs) Handles ButtonBalanceRefresh.Click
+        Customer.SetCustomerBalances(My.Settings.DatabaseLocation, selectedCustomerNumber)
+        UpdateCustomerGrid()
     End Sub
 
 End Class

@@ -23,12 +23,12 @@ Partial Class BillingReview
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewItems = New System.Windows.Forms.DataGridView()
         Me.colDescription = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,45 +50,46 @@ Partial Class BillingReview
         Me.ListBoxCustomers = New System.Windows.Forms.ListBox()
         Me.LabelTotalAmount = New System.Windows.Forms.Label()
         Me.LabelCurrentBalance = New System.Windows.Forms.Label()
-        Me.ButtonPreview = New System.Windows.Forms.Button()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ButtonSearch = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBoxClosedAccounts = New System.Windows.Forms.PictureBox()
         Me.LabelSaved = New System.Windows.Forms.Label()
-        Me.PictureBoxSaved = New System.Windows.Forms.PictureBox()
         Me.LabelGenerate = New System.Windows.Forms.Label()
-        Me.PictureBoxGenerate = New System.Windows.Forms.PictureBox()
         Me.LabelHeader = New System.Windows.Forms.Label()
         Me.DataGridViewHistory = New System.Windows.Forms.DataGridView()
         Me.colTransID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colCustomerID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonPreviewSelectedBill = New System.Windows.Forms.Button()
         Me.TransactionDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TransactionDescDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TransactionAmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RunningBalanceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CCustomerHistoryLineItemsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PictureBoxClosedAccounts = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxSaved = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxGenerate = New System.Windows.Forms.PictureBox()
         Me.ButtonSaveCurrentBill = New System.Windows.Forms.Button()
         Me.ButtonCreateBills = New System.Windows.Forms.Button()
+        Me.ButtonPreview = New System.Windows.Forms.Button()
         Me.ButtonResetData = New System.Windows.Forms.Button()
-        Me.ButtonPreviewSelectedBill = New System.Windows.Forms.Button()
-        CType(Me.DataGridViewItems, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxSaved, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxGenerate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        CType(Me.DataGridViewItems,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.Panel1.SuspendLayout
+        CType(Me.DataGridViewHistory,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.CCustomerHistoryLineItemsBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBoxClosedAccounts,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBoxSaved,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.PictureBoxGenerate,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'DataGridViewItems
         '
-        Me.DataGridViewItems.AllowUserToAddRows = False
-        Me.DataGridViewItems.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridViewItems.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridViewItems.AllowUserToAddRows = false
+        Me.DataGridViewItems.AllowUserToDeleteRows = false
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.DataGridViewItems.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDescription, Me.colAmount})
         Me.DataGridViewItems.Location = New System.Drawing.Point(523, 164)
@@ -104,14 +105,14 @@ Partial Class BillingReview
         '
         'colAmount
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.colAmount.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.colAmount.DefaultCellStyle = DataGridViewCellStyle2
         Me.colAmount.HeaderText = "Amount"
         Me.colAmount.Name = "colAmount"
         '
         'LabelCustomer
         '
-        Me.LabelCustomer.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCustomer.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelCustomer.Location = New System.Drawing.Point(520, 57)
         Me.LabelCustomer.Name = "LabelCustomer"
         Me.LabelCustomer.Size = New System.Drawing.Size(172, 20)
@@ -119,7 +120,7 @@ Partial Class BillingReview
         '
         'LabelAcctNumber
         '
-        Me.LabelAcctNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAcctNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelAcctNumber.ForeColor = System.Drawing.Color.Blue
         Me.LabelAcctNumber.Location = New System.Drawing.Point(520, 85)
         Me.LabelAcctNumber.Name = "LabelAcctNumber"
@@ -128,7 +129,7 @@ Partial Class BillingReview
         '
         'LabelSeqNumber
         '
-        Me.LabelSeqNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSeqNumber.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelSeqNumber.ForeColor = System.Drawing.Color.Blue
         Me.LabelSeqNumber.Location = New System.Drawing.Point(520, 113)
         Me.LabelSeqNumber.Name = "LabelSeqNumber"
@@ -195,7 +196,7 @@ Partial Class BillingReview
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.AutoSize = true
         Me.Label1.Location = New System.Drawing.Point(140, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 13)
@@ -209,7 +210,7 @@ Partial Class BillingReview
         Me.ButtonPrevious.Size = New System.Drawing.Size(75, 23)
         Me.ButtonPrevious.TabIndex = 5
         Me.ButtonPrevious.Text = "<< Previous"
-        Me.ButtonPrevious.UseVisualStyleBackColor = True
+        Me.ButtonPrevious.UseVisualStyleBackColor = true
         '
         'ButtonNext
         '
@@ -218,7 +219,7 @@ Partial Class BillingReview
         Me.ButtonNext.Size = New System.Drawing.Size(75, 23)
         Me.ButtonNext.TabIndex = 5
         Me.ButtonNext.Text = "Next >>"
-        Me.ButtonNext.UseVisualStyleBackColor = True
+        Me.ButtonNext.UseVisualStyleBackColor = true
         '
         'ButtonRefresh
         '
@@ -227,11 +228,11 @@ Partial Class BillingReview
         Me.ButtonRefresh.Size = New System.Drawing.Size(75, 23)
         Me.ButtonRefresh.TabIndex = 6
         Me.ButtonRefresh.Text = "Refresh"
-        Me.ButtonRefresh.UseVisualStyleBackColor = True
+        Me.ButtonRefresh.UseVisualStyleBackColor = true
         '
         'ListBoxCustomers
         '
-        Me.ListBoxCustomers.FormattingEnabled = True
+        Me.ListBoxCustomers.FormattingEnabled = true
         Me.ListBoxCustomers.Location = New System.Drawing.Point(146, 125)
         Me.ListBoxCustomers.Name = "ListBoxCustomers"
         Me.ListBoxCustomers.Size = New System.Drawing.Size(343, 550)
@@ -239,7 +240,7 @@ Partial Class BillingReview
         '
         'LabelTotalAmount
         '
-        Me.LabelTotalAmount.AutoSize = True
+        Me.LabelTotalAmount.AutoSize = true
         Me.LabelTotalAmount.Location = New System.Drawing.Point(178, 402)
         Me.LabelTotalAmount.Name = "LabelTotalAmount"
         Me.LabelTotalAmount.Size = New System.Drawing.Size(0, 13)
@@ -247,23 +248,12 @@ Partial Class BillingReview
         '
         'LabelCurrentBalance
         '
-        Me.LabelCurrentBalance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCurrentBalance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelCurrentBalance.ForeColor = System.Drawing.Color.Blue
         Me.LabelCurrentBalance.Location = New System.Drawing.Point(520, 138)
         Me.LabelCurrentBalance.Name = "LabelCurrentBalance"
         Me.LabelCurrentBalance.Size = New System.Drawing.Size(371, 20)
         Me.LabelCurrentBalance.TabIndex = 8
-        '
-        'ButtonPreview
-        '
-        Me.ButtonPreview.Image = Global.FosterOffice.My.Resources.Resources.Preview
-        Me.ButtonPreview.Location = New System.Drawing.Point(968, 272)
-        Me.ButtonPreview.Name = "ButtonPreview"
-        Me.ButtonPreview.Size = New System.Drawing.Size(156, 30)
-        Me.ButtonPreview.TabIndex = 10
-        Me.ButtonPreview.Text = "   Preview Bills..."
-        Me.ButtonPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ButtonPreview.UseVisualStyleBackColor = True
         '
         'TextBoxSearch
         '
@@ -274,7 +264,7 @@ Partial Class BillingReview
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.Location = New System.Drawing.Point(159, 88)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
@@ -288,7 +278,7 @@ Partial Class BillingReview
         Me.ButtonSearch.Size = New System.Drawing.Size(27, 21)
         Me.ButtonSearch.TabIndex = 13
         Me.ButtonSearch.Text = "?"
-        Me.ButtonSearch.UseVisualStyleBackColor = True
+        Me.ButtonSearch.UseVisualStyleBackColor = true
         '
         'Panel1
         '
@@ -308,7 +298,7 @@ Partial Class BillingReview
         'Label3
         '
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label3.Location = New System.Drawing.Point(3, 225)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 22)
@@ -316,21 +306,10 @@ Partial Class BillingReview
         Me.Label3.Text = "Closed Accounts"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBoxClosedAccounts
-        '
-        Me.PictureBoxClosedAccounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxClosedAccounts.Image = Global.FosterOffice.My.Resources.Resources.Receipt_Edit
-        Me.PictureBoxClosedAccounts.Location = New System.Drawing.Point(48, 187)
-        Me.PictureBoxClosedAccounts.Name = "PictureBoxClosedAccounts"
-        Me.PictureBoxClosedAccounts.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBoxClosedAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBoxClosedAccounts.TabIndex = 2
-        Me.PictureBoxClosedAccounts.TabStop = False
-        '
         'LabelSaved
         '
         Me.LabelSaved.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LabelSaved.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSaved.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelSaved.Location = New System.Drawing.Point(3, 142)
         Me.LabelSaved.Name = "LabelSaved"
         Me.LabelSaved.Size = New System.Drawing.Size(122, 22)
@@ -338,21 +317,10 @@ Partial Class BillingReview
         Me.LabelSaved.Text = "Saved"
         Me.LabelSaved.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBoxSaved
-        '
-        Me.PictureBoxSaved.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxSaved.Image = Global.FosterOffice.My.Resources.Resources.Database
-        Me.PictureBoxSaved.Location = New System.Drawing.Point(48, 104)
-        Me.PictureBoxSaved.Name = "PictureBoxSaved"
-        Me.PictureBoxSaved.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBoxSaved.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBoxSaved.TabIndex = 0
-        Me.PictureBoxSaved.TabStop = False
-        '
         'LabelGenerate
         '
         Me.LabelGenerate.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LabelGenerate.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelGenerate.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelGenerate.Location = New System.Drawing.Point(3, 62)
         Me.LabelGenerate.Name = "LabelGenerate"
         Me.LabelGenerate.Size = New System.Drawing.Size(122, 22)
@@ -360,23 +328,12 @@ Partial Class BillingReview
         Me.LabelGenerate.Text = "Generate "
         Me.LabelGenerate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PictureBoxGenerate
-        '
-        Me.PictureBoxGenerate.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBoxGenerate.Image = Global.FosterOffice.My.Resources.Resources.Form_Wizard
-        Me.PictureBoxGenerate.Location = New System.Drawing.Point(48, 24)
-        Me.PictureBoxGenerate.Name = "PictureBoxGenerate"
-        Me.PictureBoxGenerate.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBoxGenerate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBoxGenerate.TabIndex = 0
-        Me.PictureBoxGenerate.TabStop = False
-        '
         'LabelHeader
         '
-        Me.LabelHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LabelHeader.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.LabelHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.LabelHeader.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.LabelHeader.ForeColor = System.Drawing.Color.Blue
         Me.LabelHeader.Location = New System.Drawing.Point(127, -1)
         Me.LabelHeader.Name = "LabelHeader"
@@ -387,19 +344,19 @@ Partial Class BillingReview
         '
         'DataGridViewHistory
         '
-        Me.DataGridViewHistory.AllowUserToAddRows = False
-        Me.DataGridViewHistory.AllowUserToDeleteRows = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridViewHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewHistory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridViewHistory.AutoGenerateColumns = False
+        Me.DataGridViewHistory.AllowUserToAddRows = false
+        Me.DataGridViewHistory.AllowUserToDeleteRows = false
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.DataGridViewHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewHistory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewHistory.AutoGenerateColumns = false
         Me.DataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewHistory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colTransID, Me.colCustomerID, Me.TransactionDateDataGridViewTextBoxColumn, Me.TransactionDescDataGridViewTextBoxColumn, Me.TransactionAmountDataGridViewTextBoxColumn, Me.RunningBalanceDataGridViewTextBoxColumn})
         Me.DataGridViewHistory.DataSource = Me.CCustomerHistoryLineItemsBindingSource
         Me.DataGridViewHistory.Location = New System.Drawing.Point(523, 437)
         Me.DataGridViewHistory.Name = "DataGridViewHistory"
-        Me.DataGridViewHistory.ReadOnly = True
+        Me.DataGridViewHistory.ReadOnly = true
         Me.DataGridViewHistory.Size = New System.Drawing.Size(601, 242)
         Me.DataGridViewHistory.TabIndex = 20
         '
@@ -408,94 +365,27 @@ Partial Class BillingReview
         Me.colTransID.DataPropertyName = "TransactionID"
         Me.colTransID.HeaderText = "TransID"
         Me.colTransID.Name = "colTransID"
-        Me.colTransID.ReadOnly = True
-        Me.colTransID.Visible = False
+        Me.colTransID.ReadOnly = true
+        Me.colTransID.Visible = false
         '
         'colCustomerID
         '
         Me.colCustomerID.DataPropertyName = "CustomerID"
         Me.colCustomerID.HeaderText = "CustomerID"
         Me.colCustomerID.Name = "colCustomerID"
-        Me.colCustomerID.ReadOnly = True
-        Me.colCustomerID.Visible = False
+        Me.colCustomerID.ReadOnly = true
+        Me.colCustomerID.Visible = false
         '
-        'TransactionDateDataGridViewTextBoxColumn
+        'Button1
         '
-        Me.TransactionDateDataGridViewTextBoxColumn.DataPropertyName = "TransactionDate"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.Format = "d"
-        DataGridViewCellStyle10.NullValue = Nothing
-        Me.TransactionDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
-        Me.TransactionDateDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.TransactionDateDataGridViewTextBoxColumn.Name = "TransactionDateDataGridViewTextBoxColumn"
-        Me.TransactionDateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TransactionDescDataGridViewTextBoxColumn
-        '
-        Me.TransactionDescDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TransactionDescDataGridViewTextBoxColumn.DataPropertyName = "TransactionDesc"
-        Me.TransactionDescDataGridViewTextBoxColumn.HeaderText = "Description"
-        Me.TransactionDescDataGridViewTextBoxColumn.Name = "TransactionDescDataGridViewTextBoxColumn"
-        Me.TransactionDescDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TransactionAmountDataGridViewTextBoxColumn
-        '
-        Me.TransactionAmountDataGridViewTextBoxColumn.DataPropertyName = "TransactionAmount"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        DataGridViewCellStyle11.NullValue = "0.00"
-        Me.TransactionAmountDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
-        Me.TransactionAmountDataGridViewTextBoxColumn.HeaderText = "Amount"
-        Me.TransactionAmountDataGridViewTextBoxColumn.Name = "TransactionAmountDataGridViewTextBoxColumn"
-        Me.TransactionAmountDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RunningBalanceDataGridViewTextBoxColumn
-        '
-        Me.RunningBalanceDataGridViewTextBoxColumn.DataPropertyName = "RunningBalance"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle12.Format = "N2"
-        DataGridViewCellStyle12.NullValue = "0.00"
-        Me.RunningBalanceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
-        Me.RunningBalanceDataGridViewTextBoxColumn.HeaderText = "Balance"
-        Me.RunningBalanceDataGridViewTextBoxColumn.Name = "RunningBalanceDataGridViewTextBoxColumn"
-        Me.RunningBalanceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CCustomerHistoryLineItemsBindingSource
-        '
-        Me.CCustomerHistoryLineItemsBindingSource.DataSource = GetType(PickupTransaction.Customer.CCustomerHistory.CCustomerHistoryLineItems)
-        '
-        'ButtonSaveCurrentBill
-        '
-        Me.ButtonSaveCurrentBill.Image = Global.FosterOffice.My.Resources.Resources.Save
-        Me.ButtonSaveCurrentBill.Location = New System.Drawing.Point(968, 200)
-        Me.ButtonSaveCurrentBill.Name = "ButtonSaveCurrentBill"
-        Me.ButtonSaveCurrentBill.Size = New System.Drawing.Size(156, 30)
-        Me.ButtonSaveCurrentBill.TabIndex = 11
-        Me.ButtonSaveCurrentBill.Text = "   Save Current Bill"
-        Me.ButtonSaveCurrentBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ButtonSaveCurrentBill.UseVisualStyleBackColor = True
-        '
-        'ButtonCreateBills
-        '
-        Me.ButtonCreateBills.Image = Global.FosterOffice.My.Resources.Resources.Billing
-        Me.ButtonCreateBills.Location = New System.Drawing.Point(968, 164)
-        Me.ButtonCreateBills.Name = "ButtonCreateBills"
-        Me.ButtonCreateBills.Size = New System.Drawing.Size(155, 30)
-        Me.ButtonCreateBills.TabIndex = 11
-        Me.ButtonCreateBills.Text = "   Create Bills"
-        Me.ButtonCreateBills.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ButtonCreateBills.UseVisualStyleBackColor = True
-        '
-        'ButtonResetData
-        '
-        Me.ButtonResetData.Image = Global.FosterOffice.My.Resources.Resources.delete_12x12
-        Me.ButtonResetData.Location = New System.Drawing.Point(968, 236)
-        Me.ButtonResetData.Name = "ButtonResetData"
-        Me.ButtonResetData.Size = New System.Drawing.Size(156, 30)
-        Me.ButtonResetData.TabIndex = 9
-        Me.ButtonResetData.Text = "   Delete Bill / Reset"
-        Me.ButtonResetData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ButtonResetData.UseVisualStyleBackColor = True
+        Me.Button1.Image = Global.FosterOffice.My.Resources.Resources.Receipt_Options
+        Me.Button1.Location = New System.Drawing.Point(968, 344)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 30)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "   Adjust Bill Date..."
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'ButtonPreviewSelectedBill
         '
@@ -506,13 +396,136 @@ Partial Class BillingReview
         Me.ButtonPreviewSelectedBill.TabIndex = 21
         Me.ButtonPreviewSelectedBill.Text = "   Preview Selected Bill..."
         Me.ButtonPreviewSelectedBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ButtonPreviewSelectedBill.UseVisualStyleBackColor = True
+        Me.ButtonPreviewSelectedBill.UseVisualStyleBackColor = true
+        '
+        'TransactionDateDataGridViewTextBoxColumn
+        '
+        Me.TransactionDateDataGridViewTextBoxColumn.DataPropertyName = "TransactionDate"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Format = "d"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.TransactionDateDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        Me.TransactionDateDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.TransactionDateDataGridViewTextBoxColumn.Name = "TransactionDateDataGridViewTextBoxColumn"
+        Me.TransactionDateDataGridViewTextBoxColumn.ReadOnly = true
+        '
+        'TransactionDescDataGridViewTextBoxColumn
+        '
+        Me.TransactionDescDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TransactionDescDataGridViewTextBoxColumn.DataPropertyName = "TransactionDesc"
+        Me.TransactionDescDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.TransactionDescDataGridViewTextBoxColumn.Name = "TransactionDescDataGridViewTextBoxColumn"
+        Me.TransactionDescDataGridViewTextBoxColumn.ReadOnly = true
+        '
+        'TransactionAmountDataGridViewTextBoxColumn
+        '
+        Me.TransactionAmountDataGridViewTextBoxColumn.DataPropertyName = "TransactionAmount"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        DataGridViewCellStyle5.NullValue = "0.00"
+        Me.TransactionAmountDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        Me.TransactionAmountDataGridViewTextBoxColumn.HeaderText = "Amount"
+        Me.TransactionAmountDataGridViewTextBoxColumn.Name = "TransactionAmountDataGridViewTextBoxColumn"
+        Me.TransactionAmountDataGridViewTextBoxColumn.ReadOnly = true
+        '
+        'RunningBalanceDataGridViewTextBoxColumn
+        '
+        Me.RunningBalanceDataGridViewTextBoxColumn.DataPropertyName = "RunningBalance"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = "0.00"
+        Me.RunningBalanceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
+        Me.RunningBalanceDataGridViewTextBoxColumn.HeaderText = "Balance"
+        Me.RunningBalanceDataGridViewTextBoxColumn.Name = "RunningBalanceDataGridViewTextBoxColumn"
+        Me.RunningBalanceDataGridViewTextBoxColumn.ReadOnly = true
+        '
+        'CCustomerHistoryLineItemsBindingSource
+        '
+        Me.CCustomerHistoryLineItemsBindingSource.DataSource = GetType(PickupTransaction.Customer.CCustomerHistory.CCustomerHistoryLineItems)
+        '
+        'PictureBoxClosedAccounts
+        '
+        Me.PictureBoxClosedAccounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxClosedAccounts.Image = Global.FosterOffice.My.Resources.Resources.Receipt_Edit
+        Me.PictureBoxClosedAccounts.Location = New System.Drawing.Point(48, 187)
+        Me.PictureBoxClosedAccounts.Name = "PictureBoxClosedAccounts"
+        Me.PictureBoxClosedAccounts.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBoxClosedAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBoxClosedAccounts.TabIndex = 2
+        Me.PictureBoxClosedAccounts.TabStop = false
+        '
+        'PictureBoxSaved
+        '
+        Me.PictureBoxSaved.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxSaved.Image = Global.FosterOffice.My.Resources.Resources.Database
+        Me.PictureBoxSaved.Location = New System.Drawing.Point(48, 104)
+        Me.PictureBoxSaved.Name = "PictureBoxSaved"
+        Me.PictureBoxSaved.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBoxSaved.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBoxSaved.TabIndex = 0
+        Me.PictureBoxSaved.TabStop = false
+        '
+        'PictureBoxGenerate
+        '
+        Me.PictureBoxGenerate.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBoxGenerate.Image = Global.FosterOffice.My.Resources.Resources.Form_Wizard
+        Me.PictureBoxGenerate.Location = New System.Drawing.Point(48, 24)
+        Me.PictureBoxGenerate.Name = "PictureBoxGenerate"
+        Me.PictureBoxGenerate.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBoxGenerate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBoxGenerate.TabIndex = 0
+        Me.PictureBoxGenerate.TabStop = false
+        '
+        'ButtonSaveCurrentBill
+        '
+        Me.ButtonSaveCurrentBill.Image = Global.FosterOffice.My.Resources.Resources.Save
+        Me.ButtonSaveCurrentBill.Location = New System.Drawing.Point(968, 200)
+        Me.ButtonSaveCurrentBill.Name = "ButtonSaveCurrentBill"
+        Me.ButtonSaveCurrentBill.Size = New System.Drawing.Size(156, 30)
+        Me.ButtonSaveCurrentBill.TabIndex = 11
+        Me.ButtonSaveCurrentBill.Text = "   Save Current Bill"
+        Me.ButtonSaveCurrentBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ButtonSaveCurrentBill.UseVisualStyleBackColor = true
+        '
+        'ButtonCreateBills
+        '
+        Me.ButtonCreateBills.Image = Global.FosterOffice.My.Resources.Resources.Billing
+        Me.ButtonCreateBills.Location = New System.Drawing.Point(968, 164)
+        Me.ButtonCreateBills.Name = "ButtonCreateBills"
+        Me.ButtonCreateBills.Size = New System.Drawing.Size(155, 30)
+        Me.ButtonCreateBills.TabIndex = 11
+        Me.ButtonCreateBills.Text = "   Create Bills"
+        Me.ButtonCreateBills.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ButtonCreateBills.UseVisualStyleBackColor = true
+        '
+        'ButtonPreview
+        '
+        Me.ButtonPreview.Image = Global.FosterOffice.My.Resources.Resources.Preview
+        Me.ButtonPreview.Location = New System.Drawing.Point(968, 272)
+        Me.ButtonPreview.Name = "ButtonPreview"
+        Me.ButtonPreview.Size = New System.Drawing.Size(156, 30)
+        Me.ButtonPreview.TabIndex = 10
+        Me.ButtonPreview.Text = "   Preview Bills..."
+        Me.ButtonPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ButtonPreview.UseVisualStyleBackColor = true
+        '
+        'ButtonResetData
+        '
+        Me.ButtonResetData.Image = Global.FosterOffice.My.Resources.Resources.delete_12x12
+        Me.ButtonResetData.Location = New System.Drawing.Point(968, 236)
+        Me.ButtonResetData.Name = "ButtonResetData"
+        Me.ButtonResetData.Size = New System.Drawing.Size(156, 30)
+        Me.ButtonResetData.TabIndex = 9
+        Me.ButtonResetData.Text = "   Delete Bill / Reset"
+        Me.ButtonResetData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ButtonResetData.UseVisualStyleBackColor = true
         '
         'BillingReview
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1135, 697)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonPreviewSelectedBill)
         Me.Controls.Add(Me.DataGridViewHistory)
         Me.Controls.Add(Me.LabelHeader)
@@ -543,27 +556,27 @@ Partial Class BillingReview
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LabelCustomer)
         Me.Controls.Add(Me.DataGridViewItems)
-        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.MaximizeBox = false
+        Me.MinimizeBox = false
         Me.Name = "BillingReview"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
+        Me.ShowIcon = false
+        Me.ShowInTaskbar = false
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Billing Review"
-        CType(Me.DataGridViewItems, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBoxClosedAccounts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxSaved, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxGenerate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.DataGridViewItems,System.ComponentModel.ISupportInitialize).EndInit
+        Me.Panel1.ResumeLayout(false)
+        Me.Panel1.PerformLayout
+        CType(Me.DataGridViewHistory,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.CCustomerHistoryLineItemsBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBoxClosedAccounts,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBoxSaved,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBoxGenerate,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents DataGridViewItems As System.Windows.Forms.DataGridView
     Friend WithEvents LabelCustomer As System.Windows.Forms.Label
     Friend WithEvents LabelAcctNumber As System.Windows.Forms.Label
@@ -609,4 +622,5 @@ Partial Class BillingReview
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PictureBoxClosedAccounts As System.Windows.Forms.PictureBox
     Friend WithEvents ButtonPreviewSelectedBill As Button
+    Friend WithEvents Button1 As Button
 End Class

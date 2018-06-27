@@ -273,6 +273,12 @@
     <Compile Include="GUI\RetailProgram\AddNewItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GUI\RetailProgram\AdjustBillDate.Designer.vb">
+      <DependentUpon>AdjustBillDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RetailProgram\AdjustBillDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\RetailProgram\BillingForm.Designer.vb">
       <DependentUpon>BillingForm.vb</DependentUpon>
     </Compile>
@@ -596,6 +602,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RetailProgram\AddNewItem.resx">
       <DependentUpon>AddNewItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RetailProgram\AdjustBillDate.resx">
+      <DependentUpon>AdjustBillDate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RetailProgram\BillingForm.resx">
       <DependentUpon>BillingForm.vb</DependentUpon>

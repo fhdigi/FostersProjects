@@ -158,7 +158,7 @@ Public Class Customer
         Public Property WorkingList As New List(Of Customer)
         Public Property MinimumSequenceNumber As Integer = 99999
         Public Property MaximumSequenceNumber As Integer = 0
-        
+
         Public Sub GetData()
 
             Dim LookupRouteDesc(5, 4) As String
@@ -368,36 +368,36 @@ Public Class Customer
         If dayOfTheWeek > 0 Then
 
             Dim custList = From c In db.Customers
-                          Where c.PickupDay = dayOfTheWeek And c.SequenceNumber > seqNumStart And c.SequenceNumber < seqNumEnd And c.Route <> 0
-                          Order By c.PickupDay, c.SequenceNumber
-                          Select New CCustomerList With
-                                 {
-                                     .SequenceNumber = c.SequenceNumber,
-                                     .AccountNumber = c.CustomerNumber,
-                                     .CustomerName = c.FullName,
-                                     .CustomerAddress = c.RouteLocation_Address,
-                                     .CompleteAddressWithCSZ = c.RouteLocation_Address & " " & c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode,
-                                     .SpecialInstructions = c.SpecialInstructions,
-                                     .Route = c.Route
-                                 }
+                           Where c.PickupDay = dayOfTheWeek And c.SequenceNumber > seqNumStart And c.SequenceNumber < seqNumEnd And c.Route <> 0
+                           Order By c.PickupDay, c.SequenceNumber
+                           Select New CCustomerList With
+                                  {
+                                      .SequenceNumber = c.SequenceNumber,
+                                      .AccountNumber = c.CustomerNumber,
+                                      .CustomerName = c.FullName,
+                                      .CustomerAddress = c.RouteLocation_Address,
+                                      .CompleteAddressWithCSZ = c.RouteLocation_Address & " " & c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode,
+                                      .SpecialInstructions = c.SpecialInstructions,
+                                      .Route = c.Route
+                                  }
 
             Return custList.ToList
 
         Else
 
             Dim custList = From c In db.Customers
-                       Where c.SequenceNumber >= seqNumStart And c.SequenceNumber <= seqNumEnd And c.Route <> 0
-                       Order By c.PickupDay, c.SequenceNumber
-                       Select New CCustomerList With
-                              {
-                                  .SequenceNumber = c.SequenceNumber,
-                                  .AccountNumber = c.CustomerNumber,
-                                  .CustomerName = c.FullName,
-                                  .CustomerAddress = c.RouteLocation_Address,
-                                  .CompleteAddressWithCSZ = c.RouteLocation_Address & " " & c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode,
-                                  .SpecialInstructions = c.SpecialInstructions,
-                                  .Route = c.Route
-                              }
+                           Where c.SequenceNumber >= seqNumStart And c.SequenceNumber <= seqNumEnd And c.Route <> 0
+                           Order By c.PickupDay, c.SequenceNumber
+                           Select New CCustomerList With
+                                  {
+                                      .SequenceNumber = c.SequenceNumber,
+                                      .AccountNumber = c.CustomerNumber,
+                                      .CustomerName = c.FullName,
+                                      .CustomerAddress = c.RouteLocation_Address,
+                                      .CompleteAddressWithCSZ = c.RouteLocation_Address & " " & c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode,
+                                      .SpecialInstructions = c.SpecialInstructions,
+                                      .Route = c.Route
+                                  }
 
             Return custList.ToList
 
@@ -497,8 +497,8 @@ Public Class Customer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.Customers
-                  Where c.CustomerNumber = Me.CustomerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = Me.CustomerNumber
+                   Select c).SingleOrDefault
 
         db.Customers.DeleteOnSubmit(obj)
         db.SubmitChanges()
@@ -518,8 +518,8 @@ Public Class Customer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.Customers
-                  Where c.CustomerNumber = customerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = customerNumber
+                   Select c).SingleOrDefault
 
         With obj
             If .PreviousMonthBilled <> .LastMonthBilled Or .PreviousMonthBilled Is Nothing Then .PreviousMonthBilled = .LastMonthBilled
@@ -535,8 +535,8 @@ Public Class Customer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.Customers
-                  Where c.CustomerNumber = customerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = customerNumber
+                   Select c).SingleOrDefault
 
         If Not obj.PreviousMonthBilled Is Nothing Then
             obj.LastMonthBilled = obj.PreviousMonthBilled
@@ -554,8 +554,8 @@ Public Class Customer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.Customers
-                  Where c.CustomerNumber = Me.CustomerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = Me.CustomerNumber
+                   Select c).SingleOrDefault
 
         With obj
             .SequenceNumber = Me.SequenceNumber
@@ -625,8 +625,8 @@ Public Class Customer
             Dim db As New DisposalData(ConnectionString)
 
             Dim cust = (From c In db.Customers
-                       Order By c.Billing_LastName, c.Billing_FirstName
-                       Select c).ToList
+                        Order By c.Billing_LastName, c.Billing_FirstName
+                        Select c).ToList
 
             Return cust
         Catch ex As Exception
@@ -688,33 +688,33 @@ Public Class Customer
 
             ' ----- Select all of the customers that are on the report billing cycle 
             Dim custListWithBalance = (From c In customerDict.Values
-                                      Where (c.AgingBalance3Month > 0.0 Or c.AgingBalance4Month > 0 Or c.AgingBalance5Month > 0) And c.LastMonthBilled = monthIndex
-                                      Order By c.Billing_LastName, c.Billing_FirstName
-                                      Select New CBillingData With
-                                             {
-                                                  .AccountNumber = c.CustomerNumber,
-                                                  .SequenceNumber = c.SequenceNumber,
-                                                  .MonthsToBill = 1,
-                                                  .StartingBalance = c.CurrentBalance,
-                                                  .FirstName = c.Billing_FirstName,
-                                                  .LastName = c.Billing_LastName,
-                                                  .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
-                                                  .Address = c.Billing_Address,
-                                                  .City = c.Billing_City,
-                                                  .State = c.Billing_State,
-                                                  .ZipCode = c.Billing_ZipCode,
-                                                  .ListHeader = .SequenceNumber.ToString & " - " & .CustomerName & " (" & .AccountNumber.ToString & ") - D",
-                                                  .BillingType = c.BillingTypeCode,
-                                                  .TaxRate = c.TaxRate,
-                                                  .MonthlyCharge = 0.0,
-                                                  .ExtraBagsQty = 0,
-                                                  .ExtraBagsCost = 0.0,
-                                                  .AdditionalItems = "",
-                                                  .AdditionalItemCost = 0.0,
-                                                  .DelinquentAccount = True,
-                                                  .GoInAfter = If(c.GoInAfter Is Nothing, 0, c.GoInAfter),
-                                                  .GoInAfterAmount = If(c.GoInAfterAmount Is Nothing, 0.0, c.GoInAfterAmount)
-                                              }).ToList
+                                       Where (c.AgingBalance3Month > 0.0 Or c.AgingBalance4Month > 0 Or c.AgingBalance5Month > 0) And c.LastMonthBilled = monthIndex
+                                       Order By c.Billing_LastName, c.Billing_FirstName
+                                       Select New CBillingData With
+                                              {
+                                                   .AccountNumber = c.CustomerNumber,
+                                                   .SequenceNumber = c.SequenceNumber,
+                                                   .MonthsToBill = 1,
+                                                   .StartingBalance = c.CurrentBalance,
+                                                   .FirstName = c.Billing_FirstName,
+                                                   .LastName = c.Billing_LastName,
+                                                   .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
+                                                   .Address = c.Billing_Address,
+                                                   .City = c.Billing_City,
+                                                   .State = c.Billing_State,
+                                                   .ZipCode = c.Billing_ZipCode,
+                                                   .ListHeader = .SequenceNumber.ToString & " - " & .CustomerName & " (" & .AccountNumber.ToString & ") - D",
+                                                   .BillingType = c.BillingTypeCode,
+                                                   .TaxRate = c.TaxRate,
+                                                   .MonthlyCharge = 0.0,
+                                                   .ExtraBagsQty = 0,
+                                                   .ExtraBagsCost = 0.0,
+                                                   .AdditionalItems = "",
+                                                   .AdditionalItemCost = 0.0,
+                                                   .DelinquentAccount = True,
+                                                   .GoInAfter = If(c.GoInAfter Is Nothing, 0, c.GoInAfter),
+                                                   .GoInAfterAmount = If(c.GoInAfterAmount Is Nothing, 0.0, c.GoInAfterAmount)
+                                               }).ToList
 
             Return custListWithBalance
 
@@ -765,32 +765,32 @@ Public Class Customer
 
             ' ----- Select all of the customers that are on the report billing cycle 
             Dim custList = (From c In customerDict.Values
-                           Where c.LastMonthBilled = monthIndex And c.MonthsToBill = frequency And c.PickupDay = pickDay And c.SequenceNumber <= 80000
-                           Order By c.Billing_LastName, c.Billing_FirstName
-                           Select New CBillingData With
-                                  {
-                                      .AccountNumber = c.CustomerNumber,
-                                      .SequenceNumber = c.SequenceNumber,
-                                      .MonthsToBill = c.MonthsToBill,
-                                      .StartingBalance = c.CurrentBalance,
-                                      .FirstName = c.Billing_FirstName,
-                                      .LastName = c.Billing_LastName,
-                                      .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
-                                      .Address = c.Billing_Address,
-                                      .City = c.Billing_City,
-                                      .State = c.Billing_State,
-                                      .ZipCode = c.Billing_ZipCode,
-                                      .ListHeader = .SequenceNumber.ToString & " - " & .CustomerName & " (" & .AccountNumber.ToString & ") - " & .MonthsToBill.ToString,
-                                      .BillingType = c.BillingTypeCode,
-                                      .TaxRate = c.TaxRate,
-                                      .MonthlyCharge = 0.0,
-                                      .ExtraBagsQty = 0,
-                                      .ExtraBagsCost = 0.0,
-                                      .AdditionalItems = "",
-                                      .AdditionalItemCost = 0.0,
-                                      .GoInAfter = If(c.GoInAfter Is Nothing, 0, c.GoInAfter),
-                                      .GoInAfterAmount = If(c.GoInAfterAmount Is Nothing, 0.0, c.GoInAfterAmount)
-                                  }).ToList
+                            Where c.LastMonthBilled = monthIndex And c.MonthsToBill = frequency And c.PickupDay = pickDay And c.SequenceNumber <= 80000
+                            Order By c.Billing_LastName, c.Billing_FirstName
+                            Select New CBillingData With
+                                   {
+                                       .AccountNumber = c.CustomerNumber,
+                                       .SequenceNumber = c.SequenceNumber,
+                                       .MonthsToBill = c.MonthsToBill,
+                                       .StartingBalance = c.CurrentBalance,
+                                       .FirstName = c.Billing_FirstName,
+                                       .LastName = c.Billing_LastName,
+                                       .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
+                                       .Address = c.Billing_Address,
+                                       .City = c.Billing_City,
+                                       .State = c.Billing_State,
+                                       .ZipCode = c.Billing_ZipCode,
+                                       .ListHeader = .SequenceNumber.ToString & " - " & .CustomerName & " (" & .AccountNumber.ToString & ") - " & .MonthsToBill.ToString,
+                                       .BillingType = c.BillingTypeCode,
+                                       .TaxRate = c.TaxRate,
+                                       .MonthlyCharge = 0.0,
+                                       .ExtraBagsQty = 0,
+                                       .ExtraBagsCost = 0.0,
+                                       .AdditionalItems = "",
+                                       .AdditionalItemCost = 0.0,
+                                       .GoInAfter = If(c.GoInAfter Is Nothing, 0, c.GoInAfter),
+                                       .GoInAfterAmount = If(c.GoInAfterAmount Is Nothing, 0.0, c.GoInAfterAmount)
+                                   }).ToList
             Return custList
 
         End If
@@ -896,16 +896,16 @@ Public Class Customer
         Dim db As New DisposalData(connectionString)
 
         Dim CustomerHistoryObj As CCustomerHistory = (From c In db.Customers
-                                                     Where c.CustomerNumber = customerNumber
-                                                     Select New CCustomerHistory With
-                                                            {
-                                                                .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
-                                                                .CustomerAccountNumber = c.CustomerNumber,
-                                                                .BillingAddress = c.Billing_Address,
-                                                                .BillingCSZ = c.Billing_City & ", " & c.Billing_State & " " & c.Billing_ZipCode,
-                                                                .RouteAddress = c.RouteLocation_Address,
-                                                                .RouteCSZ = c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode
-                                                            }).SingleOrDefault
+                                                      Where c.CustomerNumber = customerNumber
+                                                      Select New CCustomerHistory With
+                                                             {
+                                                                 .CustomerName = c.Billing_FirstName & " " & c.Billing_LastName,
+                                                                 .CustomerAccountNumber = c.CustomerNumber,
+                                                                 .BillingAddress = c.Billing_Address,
+                                                                 .BillingCSZ = c.Billing_City & ", " & c.Billing_State & " " & c.Billing_ZipCode,
+                                                                 .RouteAddress = c.RouteLocation_Address,
+                                                                 .RouteCSZ = c.RouteLocation_City & ", " & c.RouteLocation_State & " " & c.RouteLocation_ZipCode
+                                                             }).SingleOrDefault
 
 
         ' ----- Create a starting balance line item 
@@ -1042,21 +1042,21 @@ Public Class Customer
                                              Select c).ToList
 
         ' ----- See if this extra processing helps
-        dim custsToRemove as new list (of Customer)
+        Dim custsToRemove As New List(Of Customer)
 
-        for each custObj as Customer in custList
+        For Each custObj As Customer In custList
 
             ' ----- check for the dreaded nothings 
-            if custObj.Comments is nothing then custObj.Comments = ""
-            if custObj.SpecialInstructions is nothing then custObj.SpecialInstructions = ""
+            If custObj.Comments Is Nothing Then custObj.Comments = ""
+            If custObj.SpecialInstructions Is Nothing Then custObj.SpecialInstructions = ""
 
-            if custObj.Comments.Trim = "" And custObj.SpecialInstructions.Trim = "" then
+            If custObj.Comments.Trim = "" And custObj.SpecialInstructions.Trim = "" Then
                 custsToRemove.Add(custObj)
             End If
 
         Next
 
-        for each custObj as Customer in custsToRemove
+        For Each custObj As Customer In custsToRemove
             custList.Remove(custObj)
         Next
 
@@ -1073,21 +1073,21 @@ Public Class Customer
                                              Select c).ToList
 
         ' ----- See if this extra processing helps
-        dim custsToRemove as new list (of Customer)
+        Dim custsToRemove As New List(Of Customer)
 
-        for each custObj as Customer in custList
+        For Each custObj As Customer In custList
 
             ' ----- check for the dreaded nothings 
-            if custObj.Comments is nothing then custObj.Comments = ""
-            if custObj.SpecialInstructions is nothing then custObj.SpecialInstructions = ""
+            If custObj.Comments Is Nothing Then custObj.Comments = ""
+            If custObj.SpecialInstructions Is Nothing Then custObj.SpecialInstructions = ""
 
-            if custObj.Comments.Trim = "" And custObj.SpecialInstructions.Trim = "" then
+            If custObj.Comments.Trim = "" And custObj.SpecialInstructions.Trim = "" Then
                 custsToRemove.Add(custObj)
             End If
 
         Next
 
-        for each custObj as Customer in custsToRemove
+        For Each custObj As Customer In custsToRemove
             custList.Remove(custObj)
         Next
 
@@ -1100,8 +1100,8 @@ Public Class Customer
         Dim db As New DisposalData(connectionString)
 
         Dim test As IEnumerable = From c In db.Customers
-                   Where c.CustomerNumber = custNum
-                   Select c.YellowTab, c.AgingBalance3Month, c.AgingBalance4Month, c.AgingBalance5Month
+                                  Where c.CustomerNumber = custNum
+                                  Select c.YellowTab, c.AgingBalance3Month, c.AgingBalance4Month, c.AgingBalance5Month
 
         Try
             yellowTabFlag = test(0).YellowTab
@@ -1179,27 +1179,27 @@ Public Class Customer
 
     End Function
 
-    Public Shared Function FindCustomersWithDuplicateSeqNumbers (connectionString As String) As List(of Customer)
-        
-        Dim db As New DisposalData (connectionString )
-        Dim prevCust As Customer = Nothing 
-        Dim filteredCustomerList As new List(Of Customer ) 
+    Public Shared Function FindCustomersWithDuplicateSeqNumbers(connectionString As String) As List(Of Customer)
 
-        Dim customerList As List(Of Customer) = (From c In db.Customers Where c.SequenceNumber < 60000 order By c.SequenceNumber Select c).ToList 
+        Dim db As New DisposalData(connectionString)
+        Dim prevCust As Customer = Nothing
+        Dim filteredCustomerList As New List(Of Customer)
 
-        For Each cust As Customer In customerList 
-            If prevCust is Nothing then 
-                prevCust = cust 
+        Dim customerList As List(Of Customer) = (From c In db.Customers Where c.SequenceNumber < 60000 Order By c.SequenceNumber Select c).ToList
+
+        For Each cust As Customer In customerList
+            If prevCust Is Nothing Then
+                prevCust = cust
             Else
-                If prevCust .SequenceNumber = cust.SequenceNumber then 
-                    filteredCustomerList .Add (prevCust)
-                    filteredCustomerList .Add (cust)
+                If prevCust.SequenceNumber = cust.SequenceNumber Then
+                    filteredCustomerList.Add(prevCust)
+                    filteredCustomerList.Add(cust)
                 End If
-                prevCust = cust 
+                prevCust = cust
             End If
         Next
 
-        Return filteredCustomerList 
+        Return filteredCustomerList
 
     End Function
 End Class
@@ -1235,8 +1235,8 @@ Public Class CollectionRecord
 
         ' ----- Get a collection record object 
         Dim obj As CollectionRecord = (From cr In db.CollectionRecords
-                                        Where cr.CustomerID = colRecordObj.CustomerID And cr.ItemID = colRecordObj.ItemID
-                                        Select cr).SingleOrDefault
+                                       Where cr.CustomerID = colRecordObj.CustomerID And cr.ItemID = colRecordObj.ItemID
+                                       Select cr).SingleOrDefault
 
         ' ----- If there were records, then delete them 
         If Not obj Is Nothing Then
@@ -1257,8 +1257,8 @@ Public Class CollectionRecord
 
         ' ----- Get a collection record object 
         Dim obj As CollectionRecord = (From cr In db.CollectionRecords
-                                        Where cr.ID = colRecordObj.ID
-                                        Select cr).SingleOrDefault
+                                       Where cr.ID = colRecordObj.ID
+                                       Select cr).SingleOrDefault
 
         ' ----- If there were records, then delete them 
         If Not obj Is Nothing Then
@@ -1289,8 +1289,8 @@ Public Class CollectionRecord
 
         ' ----- Get a collection record object 
         Dim obj As CollectionRecord = (From cr In db.CollectionRecords
-                                        Where cr.CustomerID = colRecordObj.CustomerID And cr.ItemID = colRecordObj.ItemID
-                                        Select cr).SingleOrDefault
+                                       Where cr.CustomerID = colRecordObj.CustomerID And cr.ItemID = colRecordObj.ItemID
+                                       Select cr).SingleOrDefault
 
         ' ----- If there were records, then delete them 
         If Not obj Is Nothing Then
@@ -1307,8 +1307,8 @@ Public Class CollectionRecord
 
         ' ----- Get a collection record object 
         Dim obj As CollectionRecord = (From cr In db.CollectionRecords
-                                        Where cr.ID = dbID
-                                        Select cr).SingleOrDefault
+                                       Where cr.ID = dbID
+                                       Select cr).SingleOrDefault
 
         ' ----- If there were records, then delete them 
         If Not obj Is Nothing Then
@@ -1377,8 +1377,8 @@ Public Class CollectionRecord
 
         ' ----- Get a collection record object 
         Dim numberOfBags As Integer = (From cr In db.CollectionRecords
-                                      Where cr.CustomerID = customerID And cr.ItemID = 1
-                                      Select cr.Quantity).SingleOrDefault
+                                       Where cr.CustomerID = customerID And cr.ItemID = 1
+                                       Select cr.Quantity).SingleOrDefault
 
         Return numberOfBags
 
@@ -1496,8 +1496,8 @@ Public Class CollectionRecord
         Dim db As New DisposalData(ConnectionString)
 
         Dim itmX As List(Of CollectionRecord) = (From i In db.CollectionRecords
-                                                  Where i.CustomerID = customerID And i.DateCollected = dtePickup
-                                                  Select i).ToList
+                                                 Where i.CustomerID = customerID And i.DateCollected = dtePickup
+                                                 Select i).ToList
 
         For Each obj As CollectionRecord In itmX
             db.CollectionRecords.DeleteOnSubmit(obj)
@@ -1539,26 +1539,26 @@ Public Class CollectionRecord
         Dim db As New DisposalData(ConnectionString)
 
         Dim strList = (From r In db.CollectionRecords
-                      Order By r.RouteDescription
-                      Select r.RouteDescription).Distinct
+                       Order By r.RouteDescription
+                       Select r.RouteDescription).Distinct
 
         Return strList.ToList
 
     End Function
 
-    Public Shared Function ReturnCollectionDuplicates(ConnectionString As String, collectionDate As datetime) As List(Of CollectionRecord )
-                                                                                                                                              
+    Public Shared Function ReturnCollectionDuplicates(ConnectionString As String, collectionDate As DateTime) As List(Of CollectionRecord)
+
         ' ----- Create the context
         Dim db As New DisposalData(ConnectionString)
 
         ' ----- Get a collection record object 
-        Dim dupItems As List(Of CollectionRecord) = (From cr In db.CollectionRecords 
-                                                     Where cr.DateCollected >= collectionDate And cr.DateCollected < collectionDate 
-                                                     Order By cr.CustomerID 
-                                                     Select cr).ToList 
-     
+        Dim dupItems As List(Of CollectionRecord) = (From cr In db.CollectionRecords
+                                                     Where cr.DateCollected >= collectionDate And cr.DateCollected < collectionDate
+                                                     Order By cr.CustomerID
+                                                     Select cr).ToList
 
-        Return dupItems 
+
+        Return dupItems
 
     End Function
 
@@ -1854,7 +1854,7 @@ Public Class Payments
         Public Property TotalPayment As Double = 0.0
         Public Property Revenue As Double = 0.0
         Public Property Taxes As Double = 0.0
-        Public Property CreditCardUsed As Boolean = False 
+        Public Property CreditCardUsed As Boolean = False
     End Class
 
     Public Class CRevenueReport
@@ -1867,10 +1867,10 @@ Public Class Payments
         Public Property TotalTax As Double = 0.0
         Public Property TotalCollected As Double = 0.0
         Public Property TotalCreditCollected As Double = 0.0
-        Public Property TotalNonCreditCollected as Double = 0.0
+        Public Property TotalNonCreditCollected As Double = 0.0
     End Class
 
-    Public Sub New(ByVal dbID As Integer, ByVal datePayment As Date, ByVal amountPayment As Single, ByVal customerNumber As Integer, ByVal methodOfPay As Integer, ByVal nCheckNumber As Long, strDesc As String, strCCAuth As string )
+    Public Sub New(ByVal dbID As Integer, ByVal datePayment As Date, ByVal amountPayment As Single, ByVal customerNumber As Integer, ByVal methodOfPay As Integer, ByVal nCheckNumber As Long, strDesc As String, strCCAuth As String)
 
         _ID = dbID
         _PaymentDate = datePayment
@@ -1879,7 +1879,7 @@ Public Class Payments
         _MOP = methodOfPay
         _CheckNumber = nCheckNumber
         _Description = strDesc
-        _CreditCardAuthNumber = strCCAuth 
+        _CreditCardAuthNumber = strCCAuth
 
     End Sub
 
@@ -1917,7 +1917,7 @@ Public Class Payments
                                      .CustomerAddress = c.RouteLocation_Address,
                                      .PaymentDate = p.PaymentDate,
                                      .PaymentAmount = p.PaymentAmount,
-                                     .Description =  p.Description,
+                                     .Description = p.Description,
                                      .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString))))
                                  }
 
@@ -2053,16 +2053,16 @@ Public Class Payments
 
         ' ----- Creates a list of payments broken down into revenue
         Dim revenue As List(Of CRevenueListing) = (From p In db.Payments
-                                                       Join c In db.Customers On p.CustomerID Equals c.CustomerNumber
-                                                       Where p.PaymentDate.Date >= dtePaymentStart And p.PaymentDate.Date <= dtePaymentEnd
-                                                       Select New CRevenueListing With
-                                                              {
-                                                                  .TaxRate = c.TaxRate.Value,
-                                                                  .CreditCardUsed = (p.MOP = 4),
-                                                                  .TotalPayment = Decimal.ToDouble(p.PaymentAmount),
-                                                                  .Revenue = Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value),
-                                                                  .Taxes = Decimal.ToDouble(p.PaymentAmount) - (Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value))
-                                                              }).ToList
+                                                   Join c In db.Customers On p.CustomerID Equals c.CustomerNumber
+                                                   Where p.PaymentDate.Date >= dtePaymentStart And p.PaymentDate.Date <= dtePaymentEnd
+                                                   Select New CRevenueListing With
+                                                          {
+                                                              .TaxRate = c.TaxRate.Value,
+                                                              .CreditCardUsed = (p.MOP = 4),
+                                                              .TotalPayment = Decimal.ToDouble(p.PaymentAmount),
+                                                              .Revenue = Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value),
+                                                              .Taxes = Decimal.ToDouble(p.PaymentAmount) - (Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value))
+                                                          }).ToList
 
         ' ----- create the report object 
         Dim rptObj As New CRevenueReport
@@ -2087,10 +2087,10 @@ Public Class Payments
             rptObj.TotalTax += obj.Taxes
 
             ' ----- added for credit cards 
-            If obj.CreditCardUsed Then 
+            If obj.CreditCardUsed Then
                 rptObj.TotalCreditCollected += obj.TotalPayment
-            Else 
-                rptObj.TotalNonCreditCollected += obj.TotalPayment 
+            Else
+                rptObj.TotalNonCreditCollected += obj.TotalPayment
             End If
 
             rptObj.TotalCollected += obj.TotalPayment
@@ -2197,6 +2197,22 @@ Public Class Transactions
 
     End Sub
 
+
+    Public Shared Sub UpdateBillingDate(ByVal connectionString As String, ByVal customerNumber As Integer, ByVal billingDate As Date, ByVal newBillingDate As Date) 
+
+        Dim db As New DisposalData(connectionString)
+
+        Dim trans = (From t In db.Transactions
+                Where t.CustomerID = customerNumber And t.TransDate >= billingDate And t.TransDate < billingDate + New TimeSpan(1, 0, 0, 0)
+                Select t).ToList
+
+        For Each transaction In trans 
+            transaction.TransDate = newBillingDate 
+            db.SubmitChanges 
+        Next
+
+    End Sub
+
 End Class
 
 Public Class RentalTransaction
@@ -2271,7 +2287,7 @@ Public Class RentalTransaction
         newTransObj.Amount = amt
         newTransObj.Qty = qty
         newTransObj.Reference = "Charge"
-        newTransObj.BillingDate = BillingDate
+        newTransObj.BillingDate = billingDate
 
         db.RentalTransactions.InsertOnSubmit(newTransObj)
         db.SubmitChanges()
@@ -2421,7 +2437,7 @@ Public Class RentalCustomer
         Public Property MiscText As String = ""
         Public Property PickupID As Integer = 0
 
-        Public property SpecialRoute as Boolean = false
+        Public Property SpecialRoute As Boolean = False
 
         ' ----- Added for the auto-fill 
         Public Property HasCardboard As Boolean = False
@@ -2436,16 +2452,16 @@ Public Class RentalCustomer
 
             Dim db As New DisposalData(connectionString)
 
-            Dim obj As List(Of RentalPickupInformation) = new List(Of RentalPickupInformation) 
+            Dim obj As List(Of RentalPickupInformation) = New List(Of RentalPickupInformation)
 
-            if CustomerNumber < 0 Or SpecialRoute then 
-                obj  = (From d In db.RentalPickupInformations
-                    Where d.CustomerNumber = Math.Abs(Me.CustomerNumber) And d.Route = routeNumber And d.DaysIndex = dayOftheWeek
-                    Select d).ToList                
-            else
-                obj  = (From d In db.RentalPickupInformations
-                    Where d.CustomerNumber = Me.CustomerNumber And d.DaysIndex = dayOftheWeek
-                    Select d).ToList
+            If CustomerNumber < 0 Or SpecialRoute Then
+                obj = (From d In db.RentalPickupInformations
+                       Where d.CustomerNumber = Math.Abs(Me.CustomerNumber) And d.Route = routeNumber And d.DaysIndex = dayOftheWeek
+                       Select d).ToList
+            Else
+                obj = (From d In db.RentalPickupInformations
+                       Where d.CustomerNumber = Me.CustomerNumber And d.DaysIndex = dayOftheWeek
+                       Select d).ToList
             End If
 
             For Each tmp As RentalPickupInformation In obj
@@ -2529,10 +2545,10 @@ Public Class RentalCustomer
         Public Property OrderOnDataSheet As Integer = 0
 
         '* Added on 16-Feb-2018 to auto-populate dumpsters *'
-        Public Property HasDumpster As Boolean = False 
-        Public Property HasRecycle As Boolean = False 
+        Public Property HasDumpster As Boolean = False
+        Public Property HasRecycle As Boolean = False
         Public Property HasCardboard As Boolean = False
-        Public Property HasCart As Boolean = false
+        Public Property HasCart As Boolean = False
 
     End Class
 
@@ -2596,8 +2612,8 @@ Public Class RentalCustomer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.RentalCustomers
-                  Where c.CustomerNumber = Me.CustomerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = Me.CustomerNumber
+                   Select c).SingleOrDefault
 
         With obj
             .SequenceNumber = Me.SequenceNumber
@@ -2777,31 +2793,31 @@ Public Class RentalCustomer
 
         ' ----- Get a list of customers that have dumpsters to be emptied on the specific day 
         Dim rentalCustListDumpstersOnly As List(Of RentalRouteInformation) = (From c In db.RentalCustomers
-                                                         Join d In db.RentalPickupInformations On c.CustomerNumber Equals d.CustomerNumber
-                                                         Where d.DaysIndex = RentalCustomerDayArray(dayIndex) And d.DumpsterIndex = "Dumpster" And c.Inactive = False
-                                                         Select New RentalRouteInformation With
-                                                                {
-                                                                    .CustomerNumber = c.CustomerNumber,
-                                                                    .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
-                                                                    .CustomerAddress = c.RouteLocation_Address,
-                                                                    .Container = ReturnLoadAbbreviation(d.LoadIndex),
-                                                                    .Size = d.SizeIndex,
-                                                                    .MiscText = d.MiscText,
-                                                                    .PickupID = d.ID,
-                                                                    .HasTrashDumpster = True,
-                                                                    .RouteNumber = d.Route,
-                                                                    .ReportOrder = If(d.Route = 4, 999, d.Route),
-                                                                    .SequenceNumber = d.SequenceNumber,
-                                                                    .DayOfTheWeek = d.DaysIndex,
-                                                                    .RouteOrBook = If(d.Route >= 4, "Route Containers", "Containers"),
-                                                                    .ExtraInfo = d.MiscText,
-                                                                    .NotesOnly = d.TruckNotes,
-                                                                    .Is90GallonCart = False,
-                                                                    .RecycleRouteNumber = -99,
-                                                                    .RecycleSequenceNumber = -99,
-                                                                    .SpecialRoute = c.SpecialRoute,
-                                                                    .HeaderLine = String.Format("{0} {1} {2}", "Route", If(d.Route > 4, d.Route - 4, d.Route), If(d.Route > 4, "Tablet", "Containers"))
-                                                                }).ToList
+                                                                              Join d In db.RentalPickupInformations On c.CustomerNumber Equals d.CustomerNumber
+                                                                              Where d.DaysIndex = RentalCustomerDayArray(dayIndex) And d.DumpsterIndex = "Dumpster" And c.Inactive = False
+                                                                              Select New RentalRouteInformation With
+                                                                                     {
+                                                                                         .CustomerNumber = c.CustomerNumber,
+                                                                                         .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
+                                                                                         .CustomerAddress = c.RouteLocation_Address,
+                                                                                         .Container = ReturnLoadAbbreviation(d.LoadIndex),
+                                                                                         .Size = d.SizeIndex,
+                                                                                         .MiscText = d.MiscText,
+                                                                                         .PickupID = d.ID,
+                                                                                         .HasTrashDumpster = True,
+                                                                                         .RouteNumber = d.Route,
+                                                                                         .ReportOrder = If(d.Route = 4, 999, d.Route),
+                                                                                         .SequenceNumber = d.SequenceNumber,
+                                                                                         .DayOfTheWeek = d.DaysIndex,
+                                                                                         .RouteOrBook = If(d.Route >= 4, "Route Containers", "Containers"),
+                                                                                         .ExtraInfo = d.MiscText,
+                                                                                         .NotesOnly = d.TruckNotes,
+                                                                                         .Is90GallonCart = False,
+                                                                                         .RecycleRouteNumber = -99,
+                                                                                         .RecycleSequenceNumber = -99,
+                                                                                         .SpecialRoute = c.SpecialRoute,
+                                                                                         .HeaderLine = String.Format("{0} {1} {2}", "Route", If(d.Route > 4, d.Route - 4, d.Route), If(d.Route > 4, "Tablet", "Containers"))
+                                                                                     }).ToList
 
 
         ' ----- Add this information to a dictionary 
@@ -2858,26 +2874,26 @@ Public Class RentalCustomer
                 ' ----- If it does, append information to the ExtraInfo field
                 If Not presentObj Is Nothing Then
                     'if obj.RouteNumber <= 3 and not obj.Container is nothing And obj.Container <> presentObj .Container And obj.RecycleRouteNumber = 0 And obj.RecycleSequenceNumber = 0 and obj.RouteNumber <> presentObj .RouteNumber  then 
-                    if presentObj.SpecialRoute then 
-                        obj.SpecialRoute = true 
+                    If presentObj.SpecialRoute Then
+                        obj.SpecialRoute = True
                         obj.CustomerNumber *= -1
                         normalizedList.Add(obj.CustomerNumber, obj)
                     Else
 
-                        If normalizedList(obj.CustomerNumber).Is90GallonCart = False then
+                        If normalizedList(obj.CustomerNumber).Is90GallonCart = False Then
                             normalizedList(obj.CustomerNumber).Is90GallonCart = obj.Is90GallonCart
-                        End If 
+                        End If
 
                         normalizedList(obj.CustomerNumber).ExtraInfo &= "+" & obj.ExtraInfo & " "
                         normalizedList(obj.CustomerNumber).HasRecycleContainer = obj.HasRecycleContainer
 
-                        If normalizedList(obj.CustomerNumber).HasRecycleBin = false then
+                        If normalizedList(obj.CustomerNumber).HasRecycleBin = False Then
                             normalizedList(obj.CustomerNumber).HasRecycleBin = obj.HasRecycleBin
-                        End If 
+                        End If
 
                         If normalizedList(obj.CustomerNumber).HasCardboard = False Then
                             normalizedList(obj.CustomerNumber).HasCardboard = obj.HasCardboard
-                        End If 
+                        End If
 
                         normalizedList(obj.CustomerNumber).RecycleRouteNumber = obj.RecycleRouteNumber
                         normalizedList(obj.CustomerNumber).RecycleSequenceNumber = obj.RecycleSequenceNumber
@@ -2967,7 +2983,7 @@ Public Class RentalCustomer
         Dim db As New DisposalData(ConnectionString)
 
         Dim custList = From c In db.RentalCustomers
-                       Order By c.CustomerNumber 
+                       Order By c.CustomerNumber
                        Select New CRentalCustomerList With
                               {
                                   .SequenceNumber = c.SequenceNumber,
@@ -2998,46 +3014,46 @@ Public Class RentalCustomer
 
         ' ----- Select all of the customers that are on the report billing cycle 
         Dim custListWithBalance = (From c In customerDict.Values
-                                  Order By c.Billing_LastName, c.Billing_FirstName
-                                  Select New CRentalBillingData With
-                                         {
-                                              .AccountNumber = c.CustomerNumber,
-                                              .StartingBalance = If(c.CurrentBalance.ToString = "", 0.0, c.CurrentBalance),
-                                              .PickupFirstName = c.RouteLocation_FirstName,
-                                              .PickupLastName = c.RouteLocation_LastName,
-                                              .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
-                                              .PickupAddress = c.RouteLocation_Address,
-                                              .PickupCity = c.RouteLocation_City,
-                                              .PickupState = c.RouteLocation_State,
-                                              .PickupZipCode = c.RouteLocation_ZipCode,
-                                              .BillingFirstName = c.Billing_FirstName,
-                                              .BillingLastName = c.Billing_LastName,
-                                              .BillingFullName = c.Billing_FirstName & " " & c.Billing_LastName,
-                                              .BillingAddress = c.Billing_Address,
-                                              .BillingCity = c.Billing_City,
-                                              .BillingState = c.Billing_State,
-                                              .BillingZipCode = c.Billing_ZipCode,
-                                              .PurchaseOrderNumber = c.PONumber,
-                                              .ListHeader = .AccountNumber.ToString & " - " & .CustomerName,
-                                              .TaxRate = c.TaxRate,
-                                              .DumpsterCharge = If(c.DumpsterCharge.ToString = "", 0.0, c.DumpsterCharge),
-                                              .DumpsterChargePUType = If(c.DumpsterPUType.ToString = "", 0, c.DumpsterPUType),
-                                              .DumpsterRental = If(c.DumpsterRental.ToString = "", 0.0, c.DumpsterRental),
-                                              .RollOffCharge = If(c.RollOffCharge.ToString = "", 0.0, c.RollOffCharge),
-                                              .RollOffRental = If(c.RollOffRental.ToString = "", 0.0, c.RollOffRental),
-                                              .CardboardCharge = If(c.CardboardCharge.ToString = "", 0.0, c.CardboardCharge),
-                                              .CardboardChargePUType = If(c.CardboardPUType.ToString = "", 0, c.CardboardPUType),
-                                              .CardboardRental = If(c.CardboardRental.ToString = "", 0.0, c.CardboardRental),
-                                              .Cart90Charge = If(c.Cart90GallonCharge.ToString = "", 0.0, c.Cart90GallonCharge),
-                                              .Cart90ChargePUType = If(c.Cart90GallonPUType.ToString = "", 0, c.Cart90GallonPUType),
-                                              .Cart90Rental = If(c.Cart90GallonRental.ToString = "", 0.0, c.Cart90GallonRental),
-                                              .RecycleCharge = If(c.RecycleCharge.ToString = "", 0.0, c.RecycleCharge),
-                                              .RecycleChargePUType = If(c.RecyclePUType.ToString = "", 0, c.RecyclePUType),
-                                              .RecycleRental = If(c.RecycleRental.ToString = "", 0.0, c.RecycleRental),
-                                              .AdditionalItems = "",
-                                              .AdditionalItemCost = 0.0,
-                                              .DelinquentAccount = False
-                                          }).ToList
+                                   Order By c.Billing_LastName, c.Billing_FirstName
+                                   Select New CRentalBillingData With
+                                          {
+                                               .AccountNumber = c.CustomerNumber,
+                                               .StartingBalance = If(c.CurrentBalance.ToString = "", 0.0, c.CurrentBalance),
+                                               .PickupFirstName = c.RouteLocation_FirstName,
+                                               .PickupLastName = c.RouteLocation_LastName,
+                                               .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
+                                               .PickupAddress = c.RouteLocation_Address,
+                                               .PickupCity = c.RouteLocation_City,
+                                               .PickupState = c.RouteLocation_State,
+                                               .PickupZipCode = c.RouteLocation_ZipCode,
+                                               .BillingFirstName = c.Billing_FirstName,
+                                               .BillingLastName = c.Billing_LastName,
+                                               .BillingFullName = c.Billing_FirstName & " " & c.Billing_LastName,
+                                               .BillingAddress = c.Billing_Address,
+                                               .BillingCity = c.Billing_City,
+                                               .BillingState = c.Billing_State,
+                                               .BillingZipCode = c.Billing_ZipCode,
+                                               .PurchaseOrderNumber = c.PONumber,
+                                               .ListHeader = .AccountNumber.ToString & " - " & .CustomerName,
+                                               .TaxRate = c.TaxRate,
+                                               .DumpsterCharge = If(c.DumpsterCharge.ToString = "", 0.0, c.DumpsterCharge),
+                                               .DumpsterChargePUType = If(c.DumpsterPUType.ToString = "", 0, c.DumpsterPUType),
+                                               .DumpsterRental = If(c.DumpsterRental.ToString = "", 0.0, c.DumpsterRental),
+                                               .RollOffCharge = If(c.RollOffCharge.ToString = "", 0.0, c.RollOffCharge),
+                                               .RollOffRental = If(c.RollOffRental.ToString = "", 0.0, c.RollOffRental),
+                                               .CardboardCharge = If(c.CardboardCharge.ToString = "", 0.0, c.CardboardCharge),
+                                               .CardboardChargePUType = If(c.CardboardPUType.ToString = "", 0, c.CardboardPUType),
+                                               .CardboardRental = If(c.CardboardRental.ToString = "", 0.0, c.CardboardRental),
+                                               .Cart90Charge = If(c.Cart90GallonCharge.ToString = "", 0.0, c.Cart90GallonCharge),
+                                               .Cart90ChargePUType = If(c.Cart90GallonPUType.ToString = "", 0, c.Cart90GallonPUType),
+                                               .Cart90Rental = If(c.Cart90GallonRental.ToString = "", 0.0, c.Cart90GallonRental),
+                                               .RecycleCharge = If(c.RecycleCharge.ToString = "", 0.0, c.RecycleCharge),
+                                               .RecycleChargePUType = If(c.RecyclePUType.ToString = "", 0, c.RecyclePUType),
+                                               .RecycleRental = If(c.RecycleRental.ToString = "", 0.0, c.RecycleRental),
+                                               .AdditionalItems = "",
+                                               .AdditionalItemCost = 0.0,
+                                               .DelinquentAccount = False
+                                           }).ToList
 
         Return custListWithBalance
 
@@ -3048,8 +3064,8 @@ Public Class RentalCustomer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.RentalCustomers
-                  Where c.CustomerNumber = customerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = customerNumber
+                   Select c).SingleOrDefault
 
         With obj
             If .PreviousMonthBilled <> .LastMonthBilled Or .PreviousMonthBilled Is Nothing Then .PreviousMonthBilled = .LastMonthBilled
@@ -3270,8 +3286,8 @@ Public Class RentalCustomer
             Dim db As New DisposalData(ConnectionString)
 
             Dim cust = (From c In db.RentalCustomers
-                       Order By c.Billing_LastName, c.Billing_FirstName
-                       Select c).ToList
+                        Order By c.Billing_LastName, c.Billing_FirstName
+                        Select c).ToList
 
             Return cust
         Catch ex As Exception
@@ -3295,7 +3311,7 @@ Public Class RentalCustomer
 
     End Function
 
-        Public Shared Function IsInActive(ByVal ConnectionString As String, ByVal customerNumber As Integer) As Boolean
+    Public Shared Function IsInActive(ByVal ConnectionString As String, ByVal customerNumber As Integer) As Boolean
 
         ' ----- Open the connection 
         Dim db As New DisposalData(ConnectionString)
@@ -3304,7 +3320,7 @@ Public Class RentalCustomer
         Try
             Return (From c In db.RentalCustomers Where c.CustomerNumber = customerNumber Select c.Inactive).SingleOrDefault
         Catch ex As Exception
-            Return false
+            Return False
         End Try
 
     End Function
@@ -3314,8 +3330,8 @@ Public Class RentalCustomer
         Dim db As New DisposalData(ConnectionString)
 
         Dim obj = (From c In db.RentalCustomers
-                  Where c.CustomerNumber = Me.CustomerNumber
-                  Select c).SingleOrDefault
+                   Where c.CustomerNumber = Me.CustomerNumber
+                   Select c).SingleOrDefault
 
         db.RentalCustomers.DeleteOnSubmit(obj)
         db.SubmitChanges()
@@ -3425,9 +3441,9 @@ Public Class RentalRouteData
         Dim db As New DisposalData(connectionString)
 
         Dim pickupData As List(Of RentalRouteData) = (From r In db.RentalRouteDatas
-                                                       Where r.CustomerNumber = customerNumber
-                                                       Order By r.DateOfPickup Descending
-                                                       Select r).ToList
+                                                      Where r.CustomerNumber = customerNumber
+                                                      Order By r.DateOfPickup Descending
+                                                      Select r).ToList
 
         Return pickupData
 
@@ -3453,9 +3469,9 @@ Public Class RentalRouteData
 
         ' ----- Get a collection record object 
         Dim routeDataList As List(Of RentalRouteData) = (From cr In db.RentalRouteDatas
-                                                        Where cr.DateOfPickup >= dteStart And cr.DateOfPickup < (dteEnd + New TimeSpan(1, 0, 0, 0)) And cr.CustomerNumber = CustomerNumber
-                                                        Order By cr.DateOfPickup
-                                                        Select cr).ToList
+                                                         Where cr.DateOfPickup >= dteStart And cr.DateOfPickup < (dteEnd + New TimeSpan(1, 0, 0, 0)) And cr.CustomerNumber = CustomerNumber
+                                                         Order By cr.DateOfPickup
+                                                         Select cr).ToList
 
         Return routeDataList
 
@@ -3661,7 +3677,7 @@ Public Class RentalPayment
         Public Property TotalPayment As Double = 0.0
         Public Property Revenue As Double = 0.0
         Public Property Taxes As Double = 0.0
-        Public property CreditCardUsed As Boolean = false
+        Public Property CreditCardUsed As Boolean = False
     End Class
 
     Public Class CRevenueReport
@@ -3677,7 +3693,7 @@ Public Class RentalPayment
         Public Property TotalNonCreditCollected As Double = 0.0
     End Class
 
-    Public Sub New(ByVal dbID As Integer, ByVal datePayment As Date, ByVal amountPayment As Single, ByVal customerNumber As Integer, ByVal methodOfPay As Integer, ByVal nCheckNumber As Long, strDesc As String, strCCAuth as String )
+    Public Sub New(ByVal dbID As Integer, ByVal datePayment As Date, ByVal amountPayment As Single, ByVal customerNumber As Integer, ByVal methodOfPay As Integer, ByVal nCheckNumber As Long, strDesc As String, strCCAuth As String)
 
         _ID = dbID
         _PaymentDate = datePayment
@@ -3686,7 +3702,7 @@ Public Class RentalPayment
         _MOP = methodOfPay
         _CheckNumber = nCheckNumber
         _Description = strDesc
-        _CreditCardAuthNumber = strCCAuth 
+        _CreditCardAuthNumber = strCCAuth
     End Sub
 
     Public ReadOnly Property MethodOfPaymentDesc As String
@@ -3700,7 +3716,7 @@ Public Class RentalPayment
                     Return "Money Order"
                 Case 3
                     Return "Other"
-                Case 4:
+                Case 4
                     Return "Credit Card"
                 Case Else
                     Return "Cash"
@@ -3807,16 +3823,16 @@ Public Class RentalPayment
 
         ' ----- Creates a list of payments broken down into revenue
         Dim revenue As List(Of CRevenueListing) = (From p In db.RentalPayments
-                                                       Join c In db.RentalCustomers On p.CustomerID Equals c.CustomerNumber
-                                                       Where p.PaymentDate.Date >= dtePaymentStart And p.PaymentDate.Date <= dtePaymentEnd
-                                                       Select New CRevenueListing With
-                                                              {
-                                                                  .TaxRate = c.TaxRate.Value,
-                                                                  .CreditCardUsed = (p.MOP = 4),
-                                                                  .TotalPayment = Decimal.ToDouble(p.PaymentAmount),
-                                                                  .Revenue = Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value),
-                                                                  .Taxes = Decimal.ToDouble(p.PaymentAmount) - (Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value))
-                                                              }).ToList
+                                                   Join c In db.RentalCustomers On p.CustomerID Equals c.CustomerNumber
+                                                   Where p.PaymentDate.Date >= dtePaymentStart And p.PaymentDate.Date <= dtePaymentEnd
+                                                   Select New CRevenueListing With
+                                                          {
+                                                              .TaxRate = c.TaxRate.Value,
+                                                              .CreditCardUsed = (p.MOP = 4),
+                                                              .TotalPayment = Decimal.ToDouble(p.PaymentAmount),
+                                                              .Revenue = Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value),
+                                                              .Taxes = Decimal.ToDouble(p.PaymentAmount) - (Decimal.ToDouble(p.PaymentAmount) / (1.0 + c.TaxRate.Value))
+                                                          }).ToList
 
         Dim rptObj As New CRevenueReport
 
@@ -3838,10 +3854,10 @@ Public Class RentalPayment
             rptObj.TotalTax += obj.Taxes
 
             ' ----- added for credit cards 
-            If obj.CreditCardUsed Then 
+            If obj.CreditCardUsed Then
                 rptObj.TotalCreditCollected += obj.TotalPayment
-            Else 
-                rptObj.TotalNonCreditCollected += obj.TotalPayment 
+            Else
+                rptObj.TotalNonCreditCollected += obj.TotalPayment
             End If
 
             rptObj.TotalCollected += obj.TotalPayment
@@ -3917,6 +3933,6 @@ Public Class CRentalBillingData
     Public Property AdditionalItemCost As Double = 0.0
     Public Property TaxRate As Double = 0.0
     Public Property DelinquentAccount As Boolean = False
-    Public property PurchaseOrderNumber As String = ""
+    Public Property PurchaseOrderNumber As String = ""
 
 End Class

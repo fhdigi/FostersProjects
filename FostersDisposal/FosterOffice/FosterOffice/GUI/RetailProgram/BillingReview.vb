@@ -927,4 +927,22 @@ Public Class BillingReview
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim adjBillDate As New AdjustBillDate
+
+        Dim customerBillingObj As PickupTransaction.CBillingData = DirectCast(ListBoxCustomers.SelectedItem, PickupTransaction.CBillingData)
+        Dim billDate As Date = DateTimePickerBillingDate.Value
+
+        adjBillDate.CustomerName = customerBillingObj.CustomerName
+        adjBillDate.CustomerNumber = customerBillingObj.AccountNumber
+        adjBillDate.SequenceNumber = customerBillingObj.SequenceNumber
+        adjBillDate.CurrentBillDate = billDate 
+
+        if adjBillDate.ShowDialog = DialogResult.OK then
+            ButtonRefresh.PerformClick
+        end if
+
+    End Sub
+
 End Class

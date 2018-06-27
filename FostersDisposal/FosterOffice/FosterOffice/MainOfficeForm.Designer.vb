@@ -73,6 +73,7 @@ Partial Class MainOfficeForm
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.PaymentSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RevenueReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MailingLabelsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitContainerMain = New System.Windows.Forms.SplitContainer()
         Me.GridControlRental = New DevExpress.XtraGrid.GridControl()
         Me.CRentalCustomerListBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -132,7 +133,7 @@ Partial Class MainOfficeForm
         Me.ToolStripButtonRevenueReport = New System.Windows.Forms.ToolStripButton()
         Me.StatusStripMain = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabelBalancing = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.MailingLabelsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ButtonBalanceRefresh = New System.Windows.Forms.Button()
         CType(Me.CCustomerListBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
         Me.MenuStrip1.SuspendLayout
         CType(Me.SplitContainerMain,System.ComponentModel.ISupportInitialize).BeginInit
@@ -167,7 +168,7 @@ Partial Class MainOfficeForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.RoutesToolStripMenuItem, Me.CollectionItemsToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.MailingLabelsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1291, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1406, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -445,6 +446,12 @@ Partial Class MainOfficeForm
         Me.RevenueReportToolStripMenuItem.Size = New System.Drawing.Size(305, 22)
         Me.RevenueReportToolStripMenuItem.Text = "Revenue Report"
         '
+        'MailingLabelsToolStripMenuItem
+        '
+        Me.MailingLabelsToolStripMenuItem.Name = "MailingLabelsToolStripMenuItem"
+        Me.MailingLabelsToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
+        Me.MailingLabelsToolStripMenuItem.Text = "Mailing Labels"
+        '
         'SplitContainerMain
         '
         Me.SplitContainerMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -459,6 +466,7 @@ Partial Class MainOfficeForm
         '
         'SplitContainerMain.Panel2
         '
+        Me.SplitContainerMain.Panel2.Controls.Add(Me.ButtonBalanceRefresh)
         Me.SplitContainerMain.Panel2.Controls.Add(Me.CheckBoxCurrentMonthPickups)
         Me.SplitContainerMain.Panel2.Controls.Add(Me.ButtonViewBills)
         Me.SplitContainerMain.Panel2.Controls.Add(Me.ButtonPrintPayment)
@@ -467,8 +475,8 @@ Partial Class MainOfficeForm
         Me.SplitContainerMain.Panel2.Controls.Add(Me.ButtonDeleteCustomer)
         Me.SplitContainerMain.Panel2.Controls.Add(Me.PanelControl2)
         Me.SplitContainerMain.Panel2.Controls.Add(Me.PropertyGridControlCustomer)
-        Me.SplitContainerMain.Size = New System.Drawing.Size(1291, 443)
-        Me.SplitContainerMain.SplitterDistance = 830
+        Me.SplitContainerMain.Size = New System.Drawing.Size(1406, 443)
+        Me.SplitContainerMain.SplitterDistance = 876
         Me.SplitContainerMain.TabIndex = 2
         '
         'GridControlRental
@@ -481,7 +489,7 @@ Partial Class MainOfficeForm
         Me.GridControlRental.MainView = Me.GridViewRental
         Me.GridControlRental.Name = "GridControlRental"
         Me.GridControlRental.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemHyperLinkEdit1, Me.RepositoryItemHyperLinkEdit2})
-        Me.GridControlRental.Size = New System.Drawing.Size(824, 373)
+        Me.GridControlRental.Size = New System.Drawing.Size(870, 373)
         Me.GridControlRental.TabIndex = 2
         Me.GridControlRental.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewRental})
         '
@@ -557,7 +565,7 @@ Partial Class MainOfficeForm
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(830, 54)
+        Me.Panel1.Size = New System.Drawing.Size(876, 54)
         Me.Panel1.TabIndex = 1
         '
         'CheckBoxSearchInactive
@@ -618,7 +626,7 @@ Partial Class MainOfficeForm
         Me.GridControlMain.MainView = Me.GridViewMain
         Me.GridControlMain.Name = "GridControlMain"
         Me.GridControlMain.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemHyperLinkEditCustomer})
-        Me.GridControlMain.Size = New System.Drawing.Size(827, 380)
+        Me.GridControlMain.Size = New System.Drawing.Size(873, 380)
         Me.GridControlMain.TabIndex = 0
         Me.GridControlMain.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridViewMain})
         '
@@ -721,7 +729,7 @@ Partial Class MainOfficeForm
         '
         Me.CheckBoxCurrentMonthPickups.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.CheckBoxCurrentMonthPickups.AutoSize = true
-        Me.CheckBoxCurrentMonthPickups.Location = New System.Drawing.Point(311, 120)
+        Me.CheckBoxCurrentMonthPickups.Location = New System.Drawing.Point(380, 120)
         Me.CheckBoxCurrentMonthPickups.Name = "CheckBoxCurrentMonthPickups"
         Me.CheckBoxCurrentMonthPickups.Size = New System.Drawing.Size(134, 17)
         Me.CheckBoxCurrentMonthPickups.TabIndex = 9
@@ -757,7 +765,7 @@ Partial Class MainOfficeForm
         Me.LabelCurrentBalance.ForeColor = System.Drawing.Color.Blue
         Me.LabelCurrentBalance.Location = New System.Drawing.Point(2, 117)
         Me.LabelCurrentBalance.Name = "LabelCurrentBalance"
-        Me.LabelCurrentBalance.Size = New System.Drawing.Size(303, 23)
+        Me.LabelCurrentBalance.Size = New System.Drawing.Size(372, 23)
         Me.LabelCurrentBalance.TabIndex = 6
         Me.LabelCurrentBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -773,7 +781,7 @@ Partial Class MainOfficeForm
         Me.DataGridViewHistory.DataSource = Me.CCustomerHistoryLineItemsBindingSource
         Me.DataGridViewHistory.Location = New System.Drawing.Point(0, 143)
         Me.DataGridViewHistory.Name = "DataGridViewHistory"
-        Me.DataGridViewHistory.Size = New System.Drawing.Size(454, 261)
+        Me.DataGridViewHistory.Size = New System.Drawing.Size(523, 261)
         Me.DataGridViewHistory.TabIndex = 5
         '
         'colDate
@@ -837,7 +845,7 @@ Partial Class MainOfficeForm
         'ButtonDeleteCustomer
         '
         Me.ButtonDeleteCustomer.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.ButtonDeleteCustomer.Location = New System.Drawing.Point(324, 410)
+        Me.ButtonDeleteCustomer.Location = New System.Drawing.Point(393, 410)
         Me.ButtonDeleteCustomer.Name = "ButtonDeleteCustomer"
         Me.ButtonDeleteCustomer.Size = New System.Drawing.Size(121, 23)
         Me.ButtonDeleteCustomer.TabIndex = 4
@@ -854,13 +862,13 @@ Partial Class MainOfficeForm
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl2.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(457, 73)
+        Me.PanelControl2.Size = New System.Drawing.Size(526, 73)
         Me.PanelControl2.TabIndex = 3
         '
         'SimpleButtonManualBill
         '
         Me.SimpleButtonManualBill.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.SimpleButtonManualBill.Location = New System.Drawing.Point(6, 45)
+        Me.SimpleButtonManualBill.Location = New System.Drawing.Point(75, 45)
         Me.SimpleButtonManualBill.Name = "SimpleButtonManualBill"
         Me.SimpleButtonManualBill.Size = New System.Drawing.Size(102, 23)
         Me.SimpleButtonManualBill.TabIndex = 4
@@ -869,7 +877,7 @@ Partial Class MainOfficeForm
         'SimpleButtonEditPickedUpItems
         '
         Me.SimpleButtonEditPickedUpItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.SimpleButtonEditPickedUpItems.Location = New System.Drawing.Point(114, 45)
+        Me.SimpleButtonEditPickedUpItems.Location = New System.Drawing.Point(183, 45)
         Me.SimpleButtonEditPickedUpItems.Name = "SimpleButtonEditPickedUpItems"
         Me.SimpleButtonEditPickedUpItems.Size = New System.Drawing.Size(111, 23)
         Me.SimpleButtonEditPickedUpItems.TabIndex = 3
@@ -878,7 +886,7 @@ Partial Class MainOfficeForm
         'SimpleButtonCustomerCard
         '
         Me.SimpleButtonCustomerCard.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.SimpleButtonCustomerCard.Location = New System.Drawing.Point(231, 45)
+        Me.SimpleButtonCustomerCard.Location = New System.Drawing.Point(300, 45)
         Me.SimpleButtonCustomerCard.Name = "SimpleButtonCustomerCard"
         Me.SimpleButtonCustomerCard.Size = New System.Drawing.Size(101, 23)
         Me.SimpleButtonCustomerCard.TabIndex = 0
@@ -887,7 +895,7 @@ Partial Class MainOfficeForm
         'SimpleButtonPaymentHistory
         '
         Me.SimpleButtonPaymentHistory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.SimpleButtonPaymentHistory.Location = New System.Drawing.Point(338, 45)
+        Me.SimpleButtonPaymentHistory.Location = New System.Drawing.Point(407, 45)
         Me.SimpleButtonPaymentHistory.Name = "SimpleButtonPaymentHistory"
         Me.SimpleButtonPaymentHistory.Size = New System.Drawing.Size(107, 23)
         Me.SimpleButtonPaymentHistory.TabIndex = 0
@@ -910,7 +918,7 @@ Partial Class MainOfficeForm
             Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PropertyGridControlCustomer.Location = New System.Drawing.Point(0, 79)
         Me.PropertyGridControlCustomer.Name = "PropertyGridControlCustomer"
-        Me.PropertyGridControlCustomer.Size = New System.Drawing.Size(454, 35)
+        Me.PropertyGridControlCustomer.Size = New System.Drawing.Size(523, 35)
         Me.PropertyGridControlCustomer.TabIndex = 1
         '
         'CCustomerHistoryBindingSource
@@ -922,7 +930,7 @@ Partial Class MainOfficeForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonAddNewCustomer, Me.ToolStripSeparator2, Me.ToolStripButtonCustomerListing, Me.ToolStripSeparator5, Me.ToolStripButtonReviewCollectedItems, Me.ToolStripSeparator6, Me.ToolStripButtonReceivePayment, Me.ToolStripButtonPaymentSummary, Me.ToolStripButtonRevenueReport})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1291, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1406, 25)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -996,7 +1004,7 @@ Partial Class MainOfficeForm
         Me.StatusStripMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabelBalancing})
         Me.StatusStripMain.Location = New System.Drawing.Point(0, 492)
         Me.StatusStripMain.Name = "StatusStripMain"
-        Me.StatusStripMain.Size = New System.Drawing.Size(1291, 22)
+        Me.StatusStripMain.Size = New System.Drawing.Size(1406, 22)
         Me.StatusStripMain.TabIndex = 2
         Me.StatusStripMain.Text = "StatusStrip1"
         '
@@ -1005,17 +1013,21 @@ Partial Class MainOfficeForm
         Me.ToolStripStatusLabelBalancing.Name = "ToolStripStatusLabelBalancing"
         Me.ToolStripStatusLabelBalancing.Size = New System.Drawing.Size(0, 17)
         '
-        'MailingLabelsToolStripMenuItem
+        'ButtonBalanceRefresh
         '
-        Me.MailingLabelsToolStripMenuItem.Name = "MailingLabelsToolStripMenuItem"
-        Me.MailingLabelsToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
-        Me.MailingLabelsToolStripMenuItem.Text = "Mailing Labels"
+        Me.ButtonBalanceRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.ButtonBalanceRefresh.Location = New System.Drawing.Point(266, 410)
+        Me.ButtonBalanceRefresh.Name = "ButtonBalanceRefresh"
+        Me.ButtonBalanceRefresh.Size = New System.Drawing.Size(121, 23)
+        Me.ButtonBalanceRefresh.TabIndex = 10
+        Me.ButtonBalanceRefresh.Text = "Balance Reset"
+        Me.ButtonBalanceRefresh.UseVisualStyleBackColor = true
         '
         'MainOfficeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1291, 514)
+        Me.ClientSize = New System.Drawing.Size(1406, 514)
         Me.Controls.Add(Me.SplitContainerMain)
         Me.Controls.Add(Me.StatusStripMain)
         Me.Controls.Add(Me.ToolStrip1)
@@ -1169,4 +1181,5 @@ End Sub
     Friend WithEvents LastBilledReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UploadCurrentRouteDataToFTPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MailingLabelsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ButtonBalanceRefresh As Button
 End Class
