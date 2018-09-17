@@ -461,7 +461,14 @@ Public Class BillingReview
 
                         ' ----- We will need an adjustment for the price increase
                         Dim rateAdjustment As Double = 0.0
-                        If monthsOfPickup(tempStep) < 11 AndAlso yearsOfPickup(tempStep) = 2012 AndAlso (customerBillingObj.BillingType.ToUpper = "B" Or customerBillingObj.BillingType.ToUpper = "C") Then
+
+                        ' --- used for the 2012 price increase
+                        'If monthsOfPickup(tempStep) < 11 AndAlso yearsOfPickup(tempStep) = 2012 AndAlso (customerBillingObj.BillingType.ToUpper = "B" Or customerBillingObj.BillingType.ToUpper = "C") Then
+                        '    rateAdjustment = 1.0
+                        'End If
+
+                        ' --- used for the 2018 price increase
+                        If monthsOfPickup(tempStep) < 9 AndAlso yearsOfPickup(tempStep) = 2018 Then
                             rateAdjustment = 1.0
                         End If
 
@@ -528,7 +535,14 @@ Public Class BillingReview
                     If extraBagsThisMonth > 0 Then
 
                         Dim fBagRateAdjust As Double = BagRate
-                        If monthsOfPickup(tempBagCounter) < 11 AndAlso yearsOfPickup(tempBagCounter) = 2012 Then
+
+                        ' --- used for the 2012 price increase
+                        'If monthsOfPickup(tempBagCounter) < 11 AndAlso yearsOfPickup(tempBagCounter) = 2012 Then
+                        '    fBagRateAdjust -= 0.5
+                        'End If
+
+                        ' --- used for the 2018 price increase
+                        If monthsOfPickup(tempBagCounter) < 9 AndAlso yearsOfPickup(tempBagCounter) = 2018 Then
                             fBagRateAdjust -= 0.5
                         End If
 

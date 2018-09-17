@@ -133,7 +133,16 @@ Public Class ReviewPickedUpItems
             End If
 
             ' ----- Save the contents of that file to the database 
-            If PickupTransaction.CollectionRecord.ReadXML(My.Settings.DatabaseLocation, fileToImport) Then
+            Dim currentCount As Integer = 0
+            Dim previousCount As Integer = 0
+            Dim returnCode As PickupTransaction.CollectionRecord.ImportReturnCodes = PickupTransaction.CollectionRecord.ReadXML(My.Settings.DatabaseLocation, fileToImport, previousCount, currentCount)
+
+            If returnCode = PickupTransaction.CollectionRecord.ImportReturnCodes.Duplicates Then
+
+                Dim strMessage As String = String.Format("The program is attempting to import {0} records but has determined there are {1} duplicate database records for this date and route.  This may indicate the route has already been imported.  Please contact LCCS for support.", currentCount, previousCount)
+                MessageBox.Show(strMessage, "Duplicates", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ElseIf returnCode = PickupTransaction.CollectionRecord.ImportReturnCodes.ImportSuccessful Then
 
                 ' ----- Pull out the base file name 
                 Dim baseFileName As String = My.Computer.FileSystem.GetName(fileToImport)

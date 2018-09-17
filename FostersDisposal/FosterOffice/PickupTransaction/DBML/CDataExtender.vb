@@ -1206,6 +1206,12 @@ End Class
 
 Public Class CollectionRecord
 
+    Public Enum ImportReturnCodes
+        ImportSuccessful = 0
+        Duplicates = 1
+        UndefinedError = 2
+    End Enum
+
     Public Class PickupRecords
         Public Property DatabaseID As Integer = 0
         Public Property SequenceNumber As Integer = 0
@@ -1464,7 +1470,7 @@ Public Class CollectionRecord
 
     End Function
 
-    Public Shared Function ReadXML(ByVal ConnectionString As String, ByVal collectionRecordFileName As String) As Boolean
+    Public Shared Function ReadXML(ByVal ConnectionString As String, ByVal collectionRecordFileName As String, ByRef returnDataPrevList As Integer, ByRef returnDataCurrList As Integer) As ImportReturnCodes
 
         ' ----- Open the collection file 
         Using fs As New FileStream(collectionRecordFileName, FileMode.Open, FileAccess.Read)
@@ -1473,15 +1479,32 @@ Public Class CollectionRecord
             Dim SerXML As New XmlSerializer(GetType(List(Of CollectionRecord)))
             Dim colRec As List(Of CollectionRecord) = DirectCast(SerXML.Deserialize(fs), List(Of CollectionRecord))
 
+            '* just in case we need it later *'
+            returnDataCurrList = colRec.Count
+
             ' ----- If we have data, post it to the database 
             If colRec.Count > 0 Then
 
                 Dim db As New DisposalData(ConnectionString)
 
+                Dim collectionDay As DateTime = colRec(0).DateCollected.Date
+                Dim nextDay As DateTime = collectionDay + New TimeSpan(1, 0, 0, 0)
+
+                '* at this point, see if we have any records already '*
+                Dim previousList As List(Of CollectionRecord) = (From l In db.CollectionRecords
+                                                                 Where l.RouteDescription = colRec(0).RouteDescription And l.DateCollected >= collectionDay And l.DateCollected < nextDay Select l).ToList
+
+                '* we need to handle this some how *'
+                If previousList.Count > 0 Then
+                    returnDataPrevList = previousList.Count
+                    Return ImportReturnCodes.Duplicates
+                End If
+
                 For Each obj As CollectionRecord In colRec
-                    'RemoveAllCollectedItems(ConnectionString, obj.CustomerID, obj.DateCollected)
                     SaveCollectedItemUpload(ConnectionString, obj)
                 Next
+
+                Return ImportReturnCodes.ImportSuccessful
 
             End If
 
