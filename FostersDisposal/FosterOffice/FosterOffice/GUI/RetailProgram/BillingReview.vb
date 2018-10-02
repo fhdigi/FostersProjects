@@ -14,7 +14,7 @@ Public Class BillingReview
     Public Property FillMode As Integer = 1
 
     ' ----- Set the bag rate 
-    Const BagRate As Double = 2.0
+    Const BagRate As Double = 2.5
 
     Private Function GetBillingMonth(ByVal BillingDate As Date, ByVal reportPeriod As Integer) As Integer
 
@@ -468,7 +468,12 @@ Public Class BillingReview
                         'End If
 
                         ' --- used for the 2018 price increase
-                        If monthsOfPickup(tempStep) < 9 AndAlso yearsOfPickup(tempStep) = 2018 Then
+                        If _
+                            monthsOfPickup(tempStep) < 9 AndAlso yearsOfPickup(tempStep) = 2018 AndAlso
+                            (customerBillingObj.BillingType.ToUpper = "A" Or
+                             customerBillingObj.BillingType.ToUpper = "B" Or
+                             customerBillingObj.BillingType.ToUpper = "C" Or
+                             customerBillingObj.BillingType.ToUpper = "D") Then
                             rateAdjustment = 1.0
                         End If
 

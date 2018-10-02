@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainOfficeForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainOfficeForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -100,6 +100,7 @@ Partial Class MainOfficeForm
         Me.colCustomerAddress = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colPhoneNumber = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRoute = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ButtonBalanceRefresh = New System.Windows.Forms.Button()
         Me.CheckBoxCurrentMonthPickups = New System.Windows.Forms.CheckBox()
         Me.ButtonViewBills = New System.Windows.Forms.Button()
         Me.ButtonPrintPayment = New System.Windows.Forms.Button()
@@ -133,31 +134,30 @@ Partial Class MainOfficeForm
         Me.ToolStripButtonRevenueReport = New System.Windows.Forms.ToolStripButton()
         Me.StatusStripMain = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabelBalancing = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ButtonBalanceRefresh = New System.Windows.Forms.Button()
-        CType(Me.CCustomerListBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.MenuStrip1.SuspendLayout
-        CType(Me.SplitContainerMain,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SplitContainerMain.Panel1.SuspendLayout
-        Me.SplitContainerMain.Panel2.SuspendLayout
-        Me.SplitContainerMain.SuspendLayout
-        CType(Me.GridControlRental,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.CRentalCustomerListBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GridViewRental,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemHyperLinkEdit2,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemHyperLinkEdit1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Panel1.SuspendLayout
-        CType(Me.GridControlMain,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GridViewMain,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemHyperLinkEditCustomer,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DataGridViewHistory,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.CCustomerHistoryLineItemsBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.PanelControl2,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.PanelControl2.SuspendLayout
-        CType(Me.PropertyGridControlCustomer,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.CCustomerHistoryBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.ToolStrip1.SuspendLayout
-        Me.StatusStripMain.SuspendLayout
-        Me.SuspendLayout
+        CType(Me.CCustomerListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.SplitContainerMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainerMain.Panel1.SuspendLayout()
+        Me.SplitContainerMain.Panel2.SuspendLayout()
+        Me.SplitContainerMain.SuspendLayout()
+        CType(Me.GridControlRental, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CRentalCustomerListBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridViewRental, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemHyperLinkEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemHyperLinkEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.GridControlMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridViewMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemHyperLinkEditCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl2.SuspendLayout()
+        CType(Me.PropertyGridControlCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CCustomerHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
+        Me.StatusStripMain.SuspendLayout()
+        Me.SuspendLayout()
         '
         'CCustomerListBindingSource
         '
@@ -182,7 +182,7 @@ Partial Class MainOfficeForm
         'SetupToolStripMenuItem
         '
         Me.SetupToolStripMenuItem.Name = "SetupToolStripMenuItem"
-        Me.SetupToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F10),System.Windows.Forms.Keys)
+        Me.SetupToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F10), System.Windows.Forms.Keys)
         Me.SetupToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.SetupToolStripMenuItem.Text = "&Setup..."
         '
@@ -191,7 +191,7 @@ Partial Class MainOfficeForm
         Me.UpdateMonthBilledToolStripMenuItem.Name = "UpdateMonthBilledToolStripMenuItem"
         Me.UpdateMonthBilledToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.UpdateMonthBilledToolStripMenuItem.Text = "Update Month Billed..."
-        Me.UpdateMonthBilledToolStripMenuItem.Visible = false
+        Me.UpdateMonthBilledToolStripMenuItem.Visible = False
         '
         'RefreshAllCurrentBalancesToolStripMenuItem
         '
@@ -204,7 +204,7 @@ Partial Class MainOfficeForm
         Me.ConvertRentalCustomersToolStripMenuItem.Name = "ConvertRentalCustomersToolStripMenuItem"
         Me.ConvertRentalCustomersToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.ConvertRentalCustomersToolStripMenuItem.Text = "Convert Rental Customers..."
-        Me.ConvertRentalCustomersToolStripMenuItem.Visible = false
+        Me.ConvertRentalCustomersToolStripMenuItem.Visible = False
         '
         'ToolStripSeparator4
         '
@@ -262,7 +262,7 @@ Partial Class MainOfficeForm
         Me.BillingToolStripMenuItem.Name = "BillingToolStripMenuItem"
         Me.BillingToolStripMenuItem.Size = New System.Drawing.Size(246, 22)
         Me.BillingToolStripMenuItem.Text = "Billing..."
-        Me.BillingToolStripMenuItem.Visible = false
+        Me.BillingToolStripMenuItem.Visible = False
         '
         'BillingFormToolStripMenuItem
         '
@@ -481,9 +481,9 @@ Partial Class MainOfficeForm
         '
         'GridControlRental
         '
-        Me.GridControlRental.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.GridControlRental.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridControlRental.DataSource = Me.CRentalCustomerListBindingSource
         Me.GridControlRental.Location = New System.Drawing.Point(3, 60)
         Me.GridControlRental.MainView = Me.GridViewRental
@@ -505,15 +505,15 @@ Partial Class MainOfficeForm
         '
         'colRentalAccountNumber
         '
-        Me.colRentalAccountNumber.AppearanceCell.Options.UseTextOptions = true
+        Me.colRentalAccountNumber.AppearanceCell.Options.UseTextOptions = True
         Me.colRentalAccountNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.colRentalAccountNumber.AppearanceHeader.Options.UseTextOptions = true
+        Me.colRentalAccountNumber.AppearanceHeader.Options.UseTextOptions = True
         Me.colRentalAccountNumber.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colRentalAccountNumber.Caption = "Account #"
         Me.colRentalAccountNumber.FieldName = "AccountNumber"
         Me.colRentalAccountNumber.Name = "colRentalAccountNumber"
-        Me.colRentalAccountNumber.OptionsColumn.AllowEdit = false
-        Me.colRentalAccountNumber.Visible = true
+        Me.colRentalAccountNumber.OptionsColumn.AllowEdit = False
+        Me.colRentalAccountNumber.Visible = True
         Me.colRentalAccountNumber.VisibleIndex = 0
         Me.colRentalAccountNumber.Width = 70
         '
@@ -522,22 +522,22 @@ Partial Class MainOfficeForm
         Me.colRentalCustomerName.ColumnEdit = Me.RepositoryItemHyperLinkEdit2
         Me.colRentalCustomerName.FieldName = "CustomerName"
         Me.colRentalCustomerName.Name = "colRentalCustomerName"
-        Me.colRentalCustomerName.OptionsColumn.AllowEdit = false
-        Me.colRentalCustomerName.Visible = true
+        Me.colRentalCustomerName.OptionsColumn.AllowEdit = False
+        Me.colRentalCustomerName.Visible = True
         Me.colRentalCustomerName.VisibleIndex = 1
         Me.colRentalCustomerName.Width = 229
         '
         'RepositoryItemHyperLinkEdit2
         '
-        Me.RepositoryItemHyperLinkEdit2.AutoHeight = false
+        Me.RepositoryItemHyperLinkEdit2.AutoHeight = False
         Me.RepositoryItemHyperLinkEdit2.Name = "RepositoryItemHyperLinkEdit2"
         '
         'colCompleteRentalAddressWithCSZ
         '
         Me.colCompleteRentalAddressWithCSZ.FieldName = "CompleteAddressWithCSZ"
         Me.colCompleteRentalAddressWithCSZ.Name = "colCompleteRentalAddressWithCSZ"
-        Me.colCompleteRentalAddressWithCSZ.OptionsColumn.AllowEdit = false
-        Me.colCompleteRentalAddressWithCSZ.Visible = true
+        Me.colCompleteRentalAddressWithCSZ.OptionsColumn.AllowEdit = False
+        Me.colCompleteRentalAddressWithCSZ.Visible = True
         Me.colCompleteRentalAddressWithCSZ.VisibleIndex = 2
         Me.colCompleteRentalAddressWithCSZ.Width = 229
         '
@@ -545,14 +545,14 @@ Partial Class MainOfficeForm
         '
         Me.colRentalPhoneNumber.FieldName = "PhoneNumber"
         Me.colRentalPhoneNumber.Name = "colRentalPhoneNumber"
-        Me.colRentalPhoneNumber.OptionsColumn.AllowEdit = false
-        Me.colRentalPhoneNumber.Visible = true
+        Me.colRentalPhoneNumber.OptionsColumn.AllowEdit = False
+        Me.colRentalPhoneNumber.Visible = True
         Me.colRentalPhoneNumber.VisibleIndex = 3
         Me.colRentalPhoneNumber.Width = 234
         '
         'RepositoryItemHyperLinkEdit1
         '
-        Me.RepositoryItemHyperLinkEdit1.AutoHeight = false
+        Me.RepositoryItemHyperLinkEdit1.AutoHeight = False
         Me.RepositoryItemHyperLinkEdit1.Name = "RepositoryItemHyperLinkEdit1"
         '
         'Panel1
@@ -570,13 +570,13 @@ Partial Class MainOfficeForm
         '
         'CheckBoxSearchInactive
         '
-        Me.CheckBoxSearchInactive.AutoSize = true
+        Me.CheckBoxSearchInactive.AutoSize = True
         Me.CheckBoxSearchInactive.Location = New System.Drawing.Point(593, 22)
         Me.CheckBoxSearchInactive.Name = "CheckBoxSearchInactive"
         Me.CheckBoxSearchInactive.Size = New System.Drawing.Size(155, 17)
         Me.CheckBoxSearchInactive.TabIndex = 4
         Me.CheckBoxSearchInactive.Text = "Search Inactive Customers"
-        Me.CheckBoxSearchInactive.UseVisualStyleBackColor = true
+        Me.CheckBoxSearchInactive.UseVisualStyleBackColor = True
         '
         'ButtonClearSearch
         '
@@ -586,7 +586,7 @@ Partial Class MainOfficeForm
         Me.ButtonClearSearch.Size = New System.Drawing.Size(93, 23)
         Me.ButtonClearSearch.TabIndex = 3
         Me.ButtonClearSearch.Text = "Clear Search"
-        Me.ButtonClearSearch.UseVisualStyleBackColor = true
+        Me.ButtonClearSearch.UseVisualStyleBackColor = True
         '
         'ButtonSearchCustomer
         '
@@ -597,7 +597,7 @@ Partial Class MainOfficeForm
         Me.ButtonSearchCustomer.Size = New System.Drawing.Size(93, 23)
         Me.ButtonSearchCustomer.TabIndex = 2
         Me.ButtonSearchCustomer.Text = "Search Customer..."
-        Me.ButtonSearchCustomer.UseVisualStyleBackColor = true
+        Me.ButtonSearchCustomer.UseVisualStyleBackColor = True
         '
         'TextBoxSearchCustomer
         '
@@ -608,8 +608,8 @@ Partial Class MainOfficeForm
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(13, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
@@ -618,9 +618,9 @@ Partial Class MainOfficeForm
         '
         'GridControlMain
         '
-        Me.GridControlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.GridControlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridControlMain.DataSource = Me.CCustomerListBindingSource
         Me.GridControlMain.Location = New System.Drawing.Point(0, 60)
         Me.GridControlMain.MainView = Me.GridViewMain
@@ -640,128 +640,138 @@ Partial Class MainOfficeForm
         '
         'colPickupDate
         '
-        Me.colPickupDate.AppearanceCell.Options.UseTextOptions = true
+        Me.colPickupDate.AppearanceCell.Options.UseTextOptions = True
         Me.colPickupDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colPickupDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.colPickupDate.AppearanceHeader.Options.UseTextOptions = true
+        Me.colPickupDate.AppearanceHeader.Options.UseTextOptions = True
         Me.colPickupDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colPickupDate.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colPickupDate.FieldName = "PickupDate"
         Me.colPickupDate.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.DisplayText
         Me.colPickupDate.Name = "colPickupDate"
-        Me.colPickupDate.OptionsColumn.AllowEdit = false
+        Me.colPickupDate.OptionsColumn.AllowEdit = False
         Me.colPickupDate.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value
-        Me.colPickupDate.Visible = true
+        Me.colPickupDate.Visible = True
         Me.colPickupDate.VisibleIndex = 5
         '
         'colSequenceNumber
         '
-        Me.colSequenceNumber.AppearanceCell.Options.UseTextOptions = true
+        Me.colSequenceNumber.AppearanceCell.Options.UseTextOptions = True
         Me.colSequenceNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colSequenceNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colSequenceNumber.FieldName = "SequenceNumber"
         Me.colSequenceNumber.Name = "colSequenceNumber"
-        Me.colSequenceNumber.OptionsColumn.AllowEdit = false
-        Me.colSequenceNumber.Visible = true
+        Me.colSequenceNumber.OptionsColumn.AllowEdit = False
+        Me.colSequenceNumber.Visible = True
         Me.colSequenceNumber.VisibleIndex = 0
         '
         'colAccountNumber
         '
-        Me.colAccountNumber.AppearanceCell.Options.UseTextOptions = true
+        Me.colAccountNumber.AppearanceCell.Options.UseTextOptions = True
         Me.colAccountNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colAccountNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colAccountNumber.FieldName = "AccountNumber"
         Me.colAccountNumber.Name = "colAccountNumber"
-        Me.colAccountNumber.OptionsColumn.AllowEdit = false
-        Me.colAccountNumber.Visible = true
+        Me.colAccountNumber.OptionsColumn.AllowEdit = False
+        Me.colAccountNumber.Visible = True
         Me.colAccountNumber.VisibleIndex = 2
         '
         'colCustomerName
         '
-        Me.colCustomerName.AppearanceCell.Options.UseTextOptions = true
+        Me.colCustomerName.AppearanceCell.Options.UseTextOptions = True
         Me.colCustomerName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colCustomerName.ColumnEdit = Me.RepositoryItemHyperLinkEditCustomer
         Me.colCustomerName.FieldName = "CustomerName"
         Me.colCustomerName.Name = "colCustomerName"
-        Me.colCustomerName.OptionsColumn.AllowEdit = false
-        Me.colCustomerName.Visible = true
+        Me.colCustomerName.OptionsColumn.AllowEdit = False
+        Me.colCustomerName.Visible = True
         Me.colCustomerName.VisibleIndex = 1
         '
         'RepositoryItemHyperLinkEditCustomer
         '
-        Me.RepositoryItemHyperLinkEditCustomer.AutoHeight = false
+        Me.RepositoryItemHyperLinkEditCustomer.AutoHeight = False
         Me.RepositoryItemHyperLinkEditCustomer.Name = "RepositoryItemHyperLinkEditCustomer"
         '
         'colCustomerAddress
         '
-        Me.colCustomerAddress.AppearanceCell.Options.UseTextOptions = true
+        Me.colCustomerAddress.AppearanceCell.Options.UseTextOptions = True
         Me.colCustomerAddress.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colCustomerAddress.FieldName = "CustomerAddress"
         Me.colCustomerAddress.Name = "colCustomerAddress"
-        Me.colCustomerAddress.OptionsColumn.AllowEdit = false
-        Me.colCustomerAddress.Visible = true
+        Me.colCustomerAddress.OptionsColumn.AllowEdit = False
+        Me.colCustomerAddress.Visible = True
         Me.colCustomerAddress.VisibleIndex = 3
         '
         'colPhoneNumber
         '
-        Me.colPhoneNumber.AppearanceCell.Options.UseTextOptions = true
+        Me.colPhoneNumber.AppearanceCell.Options.UseTextOptions = True
         Me.colPhoneNumber.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colPhoneNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colPhoneNumber.FieldName = "PhoneNumber"
         Me.colPhoneNumber.Name = "colPhoneNumber"
-        Me.colPhoneNumber.OptionsColumn.AllowEdit = false
-        Me.colPhoneNumber.OptionsColumn.ReadOnly = true
-        Me.colPhoneNumber.Visible = true
+        Me.colPhoneNumber.OptionsColumn.AllowEdit = False
+        Me.colPhoneNumber.OptionsColumn.ReadOnly = True
+        Me.colPhoneNumber.Visible = True
         Me.colPhoneNumber.VisibleIndex = 4
         '
         'colRoute
         '
-        Me.colRoute.AppearanceCell.Options.UseTextOptions = true
+        Me.colRoute.AppearanceCell.Options.UseTextOptions = True
         Me.colRoute.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.colRoute.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
         Me.colRoute.FieldName = "Route"
         Me.colRoute.Name = "colRoute"
-        Me.colRoute.OptionsColumn.AllowEdit = false
-        Me.colRoute.Visible = true
+        Me.colRoute.OptionsColumn.AllowEdit = False
+        Me.colRoute.Visible = True
         Me.colRoute.VisibleIndex = 5
+        '
+        'ButtonBalanceRefresh
+        '
+        Me.ButtonBalanceRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonBalanceRefresh.Location = New System.Drawing.Point(266, 410)
+        Me.ButtonBalanceRefresh.Name = "ButtonBalanceRefresh"
+        Me.ButtonBalanceRefresh.Size = New System.Drawing.Size(121, 23)
+        Me.ButtonBalanceRefresh.TabIndex = 10
+        Me.ButtonBalanceRefresh.Text = "Balance Reset"
+        Me.ButtonBalanceRefresh.UseVisualStyleBackColor = True
         '
         'CheckBoxCurrentMonthPickups
         '
-        Me.CheckBoxCurrentMonthPickups.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.CheckBoxCurrentMonthPickups.AutoSize = true
+        Me.CheckBoxCurrentMonthPickups.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBoxCurrentMonthPickups.AutoSize = True
         Me.CheckBoxCurrentMonthPickups.Location = New System.Drawing.Point(380, 120)
         Me.CheckBoxCurrentMonthPickups.Name = "CheckBoxCurrentMonthPickups"
         Me.CheckBoxCurrentMonthPickups.Size = New System.Drawing.Size(134, 17)
         Me.CheckBoxCurrentMonthPickups.TabIndex = 9
         Me.CheckBoxCurrentMonthPickups.Text = "Current Month Pickups"
-        Me.CheckBoxCurrentMonthPickups.UseVisualStyleBackColor = true
+        Me.CheckBoxCurrentMonthPickups.UseVisualStyleBackColor = True
         '
         'ButtonViewBills
         '
-        Me.ButtonViewBills.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.ButtonViewBills.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonViewBills.Location = New System.Drawing.Point(132, 410)
         Me.ButtonViewBills.Name = "ButtonViewBills"
         Me.ButtonViewBills.Size = New System.Drawing.Size(121, 23)
         Me.ButtonViewBills.TabIndex = 8
         Me.ButtonViewBills.Text = "View Bills..."
-        Me.ButtonViewBills.UseVisualStyleBackColor = true
+        Me.ButtonViewBills.UseVisualStyleBackColor = True
         '
         'ButtonPrintPayment
         '
-        Me.ButtonPrintPayment.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.ButtonPrintPayment.Enabled = false
+        Me.ButtonPrintPayment.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonPrintPayment.Enabled = False
         Me.ButtonPrintPayment.Location = New System.Drawing.Point(5, 410)
         Me.ButtonPrintPayment.Name = "ButtonPrintPayment"
         Me.ButtonPrintPayment.Size = New System.Drawing.Size(121, 23)
         Me.ButtonPrintPayment.TabIndex = 7
         Me.ButtonPrintPayment.Text = "Print Payment..."
-        Me.ButtonPrintPayment.UseVisualStyleBackColor = true
+        Me.ButtonPrintPayment.UseVisualStyleBackColor = True
         '
         'LabelCurrentBalance
         '
-        Me.LabelCurrentBalance.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.LabelCurrentBalance.Font = New System.Drawing.Font("Tahoma", 10!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.LabelCurrentBalance.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelCurrentBalance.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCurrentBalance.ForeColor = System.Drawing.Color.Blue
         Me.LabelCurrentBalance.Location = New System.Drawing.Point(2, 117)
         Me.LabelCurrentBalance.Name = "LabelCurrentBalance"
@@ -771,11 +781,11 @@ Partial Class MainOfficeForm
         '
         'DataGridViewHistory
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridViewHistory.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewHistory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.DataGridViewHistory.AutoGenerateColumns = false
+        Me.DataGridViewHistory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewHistory.AutoGenerateColumns = False
         Me.DataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewHistory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDate, Me.DataGridViewTextBoxColumn2, Me.colAmount, Me.DataGridViewTextBoxColumn4, Me.colTransID, Me.colCustomerID})
         Me.DataGridViewHistory.DataSource = Me.CCustomerHistoryLineItemsBindingSource
@@ -829,14 +839,14 @@ Partial Class MainOfficeForm
         Me.colTransID.DataPropertyName = "TransactionID"
         Me.colTransID.HeaderText = "TransID"
         Me.colTransID.Name = "colTransID"
-        Me.colTransID.Visible = false
+        Me.colTransID.Visible = False
         '
         'colCustomerID
         '
         Me.colCustomerID.DataPropertyName = "CustomerID"
         Me.colCustomerID.HeaderText = "CustomerID"
         Me.colCustomerID.Name = "colCustomerID"
-        Me.colCustomerID.Visible = false
+        Me.colCustomerID.Visible = False
         '
         'CCustomerHistoryLineItemsBindingSource
         '
@@ -844,13 +854,13 @@ Partial Class MainOfficeForm
         '
         'ButtonDeleteCustomer
         '
-        Me.ButtonDeleteCustomer.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.ButtonDeleteCustomer.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonDeleteCustomer.Location = New System.Drawing.Point(393, 410)
         Me.ButtonDeleteCustomer.Name = "ButtonDeleteCustomer"
         Me.ButtonDeleteCustomer.Size = New System.Drawing.Size(121, 23)
         Me.ButtonDeleteCustomer.TabIndex = 4
         Me.ButtonDeleteCustomer.Text = "Delete Customer..."
-        Me.ButtonDeleteCustomer.UseVisualStyleBackColor = true
+        Me.ButtonDeleteCustomer.UseVisualStyleBackColor = True
         '
         'PanelControl2
         '
@@ -867,7 +877,7 @@ Partial Class MainOfficeForm
         '
         'SimpleButtonManualBill
         '
-        Me.SimpleButtonManualBill.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.SimpleButtonManualBill.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButtonManualBill.Location = New System.Drawing.Point(75, 45)
         Me.SimpleButtonManualBill.Name = "SimpleButtonManualBill"
         Me.SimpleButtonManualBill.Size = New System.Drawing.Size(102, 23)
@@ -876,7 +886,7 @@ Partial Class MainOfficeForm
         '
         'SimpleButtonEditPickedUpItems
         '
-        Me.SimpleButtonEditPickedUpItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.SimpleButtonEditPickedUpItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButtonEditPickedUpItems.Location = New System.Drawing.Point(183, 45)
         Me.SimpleButtonEditPickedUpItems.Name = "SimpleButtonEditPickedUpItems"
         Me.SimpleButtonEditPickedUpItems.Size = New System.Drawing.Size(111, 23)
@@ -885,7 +895,7 @@ Partial Class MainOfficeForm
         '
         'SimpleButtonCustomerCard
         '
-        Me.SimpleButtonCustomerCard.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.SimpleButtonCustomerCard.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButtonCustomerCard.Location = New System.Drawing.Point(300, 45)
         Me.SimpleButtonCustomerCard.Name = "SimpleButtonCustomerCard"
         Me.SimpleButtonCustomerCard.Size = New System.Drawing.Size(101, 23)
@@ -894,7 +904,7 @@ Partial Class MainOfficeForm
         '
         'SimpleButtonPaymentHistory
         '
-        Me.SimpleButtonPaymentHistory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.SimpleButtonPaymentHistory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SimpleButtonPaymentHistory.Location = New System.Drawing.Point(407, 45)
         Me.SimpleButtonPaymentHistory.Name = "SimpleButtonPaymentHistory"
         Me.SimpleButtonPaymentHistory.Size = New System.Drawing.Size(107, 23)
@@ -903,8 +913,8 @@ Partial Class MainOfficeForm
         '
         'LabelControlCustomer
         '
-        Me.LabelControlCustomer.Appearance.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.LabelControlCustomer.Appearance.Options.UseFont = true
+        Me.LabelControlCustomer.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControlCustomer.Appearance.Options.UseFont = True
         Me.LabelControlCustomer.Location = New System.Drawing.Point(5, 5)
         Me.LabelControlCustomer.Name = "LabelControlCustomer"
         Me.LabelControlCustomer.Size = New System.Drawing.Size(150, 19)
@@ -913,9 +923,9 @@ Partial Class MainOfficeForm
         '
         'PropertyGridControlCustomer
         '
-        Me.PropertyGridControlCustomer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left)  _
-            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.PropertyGridControlCustomer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PropertyGridControlCustomer.Location = New System.Drawing.Point(0, 79)
         Me.PropertyGridControlCustomer.Name = "PropertyGridControlCustomer"
         Me.PropertyGridControlCustomer.Size = New System.Drawing.Size(523, 35)
@@ -1013,65 +1023,55 @@ Partial Class MainOfficeForm
         Me.ToolStripStatusLabelBalancing.Name = "ToolStripStatusLabelBalancing"
         Me.ToolStripStatusLabelBalancing.Size = New System.Drawing.Size(0, 17)
         '
-        'ButtonBalanceRefresh
-        '
-        Me.ButtonBalanceRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.ButtonBalanceRefresh.Location = New System.Drawing.Point(266, 410)
-        Me.ButtonBalanceRefresh.Name = "ButtonBalanceRefresh"
-        Me.ButtonBalanceRefresh.Size = New System.Drawing.Size(121, 23)
-        Me.ButtonBalanceRefresh.TabIndex = 10
-        Me.ButtonBalanceRefresh.Text = "Balance Reset"
-        Me.ButtonBalanceRefresh.UseVisualStyleBackColor = true
-        '
         'MainOfficeForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1406, 514)
         Me.Controls.Add(Me.SplitContainerMain)
         Me.Controls.Add(Me.StatusStripMain)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainOfficeForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Foster's Disposal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.CCustomerListBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        Me.MenuStrip1.ResumeLayout(false)
-        Me.MenuStrip1.PerformLayout
-        Me.SplitContainerMain.Panel1.ResumeLayout(false)
-        Me.SplitContainerMain.Panel2.ResumeLayout(false)
-        Me.SplitContainerMain.Panel2.PerformLayout
-        CType(Me.SplitContainerMain,System.ComponentModel.ISupportInitialize).EndInit
-        Me.SplitContainerMain.ResumeLayout(false)
-        CType(Me.GridControlRental,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.CRentalCustomerListBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GridViewRental,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemHyperLinkEdit2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemHyperLinkEdit1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Panel1.ResumeLayout(false)
-        Me.Panel1.PerformLayout
-        CType(Me.GridControlMain,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GridViewMain,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemHyperLinkEditCustomer,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DataGridViewHistory,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.CCustomerHistoryLineItemsBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PanelControl2,System.ComponentModel.ISupportInitialize).EndInit
-        Me.PanelControl2.ResumeLayout(false)
-        Me.PanelControl2.PerformLayout
-        CType(Me.PropertyGridControlCustomer,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.CCustomerHistoryBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        Me.ToolStrip1.ResumeLayout(false)
-        Me.ToolStrip1.PerformLayout
-        Me.StatusStripMain.ResumeLayout(false)
-        Me.StatusStripMain.PerformLayout
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        CType(Me.CCustomerListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.SplitContainerMain.Panel1.ResumeLayout(False)
+        Me.SplitContainerMain.Panel2.ResumeLayout(False)
+        Me.SplitContainerMain.Panel2.PerformLayout()
+        CType(Me.SplitContainerMain, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainerMain.ResumeLayout(False)
+        CType(Me.GridControlRental, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CRentalCustomerListBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridViewRental, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemHyperLinkEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemHyperLinkEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.GridControlMain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridViewMain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemHyperLinkEditCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewHistory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CCustomerHistoryLineItemsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl2.ResumeLayout(False)
+        Me.PanelControl2.PerformLayout()
+        CType(Me.PropertyGridControlCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CCustomerHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.StatusStripMain.ResumeLayout(False)
+        Me.StatusStripMain.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

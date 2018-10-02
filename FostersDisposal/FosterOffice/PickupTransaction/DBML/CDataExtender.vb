@@ -275,6 +275,26 @@ Public Class Customer
 
     End Function
 
+    Public Shared Function GetCustomerListInSeqBlock(connectionString As String, seqStart As Integer, seqEnd As Integer) As List(Of Customer)
+
+        Using db As New DisposalData(connectionString)
+            Return _
+                (From c In db.Customers Where c.SequenceNumber >= seqStart And c.SequenceNumber <= seqEnd Order By c.SequenceNumber Select c).
+                    ToList
+        End Using
+
+    End Function
+
+    Public Shared Function GetCustomerListInPrevSeqBlock(connectionString As String, seqStart As Integer, seqEnd As Integer, curSeqStart As Integer, curSeqEnd As Integer) As List(Of Customer)
+
+        Using db As New DisposalData(connectionString)
+            Return _
+                (From c In db.Customers Where c.PreviousSequenceNumber >= seqStart And c.PreviousSequenceNumber <= seqEnd And c.SequenceNumber >= curSeqStart And c.SequenceNumber <= curSeqEnd Order By c.PreviousSequenceNumber Select c).
+                    ToList
+        End Using
+
+    End Function
+
     Public Shared Function GetCustomerName(ByVal ConnectionString As String, ByVal customerNumber As Integer) As String
 
         ' ----- Open the connection 
@@ -559,6 +579,7 @@ Public Class Customer
 
         With obj
             .SequenceNumber = Me.SequenceNumber
+            .PreviousSequenceNumber = Me.PreviousSequenceNumber
             .RouteLocation_FirstName = Me.RouteLocation_FirstName
             .RouteLocation_LastName = Me.RouteLocation_LastName
             .RouteLocation_Address = Me.RouteLocation_Address
@@ -2221,17 +2242,17 @@ Public Class Transactions
     End Sub
 
 
-    Public Shared Sub UpdateBillingDate(ByVal connectionString As String, ByVal customerNumber As Integer, ByVal billingDate As Date, ByVal newBillingDate As Date) 
+    Public Shared Sub UpdateBillingDate(ByVal connectionString As String, ByVal customerNumber As Integer, ByVal billingDate As Date, ByVal newBillingDate As Date)
 
         Dim db As New DisposalData(connectionString)
 
         Dim trans = (From t In db.Transactions
-                Where t.CustomerID = customerNumber And t.TransDate >= billingDate And t.TransDate < billingDate + New TimeSpan(1, 0, 0, 0)
-                Select t).ToList
+                     Where t.CustomerID = customerNumber And t.TransDate >= billingDate And t.TransDate < billingDate + New TimeSpan(1, 0, 0, 0)
+                     Select t).ToList
 
-        For Each transaction In trans 
-            transaction.TransDate = newBillingDate 
-            db.SubmitChanges 
+        For Each transaction In trans
+            transaction.TransDate = newBillingDate
+            db.SubmitChanges()
         Next
 
     End Sub
