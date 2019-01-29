@@ -52,6 +52,7 @@ Partial Public Class RentalCustomerRouteListing
         'Detail
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTableData})
+        Me.Detail.Dpi = 100.0!
         Me.Detail.HeightF = 36.45833!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -62,8 +63,9 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrTableData.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrTableData.Dpi = 100.0!
         Me.XrTableData.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.XrTableData.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrTableData.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
         Me.XrTableData.Name = "XrTableData"
         Me.XrTableData.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1})
         Me.XrTableData.SizeF = New System.Drawing.SizeF(784.7917!, 36.45833!)
@@ -73,12 +75,14 @@ Partial Public Class RentalCustomerRouteListing
         'XrTableRow1
         '
         Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCellSize, Me.XrTableCellName, Me.XrTableCellContainer, Me.XrTableCell5, Me.XrTableCellAddress, Me.XrTableCell4, Me.XrTableCell3})
+        Me.XrTableRow1.Dpi = 100.0!
         Me.XrTableRow1.Name = "XrTableRow1"
         Me.XrTableRow1.Weight = 1.0R
         '
         'XrTableCellSize
         '
         Me.XrTableCellSize.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Size")})
+        Me.XrTableCellSize.Dpi = 100.0!
         Me.XrTableCellSize.Name = "XrTableCellSize"
         Me.XrTableCellSize.StylePriority.UseTextAlignment = False
         Me.XrTableCellSize.Text = "XrTableCellSize"
@@ -88,6 +92,7 @@ Partial Public Class RentalCustomerRouteListing
         'XrTableCellName
         '
         Me.XrTableCellName.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "CustomerName")})
+        Me.XrTableCellName.Dpi = 100.0!
         Me.XrTableCellName.Name = "XrTableCellName"
         Me.XrTableCellName.Padding = New DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100.0!)
         Me.XrTableCellName.StylePriority.UsePadding = False
@@ -99,6 +104,7 @@ Partial Public Class RentalCustomerRouteListing
         'XrTableCellContainer
         '
         Me.XrTableCellContainer.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Container")})
+        Me.XrTableCellContainer.Dpi = 100.0!
         Me.XrTableCellContainer.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrTableCellContainer.Name = "XrTableCellContainer"
         Me.XrTableCellContainer.StylePriority.UseFont = False
@@ -110,9 +116,12 @@ Partial Public Class RentalCustomerRouteListing
         'XrTableCell5
         '
         Me.XrTableCell5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "NotesOnly")})
-        Me.XrTableCell5.ForeColor = System.Drawing.Color.Red
+        Me.XrTableCell5.Dpi = 100.0!
+        Me.XrTableCell5.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.XrTableCell5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.Padding = New DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100.0!)
+        Me.XrTableCell5.StylePriority.UseFont = False
         Me.XrTableCell5.StylePriority.UseForeColor = False
         Me.XrTableCell5.StylePriority.UsePadding = False
         Me.XrTableCell5.StylePriority.UseTextAlignment = False
@@ -123,6 +132,7 @@ Partial Public Class RentalCustomerRouteListing
         'XrTableCellAddress
         '
         Me.XrTableCellAddress.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "CustomerAddress")})
+        Me.XrTableCellAddress.Dpi = 100.0!
         Me.XrTableCellAddress.Name = "XrTableCellAddress"
         Me.XrTableCellAddress.Padding = New DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100.0!)
         Me.XrTableCellAddress.StylePriority.UsePadding = False
@@ -133,16 +143,19 @@ Partial Public Class RentalCustomerRouteListing
         '
         'XrTableCell4
         '
+        Me.XrTableCell4.Dpi = 100.0!
         Me.XrTableCell4.Name = "XrTableCell4"
         Me.XrTableCell4.Weight = 0.19113348874337488R
         '
         'XrTableCell3
         '
+        Me.XrTableCell3.Dpi = 100.0!
         Me.XrTableCell3.Name = "XrTableCell3"
         Me.XrTableCell3.Weight = 0.19113389704859873R
         '
         'TopMargin
         '
+        Me.TopMargin.Dpi = 100.0!
         Me.TopMargin.HeightF = 35.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -150,6 +163,7 @@ Partial Public Class RentalCustomerRouteListing
         '
         'BottomMargin
         '
+        Me.BottomMargin.Dpi = 100.0!
         Me.BottomMargin.HeightF = 50.0!
         Me.BottomMargin.Name = "BottomMargin"
         Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -157,6 +171,7 @@ Partial Public Class RentalCustomerRouteListing
         '
         'XrLabel1
         '
+        Me.XrLabel1.Dpi = 100.0!
         Me.XrLabel1.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel1.ForeColor = System.Drawing.Color.Navy
         Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(9.999974!, 0.6250064!)
@@ -170,6 +185,7 @@ Partial Public Class RentalCustomerRouteListing
         'XrLabelHeader
         '
         Me.XrLabelHeader.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "HeaderLine")})
+        Me.XrLabelHeader.Dpi = 100.0!
         Me.XrLabelHeader.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabelHeader.LocationFloat = New DevExpress.Utils.PointFloat(466.0833!, 0.6250064!)
         Me.XrLabelHeader.Name = "XrLabelHeader"
@@ -182,7 +198,8 @@ Partial Public Class RentalCustomerRouteListing
         '
         'PageHeader
         '
-        Me.PageHeader.HeightF = 0.0!
+        Me.PageHeader.Dpi = 100.0!
+        Me.PageHeader.HeightF = 0!
         Me.PageHeader.Name = "PageHeader"
         '
         'XrLabel13
@@ -190,8 +207,9 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel13.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel13.Dpi = 100.0!
         Me.XrLabel13.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 34.70834!)
+        Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(0!, 34.70834!)
         Me.XrLabel13.Name = "XrLabel13"
         Me.XrLabel13.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel13.SizeF = New System.Drawing.SizeF(53.54165!, 23.0!)
@@ -206,6 +224,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel12.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel12.Dpi = 100.0!
         Me.XrLabel12.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(286.2501!, 34.7084!)
         Me.XrLabel12.Name = "XrLabel12"
@@ -222,6 +241,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel11.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel11.Dpi = 100.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(734.7917!, 34.7084!)
         Me.XrLabel11.Name = "XrLabel11"
@@ -238,6 +258,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel4.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel4.Dpi = 100.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(484.7916!, 34.7084!)
         Me.XrLabel4.Name = "XrLabel4"
@@ -254,6 +275,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel3.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel3.Dpi = 100.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(53.54166!, 34.70834!)
         Me.XrLabel3.Name = "XrLabel3"
@@ -270,6 +292,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.XrLabel5.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel5.Dpi = 100.0!
         Me.XrLabel5.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(684.7917!, 34.7084!)
         Me.XrLabel5.Name = "XrLabel5"
@@ -284,6 +307,7 @@ Partial Public Class RentalCustomerRouteListing
         'GroupHeaderRoute
         '
         Me.GroupHeaderRoute.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabelDate, Me.XrLabel13, Me.XrLabel3, Me.XrLabel4, Me.XrLabelHeader, Me.XrLabel1, Me.XrLabel11, Me.XrLabel12, Me.XrLabel5})
+        Me.GroupHeaderRoute.Dpi = 100.0!
         Me.GroupHeaderRoute.GroupFields.AddRange(New DevExpress.XtraReports.UI.GroupField() {New DevExpress.XtraReports.UI.GroupField("RouteNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)})
         Me.GroupHeaderRoute.HeightF = 57.70841!
         Me.GroupHeaderRoute.Name = "GroupHeaderRoute"
@@ -291,6 +315,7 @@ Partial Public Class RentalCustomerRouteListing
         '
         'XrLabelDate
         '
+        Me.XrLabelDate.Dpi = 100.0!
         Me.XrLabelDate.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabelDate.LocationFloat = New DevExpress.Utils.PointFloat(249.5833!, 0.6250064!)
         Me.XrLabelDate.Name = "XrLabelDate"
@@ -316,7 +341,7 @@ Partial Public Class RentalCustomerRouteListing
         Me.Font = New System.Drawing.Font("Verdana", 8.0!)
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRule1})
         Me.Margins = New System.Drawing.Printing.Margins(35, 25, 35, 50)
-        Me.Version = "11.2"
+        Me.Version = "16.1"
         CType(Me.XrTableData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
