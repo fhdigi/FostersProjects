@@ -25,6 +25,7 @@ Partial Public Class AgingReport
         Dim XrSummary3 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Dim XrSummary4 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
@@ -37,6 +38,7 @@ Partial Public Class AgingReport
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.XrLabel20 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel13 = New DevExpress.XtraReports.UI.XRLabel()
@@ -50,24 +52,36 @@ Partial Public Class AgingReport
         Me.XrLabel16 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel18 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel19 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel20 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel19, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrLabel2, Me.XrLabel1})
+        Me.Detail.Dpi = 100.0!
         Me.Detail.FormattingRules.Add(Me.FormattingRuleHighlight)
         Me.Detail.HeightF = 23.0!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'XrLabel19
+        '
+        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "LastMonthBilled")})
+        Me.XrLabel19.Dpi = 100.0!
+        Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(64.99999!, 0!)
+        Me.XrLabel19.Name = "XrLabel19"
+        Me.XrLabel19.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel19.SizeF = New System.Drawing.SizeF(36.24999!, 23.0!)
+        Me.XrLabel19.StylePriority.UseTextAlignment = False
+        Me.XrLabel19.Text = "XrLabel19"
+        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'XrLabel7
         '
         Me.XrLabel7.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance4Month", "{0:n2}")})
-        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0.0!)
+        Me.XrLabel7.Dpi = 100.0!
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0!)
         Me.XrLabel7.Name = "XrLabel7"
         Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel7.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -78,7 +92,8 @@ Partial Public Class AgingReport
         'XrLabel6
         '
         Me.XrLabel6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance5Month", "{0:n2}")})
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0.0!)
+        Me.XrLabel6.Dpi = 100.0!
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0!)
         Me.XrLabel6.Name = "XrLabel6"
         Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel6.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -89,7 +104,8 @@ Partial Public Class AgingReport
         'XrLabel5
         '
         Me.XrLabel5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance3Month", "{0:n2}")})
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0.0!)
+        Me.XrLabel5.Dpi = 100.0!
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0!)
         Me.XrLabel5.Name = "XrLabel5"
         Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel5.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -100,7 +116,8 @@ Partial Public Class AgingReport
         'XrLabel4
         '
         Me.XrLabel4.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalanceCurrent", "{0:n2}")})
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0.0!)
+        Me.XrLabel4.Dpi = 100.0!
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0!)
         Me.XrLabel4.Name = "XrLabel4"
         Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel4.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -111,7 +128,8 @@ Partial Public Class AgingReport
         'XrLabel3
         '
         Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Billing_Address")})
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(290.5833!, 0.0!)
+        Me.XrLabel3.Dpi = 100.0!
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(290.5833!, 0!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel3.SizeF = New System.Drawing.SizeF(178.4167!, 23.0!)
@@ -122,7 +140,8 @@ Partial Public Class AgingReport
         'XrLabel2
         '
         Me.XrLabel2.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "FullName")})
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(111.4166!, 0.0!)
+        Me.XrLabel2.Dpi = 100.0!
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(111.4166!, 0!)
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(167.7083!, 23.0!)
@@ -133,7 +152,8 @@ Partial Public Class AgingReport
         'XrLabel1
         '
         Me.XrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SequenceNumber")})
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0.00006357829!, 0.0!)
+        Me.XrLabel1.Dpi = 100.0!
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(0.00006357829!, 0!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(57.08333!, 23.0!)
@@ -143,16 +163,18 @@ Partial Public Class AgingReport
         '
         'FormattingRuleHighlight
         '
-        Me.FormattingRuleHighlight.Condition = "[AgingBalance3Month]>0.0 OR [AgingBalance4Month] > 0.0 OR [AgingBalance5Month] > " & _
+        Me.FormattingRuleHighlight.Condition = "[AgingBalance3Month]>0.0 OR [AgingBalance4Month] > 0.0 OR [AgingBalance5Month] > " &
     "0.0"
         '
         '
         '
-        Me.FormattingRuleHighlight.Formatting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.FormattingRuleHighlight.Formatting.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormattingRuleHighlight.Formatting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.FormattingRuleHighlight.Name = "FormattingRuleHighlight"
         '
         'TopMargin
         '
+        Me.TopMargin.Dpi = 100.0!
         Me.TopMargin.HeightF = 48.95833!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -160,6 +182,7 @@ Partial Public Class AgingReport
         '
         'BottomMargin
         '
+        Me.BottomMargin.Dpi = 100.0!
         Me.BottomMargin.HeightF = 48.87498!
         Me.BottomMargin.Name = "BottomMargin"
         Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -172,19 +195,35 @@ Partial Public Class AgingReport
         'PageHeader
         '
         Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel20, Me.XrLine1, Me.XrLabel14, Me.XrLabel13, Me.XrLabel12, Me.XrLabel11, Me.XrLabel10, Me.XrLabel9, Me.XrLabel8})
+        Me.PageHeader.Dpi = 100.0!
         Me.PageHeader.HeightF = 49.12498!
         Me.PageHeader.Name = "PageHeader"
         '
+        'XrLabel20
+        '
+        Me.XrLabel20.Dpi = 100.0!
+        Me.XrLabel20.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(64.99999!, 0!)
+        Me.XrLabel20.Name = "XrLabel20"
+        Me.XrLabel20.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel20.SizeF = New System.Drawing.SizeF(36.24999!, 37.58332!)
+        Me.XrLabel20.StylePriority.UseFont = False
+        Me.XrLabel20.StylePriority.UseTextAlignment = False
+        Me.XrLabel20.Text = "Last Bill"
+        Me.XrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'XrLine1
         '
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 37.58332!)
+        Me.XrLine1.Dpi = 100.0!
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(0!, 37.58332!)
         Me.XrLine1.Name = "XrLine1"
         Me.XrLine1.SizeF = New System.Drawing.SizeF(749.0!, 11.54166!)
         '
         'XrLabel14
         '
+        Me.XrLabel14.Dpi = 100.0!
         Me.XrLabel14.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(290.5833!, 0.0!)
+        Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(290.5833!, 0!)
         Me.XrLabel14.Name = "XrLabel14"
         Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel14.SizeF = New System.Drawing.SizeF(178.4167!, 37.58332!)
@@ -195,6 +234,7 @@ Partial Public Class AgingReport
         '
         'XrLabel13
         '
+        Me.XrLabel13.Dpi = 100.0!
         Me.XrLabel13.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
         Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(111.4166!, 0.000003814697!)
         Me.XrLabel13.Name = "XrLabel13"
@@ -207,8 +247,9 @@ Partial Public Class AgingReport
         '
         'XrLabel12
         '
+        Me.XrLabel12.Dpi = 100.0!
         Me.XrLabel12.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(0.00006357829!, 0.0!)
+        Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(0.00006357829!, 0!)
         Me.XrLabel12.Name = "XrLabel12"
         Me.XrLabel12.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel12.SizeF = New System.Drawing.SizeF(57.08332!, 37.58332!)
@@ -219,8 +260,9 @@ Partial Public Class AgingReport
         '
         'XrLabel11
         '
+        Me.XrLabel11.Dpi = 100.0!
         Me.XrLabel11.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0.0!)
+        Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0!)
         Me.XrLabel11.Name = "XrLabel11"
         Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel11.SizeF = New System.Drawing.SizeF(70.0!, 37.58332!)
@@ -231,8 +273,9 @@ Partial Public Class AgingReport
         '
         'XrLabel10
         '
+        Me.XrLabel10.Dpi = 100.0!
         Me.XrLabel10.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0.0!)
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0!)
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel10.SizeF = New System.Drawing.SizeF(70.0!, 37.58332!)
@@ -243,8 +286,9 @@ Partial Public Class AgingReport
         '
         'XrLabel9
         '
+        Me.XrLabel9.Dpi = 100.0!
         Me.XrLabel9.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0.0!)
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0!)
         Me.XrLabel9.Name = "XrLabel9"
         Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel9.SizeF = New System.Drawing.SizeF(70.0!, 37.58332!)
@@ -255,8 +299,9 @@ Partial Public Class AgingReport
         '
         'XrLabel8
         '
+        Me.XrLabel8.Dpi = 100.0!
         Me.XrLabel8.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0.0!)
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0!)
         Me.XrLabel8.Name = "XrLabel8"
         Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel8.SizeF = New System.Drawing.SizeF(70.0!, 37.58332!)
@@ -268,14 +313,16 @@ Partial Public Class AgingReport
         'GroupFooter1
         '
         Me.GroupFooter1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel15, Me.XrLabel16, Me.XrLabel17, Me.XrLabel18})
+        Me.GroupFooter1.Dpi = 100.0!
         Me.GroupFooter1.HeightF = 23.0!
         Me.GroupFooter1.Name = "GroupFooter1"
         '
         'XrLabel15
         '
         Me.XrLabel15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalanceCurrent")})
+        Me.XrLabel15.Dpi = 100.0!
         Me.XrLabel15.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0.0!)
+        Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(469.0!, 0!)
         Me.XrLabel15.Name = "XrLabel15"
         Me.XrLabel15.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel15.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -290,8 +337,9 @@ Partial Public Class AgingReport
         'XrLabel16
         '
         Me.XrLabel16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance3Month")})
+        Me.XrLabel16.Dpi = 100.0!
         Me.XrLabel16.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0.0!)
+        Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(539.0!, 0!)
         Me.XrLabel16.Name = "XrLabel16"
         Me.XrLabel16.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel16.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -306,8 +354,9 @@ Partial Public Class AgingReport
         'XrLabel17
         '
         Me.XrLabel17.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance5Month")})
+        Me.XrLabel17.Dpi = 100.0!
         Me.XrLabel17.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0.0!)
+        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(679.0!, 0!)
         Me.XrLabel17.Name = "XrLabel17"
         Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel17.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -322,8 +371,9 @@ Partial Public Class AgingReport
         'XrLabel18
         '
         Me.XrLabel18.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AgingBalance4Month")})
+        Me.XrLabel18.Dpi = 100.0!
         Me.XrLabel18.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0.0!)
+        Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(609.0!, 0!)
         Me.XrLabel18.Name = "XrLabel18"
         Me.XrLabel18.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel18.SizeF = New System.Drawing.SizeF(70.0!, 23.0!)
@@ -335,29 +385,6 @@ Partial Public Class AgingReport
         Me.XrLabel18.Text = "XrLabel18"
         Me.XrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'XrLabel19
-        '
-        Me.XrLabel19.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "LastMonthBilled")})
-        Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(64.99999!, 0.0!)
-        Me.XrLabel19.Name = "XrLabel19"
-        Me.XrLabel19.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel19.SizeF = New System.Drawing.SizeF(36.24999!, 23.0!)
-        Me.XrLabel19.StylePriority.UseTextAlignment = False
-        Me.XrLabel19.Text = "XrLabel19"
-        Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrLabel20
-        '
-        Me.XrLabel20.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(64.99999!, 0.0!)
-        Me.XrLabel20.Name = "XrLabel20"
-        Me.XrLabel20.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel20.SizeF = New System.Drawing.SizeF(36.24999!, 37.58332!)
-        Me.XrLabel20.StylePriority.UseFont = False
-        Me.XrLabel20.StylePriority.UseTextAlignment = False
-        Me.XrLabel20.Text = "Last Bill"
-        Me.XrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
         'AgingReport
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.GroupFooter1})
@@ -365,7 +392,7 @@ Partial Public Class AgingReport
         Me.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormattingRuleSheet.AddRange(New DevExpress.XtraReports.UI.FormattingRule() {Me.FormattingRuleHighlight})
         Me.Margins = New System.Drawing.Printing.Margins(50, 51, 49, 49)
-        Me.Version = "11.1"
+        Me.Version = "16.1"
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
