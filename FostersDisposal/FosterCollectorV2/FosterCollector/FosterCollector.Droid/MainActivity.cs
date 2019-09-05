@@ -2,12 +2,11 @@
 using Android.Content.PM;
 using Android.OS;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
 
 namespace FosterCollector.Droid
 {
     [Activity(Label = "FosterCollector", Icon = "@drawable/Fosters", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : FormsApplicationActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity // FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using SQLite;
-using Xamarin.Forms;
-using System.Xml.Serialization;
 
 namespace FosterCollector.Classes
 {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="1" android:versionName="FosterCollector" package="FosterCollector.FosterCollector">
-	<uses-sdk android:minSdkVersion="19" />
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<application android:icon="@drawable/Fosters" android:label="Foster Collector"></application>
 </manifest>
