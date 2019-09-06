@@ -19,7 +19,7 @@ namespace FosterCollector.Views
             pickerRoute.SelectedIndex = App.GetLastRoute();
 
             // Set the version
-            labelVersion.Text = String.Format("Version {0}","1.0.18.606");
+            labelVersion.Text = String.Format("Version {0}","1.0.19.906");
         }
 
         /// <summary>

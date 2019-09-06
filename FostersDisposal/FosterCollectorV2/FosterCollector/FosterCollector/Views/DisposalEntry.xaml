@@ -118,7 +118,7 @@
                           <ViewCell>
                             <ViewCell.View>
                               <StackLayout Orientation="Horizontal">
-                                  <Label Text="{Binding ItemDescription}" HorizontalOptions="FillAndExpand" FontSize="Large" /> 
+                                  <Label Text="{Binding ItemDescription}" HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontSize="Large" /> 
                               </StackLayout>
                             </ViewCell.View>
                           </ViewCell>
