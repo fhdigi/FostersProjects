@@ -5,7 +5,7 @@ using FosterCollector;
 
 namespace FosterCollectV3
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Icon = "@drawable/Fosters", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity  //AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
