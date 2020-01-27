@@ -26,14 +26,15 @@
             <Label Content="Route Days" FontWeight="Bold" Margin="0,0,0,5" />
             <ComboBox ItemsSource="{Binding RouteDays}" SelectedItem="{Binding SelectedRoute}"  />
 
-            <!--
-            <Label Content="Order By" FontWeight="Bold" Margin="0,30,0,5"/>
-            <ComboBox/>
-            -->
+            <Label Content="Billing Types" FontWeight="Bold" Margin="0,20,0,5" />
+            <ComboBox ItemsSource="{Binding BillingTypeListing}" SelectedItem="{Binding SelectedBillingType}"  />
+
 
             <Button Content="Refresh" Margin="25,30" Click="ButtonRefresh_Click" />
 
             <Button Content="Print" Margin="25,50" Click="ButtonPrint_Click" />
+            
+            <Button Content="Close" Margin="25,50" Click="ButtonClose_Click" />
 
         </StackPanel>
 

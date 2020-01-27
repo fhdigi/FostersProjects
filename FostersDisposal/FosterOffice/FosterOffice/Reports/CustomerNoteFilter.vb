@@ -16,6 +16,8 @@ Public Class CustomerNoteFilter
                 Me.Text = "Customer Billing Filter"
             Case 3
                 Me.Text = "Aging Report Filter"
+            Case 4
+                Me.Text = "Go In After Filter"
         End Select
 
         RB_AllDays.Checked = True
@@ -232,6 +234,39 @@ Public Class CustomerNoteFilter
 
                 rpt.ShowPreview()
 
+            Case 4
+
+                Dim rpt As New GoInAfterReport
+
+                If rptDay = 0 Then
+
+                    Select Case rptRoute
+                        Case 0
+                            rpt.DataSource = From c In PickupTransaction.Customer.ReturnCustomer(My.Settings.DatabaseLocation)
+                                             Where c.GoInAfter = True And c.SequenceNumber < 80000
+                                             Order By c.SequenceNumber
+                        Case Else
+                            rpt.DataSource = From c In PickupTransaction.Customer.ReturnCustomer(My.Settings.DatabaseLocation)
+                                             Where c.Route = rptRoute And c.GoInAfter = True And c.SequenceNumber < 80000
+                                             Order By c.SequenceNumber
+                    End Select
+
+                Else
+
+                    Select Case rptRoute
+                        Case 0
+                            rpt.DataSource = From c In PickupTransaction.Customer.ReturnCustomer(My.Settings.DatabaseLocation)
+                                             Where c.PickupDay = rptDay And c.GoInAfter = True And c.SequenceNumber < 80000
+                                             Order By c.SequenceNumber
+                        Case Else
+                            rpt.DataSource = From c In PickupTransaction.Customer.ReturnCustomer(My.Settings.DatabaseLocation)
+                                             Where c.PickupDay = rptDay And c.Route = rptRoute And c.GoInAfter = True And c.SequenceNumber < 80000
+                                             Order By c.SequenceNumber
+                    End Select
+
+                End If
+
+                rpt.ShowPreview()
         End Select
 
     End Sub

@@ -66,7 +66,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabel1.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingDate", "Billing Date: {0:M/d/yyyy}")})
         Me.XrLabel1.Dpi = 100.0!
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 96.35416!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 96.35416!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(313.5416!, 23.0!)
@@ -128,7 +128,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc1.CanGrow = False
         Me.XrLabelDesc1.Dpi = 100.0!
-        Me.XrLabelDesc1.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 139.7291!)
+        Me.XrLabelDesc1.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 139.7291!)
         Me.XrLabelDesc1.Name = "XrLabelDesc1"
         Me.XrLabelDesc1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc1.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -202,7 +202,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc2.CanGrow = False
         Me.XrLabelDesc2.Dpi = 100.0!
-        Me.XrLabelDesc2.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 156.0148!)
+        Me.XrLabelDesc2.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 156.0148!)
         Me.XrLabelDesc2.Name = "XrLabelDesc2"
         Me.XrLabelDesc2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc2.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -213,7 +213,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc3.CanGrow = False
         Me.XrLabelDesc3.Dpi = 100.0!
-        Me.XrLabelDesc3.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 172.3005!)
+        Me.XrLabelDesc3.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 172.3005!)
         Me.XrLabelDesc3.Name = "XrLabelDesc3"
         Me.XrLabelDesc3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc3.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -246,7 +246,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc4.CanGrow = False
         Me.XrLabelDesc4.Dpi = 100.0!
-        Me.XrLabelDesc4.LocationFloat = New DevExpress.Utils.PointFloat(9.999998!, 188.5861!)
+        Me.XrLabelDesc4.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 188.5861!)
         Me.XrLabelDesc4.Name = "XrLabelDesc4"
         Me.XrLabelDesc4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc4.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -257,7 +257,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc6.CanGrow = False
         Me.XrLabelDesc6.Dpi = 100.0!
-        Me.XrLabelDesc6.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 221.1577!)
+        Me.XrLabelDesc6.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 221.1577!)
         Me.XrLabelDesc6.Name = "XrLabelDesc6"
         Me.XrLabelDesc6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc6.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -268,7 +268,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc5.CanGrow = False
         Me.XrLabelDesc5.Dpi = 100.0!
-        Me.XrLabelDesc5.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 204.8718!)
+        Me.XrLabelDesc5.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 204.8718!)
         Me.XrLabelDesc5.Name = "XrLabelDesc5"
         Me.XrLabelDesc5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc5.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -279,7 +279,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc8.CanGrow = False
         Me.XrLabelDesc8.Dpi = 100.0!
-        Me.XrLabelDesc8.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 253.7292!)
+        Me.XrLabelDesc8.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 253.7292!)
         Me.XrLabelDesc8.Name = "XrLabelDesc8"
         Me.XrLabelDesc8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc8.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)
@@ -290,7 +290,7 @@ Partial Public Class BillingSheetSingle
         '
         Me.XrLabelDesc7.CanGrow = False
         Me.XrLabelDesc7.Dpi = 100.0!
-        Me.XrLabelDesc7.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 237.4435!)
+        Me.XrLabelDesc7.LocationFloat = New DevExpress.Utils.PointFloat(15.0!, 237.4435!)
         Me.XrLabelDesc7.Name = "XrLabelDesc7"
         Me.XrLabelDesc7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelDesc7.SizeF = New System.Drawing.SizeF(203.125!, 16.0!)

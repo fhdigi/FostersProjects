@@ -69,6 +69,7 @@ Partial Class MainOfficeForm
         Me.ResidentialRouteCountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.YellowTabReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerContainerReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GoInAfterReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LastBilledReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.PaymentSummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -301,6 +302,7 @@ Partial Class MainOfficeForm
         Me.UploadCurrentRouteDataToolStripMenuItem.Name = "UploadCurrentRouteDataToolStripMenuItem"
         Me.UploadCurrentRouteDataToolStripMenuItem.Size = New System.Drawing.Size(295, 22)
         Me.UploadCurrentRouteDataToolStripMenuItem.Text = "Upload Current Route Data to Trucks..."
+        Me.UploadCurrentRouteDataToolStripMenuItem.Visible = False
         '
         'UploadCurrentRouteDataToFTPToolStripMenuItem
         '
@@ -359,7 +361,7 @@ Partial Class MainOfficeForm
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerListingToolStripMenuItem, Me.CustomerListingTypeDEFBillingToolStripMenuItem, Me.CustomerNotesToolStripMenuItem, Me.CustomerAgingReportToolStripMenuItem, Me.CustomerAgingReportDelinquentOnlyToolStripMenuItem, Me.ShowCustomersWithPurchaseOrdersToolStripMenuItem, Me.ResidentialRouteCountsToolStripMenuItem, Me.YellowTabReportToolStripMenuItem, Me.CustomerContainerReportToolStripMenuItem, Me.LastBilledReportToolStripMenuItem, Me.ToolStripSeparator7, Me.PaymentSummaryToolStripMenuItem, Me.RevenueReportToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerListingToolStripMenuItem, Me.CustomerListingTypeDEFBillingToolStripMenuItem, Me.CustomerNotesToolStripMenuItem, Me.CustomerAgingReportToolStripMenuItem, Me.CustomerAgingReportDelinquentOnlyToolStripMenuItem, Me.ShowCustomersWithPurchaseOrdersToolStripMenuItem, Me.ResidentialRouteCountsToolStripMenuItem, Me.YellowTabReportToolStripMenuItem, Me.CustomerContainerReportToolStripMenuItem, Me.GoInAfterReportToolStripMenuItem, Me.LastBilledReportToolStripMenuItem, Me.ToolStripSeparator7, Me.PaymentSummaryToolStripMenuItem, Me.RevenueReportToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "&Reports"
@@ -418,6 +420,12 @@ Partial Class MainOfficeForm
         Me.CustomerContainerReportToolStripMenuItem.Name = "CustomerContainerReportToolStripMenuItem"
         Me.CustomerContainerReportToolStripMenuItem.Size = New System.Drawing.Size(305, 22)
         Me.CustomerContainerReportToolStripMenuItem.Text = "Customer Container Report..."
+        '
+        'GoInAfterReportToolStripMenuItem
+        '
+        Me.GoInAfterReportToolStripMenuItem.Name = "GoInAfterReportToolStripMenuItem"
+        Me.GoInAfterReportToolStripMenuItem.Size = New System.Drawing.Size(305, 22)
+        Me.GoInAfterReportToolStripMenuItem.Text = "Go In After Report..."
         '
         'LastBilledReportToolStripMenuItem
         '
@@ -1182,4 +1190,5 @@ Partial Class MainOfficeForm
     Friend WithEvents UploadCurrentRouteDataToFTPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MailingLabelsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonBalanceRefresh As Button
+    Friend WithEvents GoInAfterReportToolStripMenuItem As ToolStripMenuItem
 End Class

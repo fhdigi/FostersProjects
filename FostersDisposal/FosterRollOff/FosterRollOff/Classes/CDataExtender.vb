@@ -1629,6 +1629,16 @@ Public Class CDataExtender
                 Dim tmpListing As CAddressBlock = CType(x.Deserialize(srBilling), CAddressBlock)
                 customerObj.BillingAddress = tmpListing
 
+                '* Code block added 25-August-2019 *'
+                If Not customerReader("PickupAddress").Equals(DBNull.Value) Then
+                    Dim rollOffAddressAddressString As String = customerReader("PickupAddress")
+                    Dim xRo As New XmlSerializer(GetType(CAddressBlock))
+                    Dim roBilling As New StringReader(rollOffAddressAddressString)
+                    Dim tmpRoListing As CAddressBlock = CType(xRo.Deserialize(roBilling), CAddressBlock)
+                    customerObj.RollOffAdddress = tmpRoListing
+                End If
+
+                '* add to the collection *'
                 customerList.Add(customerObj)
 
             Loop

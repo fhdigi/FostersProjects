@@ -169,7 +169,7 @@ Partial Public Class AgingReport
         '
         '
         Me.FormattingRuleHighlight.Formatting.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormattingRuleHighlight.Formatting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.FormattingRuleHighlight.Formatting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.FormattingRuleHighlight.Name = "FormattingRuleHighlight"
         '
         'TopMargin

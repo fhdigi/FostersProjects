@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using MailingLabelApp.Models;
 using MailingLabelApp.ViewModels;
 
 namespace MailingLabelApp
@@ -33,6 +32,11 @@ namespace MailingLabelApp
         private void ButtonPrint_Click(object sender, RoutedEventArgs e)
         {
             DocumentMailingReport.Print();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

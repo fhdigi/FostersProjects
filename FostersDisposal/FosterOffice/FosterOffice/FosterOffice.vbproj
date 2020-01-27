@@ -365,6 +365,12 @@
     <Compile Include="Reports\BillingSheetSingle.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\GoInAfterReport.Designer.vb">
+      <DependentUpon>GoInAfterReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GoInAfterReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\LastBillReport.Designer.vb">
       <DependentUpon>LastBillReport.vb</DependentUpon>
     </Compile>
@@ -645,6 +651,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BillingSheetSingle.resx">
       <DependentUpon>BillingSheetSingle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GoInAfterReport.resx">
+      <DependentUpon>GoInAfterReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LastBillReport.resx">
       <DependentUpon>LastBillReport.vb</DependentUpon>

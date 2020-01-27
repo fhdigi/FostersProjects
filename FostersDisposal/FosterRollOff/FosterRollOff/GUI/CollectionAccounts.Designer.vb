@@ -32,6 +32,8 @@ Partial Class CollectionAccounts
         Me.ButtonViewRecord = New System.Windows.Forms.Button()
         Me.ButtonEnterCharge = New System.Windows.Forms.Button()
         Me.ButtonClose = New System.Windows.Forms.Button()
+        Me.ColumnHeaderBillingAddress = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderRollOffAddress = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label1
@@ -46,12 +48,15 @@ Partial Class CollectionAccounts
         '
         'ListViewAccounts
         '
-        Me.ListViewAccounts.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderAccountNumber, Me.ColumnHeaderCustomer, Me.ColumnHeaderBalance, Me.ColumnHeaderDateAsOf})
+        Me.ListViewAccounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ListViewAccounts.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderAccountNumber, Me.ColumnHeaderCustomer, Me.ColumnHeaderBillingAddress, Me.ColumnHeaderRollOffAddress, Me.ColumnHeaderBalance, Me.ColumnHeaderDateAsOf})
         Me.ListViewAccounts.FullRowSelect = True
         Me.ListViewAccounts.HideSelection = False
         Me.ListViewAccounts.Location = New System.Drawing.Point(27, 50)
         Me.ListViewAccounts.Name = "ListViewAccounts"
-        Me.ListViewAccounts.Size = New System.Drawing.Size(559, 345)
+        Me.ListViewAccounts.Size = New System.Drawing.Size(1011, 345)
         Me.ListViewAccounts.TabIndex = 1
         Me.ListViewAccounts.UseCompatibleStateImageBehavior = False
         Me.ListViewAccounts.View = System.Windows.Forms.View.Details
@@ -80,7 +85,8 @@ Partial Class CollectionAccounts
         '
         'ButtonEnterPayment
         '
-        Me.ButtonEnterPayment.Location = New System.Drawing.Point(603, 50)
+        Me.ButtonEnterPayment.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonEnterPayment.Location = New System.Drawing.Point(1055, 50)
         Me.ButtonEnterPayment.Name = "ButtonEnterPayment"
         Me.ButtonEnterPayment.Size = New System.Drawing.Size(180, 25)
         Me.ButtonEnterPayment.TabIndex = 2
@@ -89,7 +95,8 @@ Partial Class CollectionAccounts
         '
         'ButtonViewRecord
         '
-        Me.ButtonViewRecord.Location = New System.Drawing.Point(603, 112)
+        Me.ButtonViewRecord.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonViewRecord.Location = New System.Drawing.Point(1055, 112)
         Me.ButtonViewRecord.Name = "ButtonViewRecord"
         Me.ButtonViewRecord.Size = New System.Drawing.Size(180, 25)
         Me.ButtonViewRecord.TabIndex = 3
@@ -98,7 +105,8 @@ Partial Class CollectionAccounts
         '
         'ButtonEnterCharge
         '
-        Me.ButtonEnterCharge.Location = New System.Drawing.Point(603, 81)
+        Me.ButtonEnterCharge.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonEnterCharge.Location = New System.Drawing.Point(1055, 81)
         Me.ButtonEnterCharge.Name = "ButtonEnterCharge"
         Me.ButtonEnterCharge.Size = New System.Drawing.Size(180, 25)
         Me.ButtonEnterCharge.TabIndex = 4
@@ -107,18 +115,29 @@ Partial Class CollectionAccounts
         '
         'ButtonClose
         '
-        Me.ButtonClose.Location = New System.Drawing.Point(603, 143)
+        Me.ButtonClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonClose.Location = New System.Drawing.Point(1055, 143)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(180, 25)
         Me.ButtonClose.TabIndex = 5
         Me.ButtonClose.Text = "Close"
         Me.ButtonClose.UseVisualStyleBackColor = True
         '
+        'ColumnHeaderBillingAddress
+        '
+        Me.ColumnHeaderBillingAddress.Text = "Billing Address"
+        Me.ColumnHeaderBillingAddress.Width = 225
+        '
+        'ColumnHeaderRollOffAddress
+        '
+        Me.ColumnHeaderRollOffAddress.Text = "Roll Off Address"
+        Me.ColumnHeaderRollOffAddress.Width = 225
+        '
         'CollectionAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(795, 407)
+        Me.ClientSize = New System.Drawing.Size(1249, 407)
         Me.Controls.Add(Me.ButtonClose)
         Me.Controls.Add(Me.ButtonEnterCharge)
         Me.Controls.Add(Me.ButtonViewRecord)
@@ -149,4 +168,6 @@ Partial Class CollectionAccounts
     Friend WithEvents ButtonEnterCharge As System.Windows.Forms.Button
     Friend WithEvents ColumnHeaderDateAsOf As System.Windows.Forms.ColumnHeader
     Friend WithEvents ButtonClose As System.Windows.Forms.Button
+    Friend WithEvents ColumnHeaderBillingAddress As ColumnHeader
+    Friend WithEvents ColumnHeaderRollOffAddress As ColumnHeader
 End Class

@@ -116,7 +116,7 @@ Partial Public Class RentalCustomerRecycleListing
         Me.XrTableCell5.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "NotesOnly")})
         Me.XrTableCell5.Dpi = 100.0!
         Me.XrTableCell5.Font = New System.Drawing.Font("Verdana", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrTableCell5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.XrTableCell5.ForeColor = System.Drawing.Color.Red
         Me.XrTableCell5.Name = "XrTableCell5"
         Me.XrTableCell5.Padding = New DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100.0!)
         Me.XrTableCell5.StylePriority.UseFont = False

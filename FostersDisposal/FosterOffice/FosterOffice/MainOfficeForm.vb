@@ -195,7 +195,7 @@ Public Class MainOfficeForm
         End Try
 
         ' ----- Menus to show 
-        UploadCurrentRouteDataToolStripMenuItem.Visible = True
+        UploadCurrentRouteDataToolStripMenuItem.Visible = False ' True
         ToolStripSeparator3.Visible = True
         ToolStripSeparator8.Visible = True
         RefreshAllCurrentBalancesToolStripMenuItem.Visible = True
@@ -1074,6 +1074,12 @@ Public Class MainOfficeForm
     Private Sub ButtonBalanceRefresh_Click(sender As Object, e As EventArgs) Handles ButtonBalanceRefresh.Click
         Customer.SetCustomerBalances(My.Settings.DatabaseLocation, selectedCustomerNumber)
         UpdateCustomerGrid()
+    End Sub
+
+    Private Sub GoInAfterReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoInAfterReportToolStripMenuItem.Click
+        Dim filterScreen As New CustomerNoteFilter
+        filterScreen.ReportToShow = 4
+        filterScreen.ShowDialog()
     End Sub
 
 End Class

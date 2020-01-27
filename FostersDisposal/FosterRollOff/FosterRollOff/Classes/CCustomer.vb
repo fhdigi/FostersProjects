@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Globalization
+Imports FosterRollOff
 
 Public Class CCustomer
 
@@ -23,6 +24,7 @@ Public Class CCustomer
     Public Property CollectionBalanceAsOf As Date = Nothing
 
     Public Property CustomerNotes As String = ""
+    Public Property RollOffAdddress As CAddressBlock
 
     'Public Property RollOff10Yard As String = ""
     'Public Property RollOff20Yard As String = ""

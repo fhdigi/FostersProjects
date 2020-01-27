@@ -14,6 +14,14 @@
         For Each custObj As CCustomer In customerList.OrderBy(Function(c) c.BillingAddress.LastName)
             Dim itmX As ListViewItem = ListViewAccounts.Items.Add(custObj.CustomerNumber)
             itmX.SubItems.Add(custObj.BillingAddress.FullName)
+            itmX.SubItems.Add(custObj.BillingAddress.Address + " " + custObj.BillingAddress.City)
+
+            If Not custObj.RollOffAdddress Is Nothing Then
+                itmX.SubItems.Add(custObj.RollOffAdddress.Address + " " + custObj.RollOffAdddress.City)
+            Else
+                itmX.SubItems.Add("No Address on File")
+            End If
+
             itmX.SubItems.Add(String.Format("{0:f2}", custObj.CurrentBalanceForCollection))
             itmX.SubItems.Add(String.Format("{0:MM/dd/yyyy}", custObj.CollectionBalanceAsOf))
             itmX.Tag = custObj

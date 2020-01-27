@@ -78,6 +78,7 @@ Partial Public Class RollOffBill
         'Detail
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTableTransactions})
+        Me.Detail.Dpi = 100.0!
         Me.Detail.HeightF = 25.0!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -88,7 +89,8 @@ Partial Public Class RollOffBill
         Me.XrTableTransactions.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
-        Me.XrTableTransactions.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrTableTransactions.Dpi = 100.0!
+        Me.XrTableTransactions.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
         Me.XrTableTransactions.Name = "XrTableTransactions"
         Me.XrTableTransactions.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1})
         Me.XrTableTransactions.SizeF = New System.Drawing.SizeF(777.0!, 25.0!)
@@ -97,6 +99,7 @@ Partial Public Class RollOffBill
         'XrTableRow1
         '
         Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCellTransDate, Me.XrTableCellQty, Me.XrTableCellDesc, Me.XrTableCellUnitAmount, Me.XrTableCellAmount})
+        Me.XrTableRow1.Dpi = 100.0!
         Me.XrTableRow1.Name = "XrTableRow1"
         Me.XrTableRow1.Weight = 1.0R
         '
@@ -104,6 +107,7 @@ Partial Public Class RollOffBill
         '
         Me.XrTableCellTransDate.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTableCellTransDate.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "TransactionDate", "{0:M/d/yyyy}")})
+        Me.XrTableCellTransDate.Dpi = 100.0!
         Me.XrTableCellTransDate.Name = "XrTableCellTransDate"
         Me.XrTableCellTransDate.StylePriority.UseBorders = False
         Me.XrTableCellTransDate.StylePriority.UseTextAlignment = False
@@ -115,6 +119,7 @@ Partial Public Class RollOffBill
         '
         Me.XrTableCellQty.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTableCellQty.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Quantity")})
+        Me.XrTableCellQty.Dpi = 100.0!
         Me.XrTableCellQty.Name = "XrTableCellQty"
         Me.XrTableCellQty.StylePriority.UseBorders = False
         Me.XrTableCellQty.StylePriority.UseTextAlignment = False
@@ -126,6 +131,7 @@ Partial Public Class RollOffBill
         '
         Me.XrTableCellDesc.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTableCellDesc.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Description")})
+        Me.XrTableCellDesc.Dpi = 100.0!
         Me.XrTableCellDesc.Name = "XrTableCellDesc"
         Me.XrTableCellDesc.Padding = New DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100.0!)
         Me.XrTableCellDesc.StylePriority.UseBorders = False
@@ -139,6 +145,7 @@ Partial Public Class RollOffBill
         '
         Me.XrTableCellUnitAmount.Borders = CType((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTableCellUnitAmount.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "UnitAmount", "{0:c2}")})
+        Me.XrTableCellUnitAmount.Dpi = 100.0!
         Me.XrTableCellUnitAmount.Name = "XrTableCellUnitAmount"
         Me.XrTableCellUnitAmount.StylePriority.UseBorders = False
         Me.XrTableCellUnitAmount.StylePriority.UseTextAlignment = False
@@ -151,6 +158,7 @@ Partial Public Class RollOffBill
         Me.XrTableCellAmount.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrTableCellAmount.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Amount", "{0:c2}")})
+        Me.XrTableCellAmount.Dpi = 100.0!
         Me.XrTableCellAmount.Name = "XrTableCellAmount"
         Me.XrTableCellAmount.StylePriority.UseBorders = False
         Me.XrTableCellAmount.StylePriority.UseTextAlignment = False
@@ -160,6 +168,7 @@ Partial Public Class RollOffBill
         '
         'TopMargin
         '
+        Me.TopMargin.Dpi = 100.0!
         Me.TopMargin.HeightF = 32.0!
         Me.TopMargin.Name = "TopMargin"
         Me.TopMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -167,6 +176,7 @@ Partial Public Class RollOffBill
         '
         'BottomMargin
         '
+        Me.BottomMargin.Dpi = 100.0!
         Me.BottomMargin.HeightF = 50.0!
         Me.BottomMargin.Name = "BottomMargin"
         Me.BottomMargin.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -174,9 +184,10 @@ Partial Public Class RollOffBill
         '
         'XrLabelCompanyHeader
         '
+        Me.XrLabelCompanyHeader.Dpi = 100.0!
         Me.XrLabelCompanyHeader.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabelCompanyHeader.ForeColor = System.Drawing.Color.Blue
-        Me.XrLabelCompanyHeader.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrLabelCompanyHeader.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
         Me.XrLabelCompanyHeader.Name = "XrLabelCompanyHeader"
         Me.XrLabelCompanyHeader.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelCompanyHeader.SizeF = New System.Drawing.SizeF(550.0!, 23.0!)
@@ -186,26 +197,29 @@ Partial Public Class RollOffBill
         '
         'XrShapeBlueLine
         '
+        Me.XrShapeBlueLine.Dpi = 100.0!
         Me.XrShapeBlueLine.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.XrShapeBlueLine.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 23.00002!)
+        Me.XrShapeBlueLine.LocationFloat = New DevExpress.Utils.PointFloat(0!, 23.00002!)
         Me.XrShapeBlueLine.Name = "XrShapeBlueLine"
         Me.XrShapeBlueLine.Shape = ShapeRectangle1
         Me.XrShapeBlueLine.SizeF = New System.Drawing.SizeF(391.875!, 13.00001!)
         '
         'XrShapeGreyLine
         '
+        Me.XrShapeGreyLine.Dpi = 100.0!
         Me.XrShapeGreyLine.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.XrShapeGreyLine.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.XrShapeGreyLine.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 39.99999!)
+        Me.XrShapeGreyLine.LocationFloat = New DevExpress.Utils.PointFloat(0!, 39.99999!)
         Me.XrShapeGreyLine.Name = "XrShapeGreyLine"
         Me.XrShapeGreyLine.Shape = ShapeRectangle2
         Me.XrShapeGreyLine.SizeF = New System.Drawing.SizeF(391.875!, 4.0!)
         '
         'XrLabel1
         '
+        Me.XrLabel1.Dpi = 100.0!
         Me.XrLabel1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel1.ForeColor = System.Drawing.Color.Blue
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(607.7083!, 0.0!)
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(607.7083!, 0!)
         Me.XrLabel1.Name = "XrLabel1"
         Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel1.SizeF = New System.Drawing.SizeF(132.2917!, 34.99996!)
@@ -217,6 +231,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel2
         '
+        Me.XrLabel2.Dpi = 100.0!
         Me.XrLabel2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(0.00003178914!, 54.79164!)
         Me.XrLabel2.Name = "XrLabel2"
@@ -227,6 +242,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel3
         '
+        Me.XrLabel3.Dpi = 100.0!
         Me.XrLabel3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(131.0!, 74.79166!)
         Me.XrLabel3.Name = "XrLabel3"
@@ -238,6 +254,7 @@ Partial Public Class RollOffBill
         'XrLabel4
         '
         Me.XrLabel4.BackColor = System.Drawing.Color.Blue
+        Me.XrLabel4.Dpi = 100.0!
         Me.XrLabel4.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel4.ForeColor = System.Drawing.Color.White
         Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(607.7083!, 39.99999!)
@@ -253,6 +270,7 @@ Partial Public Class RollOffBill
         '
         'XrShape1
         '
+        Me.XrShape1.Dpi = 100.0!
         Me.XrShape1.LocationFloat = New DevExpress.Utils.PointFloat(607.7083!, 39.99999!)
         Me.XrShape1.Name = "XrShape1"
         Me.XrShape1.Shape = ShapeRectangle3
@@ -261,12 +279,14 @@ Partial Public Class RollOffBill
         'PageHeader
         '
         Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel28, Me.XrLabel24, Me.XrLabel23, Me.XrLabel22, Me.XrLabel21, Me.XrLabel20, Me.XrLabel10, Me.XrLabel16, Me.XrLabel15, Me.XrLabel14, Me.XrLabel13, Me.XrLabel12, Me.XrLabel11, Me.XrLabel9, Me.XrLabel8, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.XrLabelCompanyHeader, Me.XrShapeBlueLine, Me.XrShapeGreyLine, Me.XrLabel1, Me.XrLabel2, Me.XrLabel3, Me.XrLabel4, Me.XrShape1})
+        Me.PageHeader.Dpi = 100.0!
         Me.PageHeader.HeightF = 375.0!
         Me.PageHeader.Name = "PageHeader"
         '
         'XrLabel28
         '
         Me.XrLabel28.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "ReprintMessage")})
+        Me.XrLabel28.Dpi = 100.0!
         Me.XrLabel28.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel28.ForeColor = System.Drawing.Color.Red
         Me.XrLabel28.LocationFloat = New DevExpress.Utils.PointFloat(525.0!, 278.5834!)
@@ -283,6 +303,7 @@ Partial Public Class RollOffBill
         Me.XrLabel24.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel24.Dpi = 100.0!
         Me.XrLabel24.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel24.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 352.0!)
         Me.XrLabel24.Name = "XrLabel24"
@@ -300,6 +321,7 @@ Partial Public Class RollOffBill
         Me.XrLabel23.BackColor = System.Drawing.Color.Silver
         Me.XrLabel23.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel23.Dpi = 100.0!
         Me.XrLabel23.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel23.LocationFloat = New DevExpress.Utils.PointFloat(582.0!, 352.0!)
         Me.XrLabel23.Name = "XrLabel23"
@@ -317,6 +339,7 @@ Partial Public Class RollOffBill
         Me.XrLabel22.BackColor = System.Drawing.Color.Silver
         Me.XrLabel22.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel22.Dpi = 100.0!
         Me.XrLabel22.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel22.LocationFloat = New DevExpress.Utils.PointFloat(132.0!, 352.0!)
         Me.XrLabel22.Name = "XrLabel22"
@@ -334,6 +357,7 @@ Partial Public Class RollOffBill
         Me.XrLabel21.BackColor = System.Drawing.Color.Silver
         Me.XrLabel21.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel21.Dpi = 100.0!
         Me.XrLabel21.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XrLabel21.LocationFloat = New DevExpress.Utils.PointFloat(81.99997!, 352.0!)
         Me.XrLabel21.Name = "XrLabel21"
@@ -351,8 +375,9 @@ Partial Public Class RollOffBill
         Me.XrLabel20.BackColor = System.Drawing.Color.Silver
         Me.XrLabel20.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel20.Dpi = 100.0!
         Me.XrLabel20.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 352.0!)
+        Me.XrLabel20.LocationFloat = New DevExpress.Utils.PointFloat(0!, 352.0!)
         Me.XrLabel20.Name = "XrLabel20"
         Me.XrLabel20.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel20.SizeF = New System.Drawing.SizeF(81.99997!, 23.0!)
@@ -366,6 +391,7 @@ Partial Public Class RollOffBill
         'XrLabel10
         '
         Me.XrLabel10.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingDate", "{0:M/d/yyyy}")})
+        Me.XrLabel10.Dpi = 100.0!
         Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(519.7918!, 125.0!)
         Me.XrLabel10.Name = "XrLabel10"
         Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -375,6 +401,7 @@ Partial Public Class RollOffBill
         'XrLabel16
         '
         Me.XrLabel16.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "PickupCSZ")})
+        Me.XrLabel16.Dpi = 100.0!
         Me.XrLabel16.LocationFloat = New DevExpress.Utils.PointFloat(525.0!, 255.5834!)
         Me.XrLabel16.Name = "XrLabel16"
         Me.XrLabel16.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -384,6 +411,7 @@ Partial Public Class RollOffBill
         'XrLabel15
         '
         Me.XrLabel15.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "PickupAddress")})
+        Me.XrLabel15.Dpi = 100.0!
         Me.XrLabel15.LocationFloat = New DevExpress.Utils.PointFloat(525.0!, 232.5834!)
         Me.XrLabel15.Name = "XrLabel15"
         Me.XrLabel15.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -393,6 +421,7 @@ Partial Public Class RollOffBill
         'XrLabel14
         '
         Me.XrLabel14.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "PickupName")})
+        Me.XrLabel14.Dpi = 100.0!
         Me.XrLabel14.LocationFloat = New DevExpress.Utils.PointFloat(525.0!, 209.5834!)
         Me.XrLabel14.Name = "XrLabel14"
         Me.XrLabel14.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -402,6 +431,7 @@ Partial Public Class RollOffBill
         'XrLabel13
         '
         Me.XrLabel13.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingName")})
+        Me.XrLabel13.Dpi = 100.0!
         Me.XrLabel13.LocationFloat = New DevExpress.Utils.PointFloat(64.1667!, 209.4584!)
         Me.XrLabel13.Name = "XrLabel13"
         Me.XrLabel13.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -411,6 +441,7 @@ Partial Public Class RollOffBill
         'XrLabel12
         '
         Me.XrLabel12.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingCSZ")})
+        Me.XrLabel12.Dpi = 100.0!
         Me.XrLabel12.LocationFloat = New DevExpress.Utils.PointFloat(64.1667!, 255.4584!)
         Me.XrLabel12.Name = "XrLabel12"
         Me.XrLabel12.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -420,6 +451,7 @@ Partial Public Class RollOffBill
         'XrLabel11
         '
         Me.XrLabel11.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "BillingAddress")})
+        Me.XrLabel11.Dpi = 100.0!
         Me.XrLabel11.LocationFloat = New DevExpress.Utils.PointFloat(64.1667!, 232.4584!)
         Me.XrLabel11.Name = "XrLabel11"
         Me.XrLabel11.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -429,6 +461,7 @@ Partial Public Class RollOffBill
         'XrLabel9
         '
         Me.XrLabel9.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "AccountNumber")})
+        Me.XrLabel9.Dpi = 100.0!
         Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(88.12504!, 125.0!)
         Me.XrLabel9.Name = "XrLabel9"
         Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
@@ -437,6 +470,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel8
         '
+        Me.XrLabel8.Dpi = 100.0!
         Me.XrLabel8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(525.0!, 186.5834!)
         Me.XrLabel8.Name = "XrLabel8"
@@ -447,6 +481,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel7
         '
+        Me.XrLabel7.Dpi = 100.0!
         Me.XrLabel7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(64.1667!, 186.4584!)
         Me.XrLabel7.Name = "XrLabel7"
@@ -457,6 +492,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel6
         '
+        Me.XrLabel6.Dpi = 100.0!
         Me.XrLabel6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(471.875!, 125.0!)
         Me.XrLabel6.Name = "XrLabel6"
@@ -467,6 +503,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel5
         '
+        Me.XrLabel5.Dpi = 100.0!
         Me.XrLabel5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(10.00004!, 125.0!)
         Me.XrLabel5.Name = "XrLabel5"
@@ -478,6 +515,7 @@ Partial Public Class RollOffBill
         'PageFooter
         '
         Me.PageFooter.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabelTotal, Me.XrLabelTax, Me.XrLabel27, Me.XrLabel26, Me.XrLabel25, Me.XrLabel19, Me.XrLabel18, Me.XrLabel17, Me.XrLabelSubtotal})
+        Me.PageFooter.Dpi = 100.0!
         Me.PageFooter.HeightF = 105.2083!
         Me.PageFooter.Name = "PageFooter"
         '
@@ -485,7 +523,8 @@ Partial Public Class RollOffBill
         '
         Me.XrLabelTotal.Borders = CType((DevExpress.XtraPrinting.BorderSide.Right Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabelTotal.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Total", "{0:c2}")})
-        Me.XrLabelTotal.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 60.0!)
+        Me.XrLabelTotal.Dpi = 100.0!
+        Me.XrLabelTotal.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 55.0!)
         Me.XrLabelTotal.Name = "XrLabelTotal"
         Me.XrLabelTotal.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelTotal.SizeF = New System.Drawing.SizeF(99.99988!, 20.0!)
@@ -499,7 +538,8 @@ Partial Public Class RollOffBill
         Me.XrLabelTax.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabelTax.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Tax", "{0:c2}")})
-        Me.XrLabelTax.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 40.0!)
+        Me.XrLabelTax.Dpi = 100.0!
+        Me.XrLabelTax.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 35.0!)
         Me.XrLabelTax.Name = "XrLabelTax"
         Me.XrLabelTax.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelTax.SizeF = New System.Drawing.SizeF(100.0001!, 20.0!)
@@ -513,8 +553,9 @@ Partial Public Class RollOffBill
         Me.XrLabel27.BackColor = System.Drawing.Color.Silver
         Me.XrLabel27.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel27.Dpi = 100.0!
         Me.XrLabel27.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel27.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 60.0!)
+        Me.XrLabel27.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 55.0!)
         Me.XrLabel27.Name = "XrLabel27"
         Me.XrLabel27.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel27.SizeF = New System.Drawing.SizeF(95.00024!, 19.99995!)
@@ -531,8 +572,9 @@ Partial Public Class RollOffBill
         Me.XrLabel26.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right) _
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel26.Dpi = 100.0!
         Me.XrLabel26.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel26.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 40.0!)
+        Me.XrLabel26.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 35.0!)
         Me.XrLabel26.Name = "XrLabel26"
         Me.XrLabel26.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel26.SizeF = New System.Drawing.SizeF(95.00024!, 20.00002!)
@@ -548,8 +590,9 @@ Partial Public Class RollOffBill
         Me.XrLabel25.BackColor = System.Drawing.Color.Silver
         Me.XrLabel25.Borders = CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) _
             Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
+        Me.XrLabel25.Dpi = 100.0!
         Me.XrLabel25.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel25.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 19.99999!)
+        Me.XrLabel25.LocationFloat = New DevExpress.Utils.PointFloat(581.9998!, 15.0!)
         Me.XrLabel25.Name = "XrLabel25"
         Me.XrLabel25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel25.SizeF = New System.Drawing.SizeF(95.00018!, 20.0!)
@@ -562,6 +605,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel19
         '
+        Me.XrLabel19.Dpi = 100.0!
         Me.XrLabel19.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
         Me.XrLabel19.LocationFloat = New DevExpress.Utils.PointFloat(9.999974!, 38.54167!)
         Me.XrLabel19.Name = "XrLabel19"
@@ -572,6 +616,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel18
         '
+        Me.XrLabel18.Dpi = 100.0!
         Me.XrLabel18.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(9.999974!, 72.70832!)
         Me.XrLabel18.Multiline = True
@@ -583,6 +628,7 @@ Partial Public Class RollOffBill
         '
         'XrLabel17
         '
+        Me.XrLabel17.Dpi = 100.0!
         Me.XrLabel17.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold)
         Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(10.00001!, 5.0!)
         Me.XrLabel17.Name = "XrLabel17"
@@ -595,7 +641,8 @@ Partial Public Class RollOffBill
         '
         Me.XrLabelSubtotal.Borders = CType((DevExpress.XtraPrinting.BorderSide.Top Or DevExpress.XtraPrinting.BorderSide.Right), DevExpress.XtraPrinting.BorderSide)
         Me.XrLabelSubtotal.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "SubTotal", "{0:c2}")})
-        Me.XrLabelSubtotal.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 19.99999!)
+        Me.XrLabelSubtotal.Dpi = 100.0!
+        Me.XrLabelSubtotal.LocationFloat = New DevExpress.Utils.PointFloat(677.0001!, 15.0!)
         Me.XrLabelSubtotal.Name = "XrLabelSubtotal"
         Me.XrLabelSubtotal.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabelSubtotal.SizeF = New System.Drawing.SizeF(100.0001!, 20.0!)
@@ -615,7 +662,7 @@ Partial Public Class RollOffBill
         Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margins = New System.Drawing.Printing.Margins(32, 32, 32, 50)
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
-        Me.Version = "13.2"
+        Me.Version = "16.1"
         CType(Me.XrTableTransactions, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
