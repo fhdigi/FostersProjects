@@ -477,23 +477,28 @@ Public Class BillingReview
                             rateAdjustment = 1.0
                         End If
 
+                        ' --- used for the 2020 price increase
+                        If monthsOfPickup(tempStep) < 3 AndAlso yearsOfPickup(tempStep) = 2020 AndAlso customerBillingObj.BillingType.ToUpper = "C" Then
+                            rateAdjustment = 2.0
+                        End If
+
                         ' ----- This is the monthly charge 
                         ServiceDescriptionAmount(iStep) = customerBillingObj.MonthlyCharge - rateAdjustment
-                        WriteToRow(rowCount, ServiceDescription(iStep), ServiceDescriptionAmount(iStep))
-                        taxableAmount += customerBillingObj.MonthlyCharge - rateAdjustment
-                        totalAmount += customerBillingObj.MonthlyCharge - rateAdjustment
+                            WriteToRow(rowCount, ServiceDescription(iStep), ServiceDescriptionAmount(iStep))
+                            taxableAmount += customerBillingObj.MonthlyCharge - rateAdjustment
+                            totalAmount += customerBillingObj.MonthlyCharge - rateAdjustment
 
-                        ' ----- We can do the Go In After here 
-                        If customerBillingObj.GoInAfter Then
-                            Dim goInAmount As Double = If(customerBillingObj.GoInAfterAmount = 0.0, 2.0, customerBillingObj.GoInAfterAmount)
-                            WriteToRow(rowCount, GOIDesc(iStep), goInAmount)
-                            taxableAmount += goInAmount
-                            totalAmount += goInAmount
+                            ' ----- We can do the Go In After here 
+                            If customerBillingObj.GoInAfter Then
+                                Dim goInAmount As Double = If(customerBillingObj.GoInAfterAmount = 0.0, 2.0, customerBillingObj.GoInAfterAmount)
+                                WriteToRow(rowCount, GOIDesc(iStep), goInAmount)
+                                taxableAmount += goInAmount
+                                totalAmount += goInAmount
+                            End If
+
                         End If
 
                     End If
-
-                End If
 
             Next
 

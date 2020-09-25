@@ -725,9 +725,11 @@ Public Class MainOfficeForm
     Private Sub RefreshAllCurrentBalancesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RefreshAllCurrentBalancesToolStripMenuItem.Click
 
         ' ----- check to make sure the process is not already running 
-        If balanceThread.IsAlive Then
-            MessageBox.Show("The posting process is still running.  Another posting process cannot be started until the existing process completes", "Process Running", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-            Exit Sub
+        If Not balanceThread Is Nothing Then
+            If balanceThread.IsAlive Then
+                MessageBox.Show("The posting process is still running.  Another posting process cannot be started until the existing process completes", "Process Running", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+                Exit Sub
+            End If
         End If
 
         ' ----- Check for an update file on the internet
