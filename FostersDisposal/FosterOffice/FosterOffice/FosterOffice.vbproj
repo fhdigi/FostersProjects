@@ -359,6 +359,12 @@
     <Compile Include="ReportDisplay.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\BillingSheetSingleRotated.Designer.vb">
+      <DependentUpon>BillingSheetSingleRotated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BillingSheetSingleRotated.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\BillingSheetSingle.Designer.vb">
       <DependentUpon>BillingSheetSingle.vb</DependentUpon>
     </Compile>
@@ -648,6 +654,9 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="ReportDisplay.resx">
       <DependentUpon>ReportDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BillingSheetSingleRotated.resx">
+      <DependentUpon>BillingSheetSingleRotated.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BillingSheetSingle.resx">
       <DependentUpon>BillingSheetSingle.vb</DependentUpon>

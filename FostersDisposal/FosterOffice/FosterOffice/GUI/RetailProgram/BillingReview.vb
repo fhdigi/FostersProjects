@@ -862,7 +862,8 @@ Public Class BillingReview
 
         End If
 
-        Dim rpt As New BillingSheetSingle
+        'Dim rpt As New BillingSheetSingle
+        Dim rpt As New BillingSheetSingleRotated
         rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
 
         rpt.ShowPreview()

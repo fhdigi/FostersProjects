@@ -93,13 +93,13 @@ Public Class MainOfficeForm
     Private Sub MainOfficeForm_FormClosing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
 
         ' ----- Make sure the thread is stopped
-        Try
-            If balanceThread.IsAlive Then
-                balanceThread.Abort()
-            End If
-        Catch ex As Exception
+        'Try
+        '    If balanceThread.IsAlive Then
+        '        balanceThread.Abort()
+        '    End If
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
         ' ----- Save the print que file 
         SavePrintQueFile()

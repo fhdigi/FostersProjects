@@ -37,7 +37,11 @@ Public Class CDataExtender
 
         Try
             CustomerDictionary.Clear()
-            For Each custX As Customer In Customer.ReturnCustomer(ConnectionString)
+            Dim customerListing = Customer.ReturnCustomer(ConnectionString)
+
+            If customerListing Is Nothing Then Return
+
+            For Each custX As Customer In customerListing
                 CustomerDictionary.Add(custX.CustomerNumber, custX)
             Next
         Catch ex As Exception
