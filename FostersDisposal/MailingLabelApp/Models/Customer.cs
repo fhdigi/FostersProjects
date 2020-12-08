@@ -7,7 +7,7 @@ namespace MailingLabelApp.Models
     {
         public static List<Customer> GetCustomers()
         {
-            string connectionString = @"Data Source=FOSTERDB001\FOSTERSQL;Initial Catalog=DisposalData;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-JE8H0DC\SQLEXPRESS;Initial Catalog=DisposalData;Integrated Security=True";
 
             using (DataClassesAddressDataContext db = new DataClassesAddressDataContext(connectionString))
             {
