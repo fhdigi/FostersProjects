@@ -26,7 +26,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>FosterOffice.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DefineConstants>RentalProgram=False</DefineConstants>
+    <DefineConstants>RentalProgram=true</DefineConstants>
     <WarningsAsErrors>
     </WarningsAsErrors>
   </PropertyGroup>
@@ -39,7 +39,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>FosterOffice.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DefineConstants>RentalProgram=True</DefineConstants>
+    <DefineConstants>RentalProgram=true</DefineConstants>
     <WarningsAsErrors>
     </WarningsAsErrors>
   </PropertyGroup>

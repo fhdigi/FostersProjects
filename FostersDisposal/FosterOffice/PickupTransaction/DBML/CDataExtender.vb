@@ -3745,6 +3745,12 @@ Public Class RentalPayment
         Public Property PaymentAmount As Single = 0.0
         Public Property CheckNumber As String = ""
         Public Property Description As String = ""
+        Public Property CashAmountForReport As Single = 0.0
+        Public Property CheckAmountForReport As Single = 0.0
+        Public Property CreditCardAmountForReport As Single = 0.0
+        Public Property AutoPayAmountForReport As Single = 0.0
+        Public Property CompanyCreditAmountForReport As Single = 0.0
+        Public Property IsCheck As Boolean = False
     End Class
 
     Public Class CRevenueListing
@@ -3855,17 +3861,38 @@ Public Class RentalPayment
                           Where p.PaymentDate.Date >= dtePaymentStart And p.PaymentDate.Date <= dtePaymentEnd
                           Order By c.RouteLocation_LastName, c.RouteLocation_FirstName
                           Select New PaymentListingReport With
-                                 {
-                                     .AccountNumber = c.CustomerNumber,
-                                     .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
-                                     .CustomerAddress = c.RouteLocation_Address,
-                                     .PaymentDate = p.PaymentDate,
-                                     .PaymentAmount = p.PaymentAmount,
-                                     .Description = p.Description,
-                                     .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString))))
-                                 }
+                              {
+                              .AccountNumber = c.CustomerNumber,
+                              .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
+                              .CustomerAddress = c.RouteLocation_Address,
+                              .PaymentDate = p.PaymentDate,
+                              .PaymentAmount = p.PaymentAmount,
+                              .Description = p.Description,
+                              .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString)))),
+                              .IsCheck = If(p.MOP = 0, False, If(p.MOP = 2, False, If(p.MOP = 4, False, If(p.PaymentAmount < 0.0, False, True)))),
+                              .CashAmountForReport = If(p.MOP = 0 Or p.MOP = 2, p.PaymentAmount, 0.0),
+                              .CreditCardAmountForReport = If(p.MOP = 4, p.PaymentAmount, 0.0)
+                              }
 
-        Return paymentList.ToList
+        Dim fullListing = paymentList.ToList
+
+        For Each item As PaymentListingReport In fullListing
+
+            If item.IsCheck And item.CheckNumber <> "0" Then
+                item.CheckAmountForReport = item.PaymentAmount
+            End If
+
+            If item.CheckNumber = "0" And item.Description.ToUpper = "AUTOPAY" Then
+                item.AutoPayAmountForReport = item.PaymentAmount
+            End If
+
+            If item.CheckNumber = "CR" Then
+                item.CompanyCreditAmountForReport = item.PaymentAmount
+            End If
+
+        Next
+
+        Return fullListing
 
     End Function
 
@@ -3878,15 +3905,15 @@ Public Class RentalPayment
                           Where p.CheckNumber = checkNumber
                           Order By p.PaymentDate, c.RouteLocation_LastName, c.RouteLocation_FirstName
                           Select New PaymentListingReport With
-                                 {
-                                     .AccountNumber = c.CustomerNumber,
-                                     .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
-                                     .CustomerAddress = c.RouteLocation_Address,
-                                     .PaymentDate = p.PaymentDate,
-                                     .PaymentAmount = p.PaymentAmount,
-                                     .Description = p.Description,
-                                     .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString))))
-                                 }
+                              {
+                              .AccountNumber = c.CustomerNumber,
+                              .CustomerName = c.RouteLocation_FirstName & " " & c.RouteLocation_LastName,
+                              .CustomerAddress = c.RouteLocation_Address,
+                              .PaymentDate = p.PaymentDate,
+                              .PaymentAmount = p.PaymentAmount,
+                              .Description = p.Description,
+                              .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString))))
+                            }
 
         Return paymentList.ToList
 
