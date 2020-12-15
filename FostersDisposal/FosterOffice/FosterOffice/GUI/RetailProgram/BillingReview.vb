@@ -484,21 +484,21 @@ Public Class BillingReview
 
                         ' ----- This is the monthly charge 
                         ServiceDescriptionAmount(iStep) = customerBillingObj.MonthlyCharge - rateAdjustment
-                            WriteToRow(rowCount, ServiceDescription(iStep), ServiceDescriptionAmount(iStep))
-                            taxableAmount += customerBillingObj.MonthlyCharge - rateAdjustment
-                            totalAmount += customerBillingObj.MonthlyCharge - rateAdjustment
+                        WriteToRow(rowCount, ServiceDescription(iStep), ServiceDescriptionAmount(iStep))
+                        taxableAmount += customerBillingObj.MonthlyCharge - rateAdjustment
+                        totalAmount += customerBillingObj.MonthlyCharge - rateAdjustment
 
-                            ' ----- We can do the Go In After here 
-                            If customerBillingObj.GoInAfter Then
-                                Dim goInAmount As Double = If(customerBillingObj.GoInAfterAmount = 0.0, 2.0, customerBillingObj.GoInAfterAmount)
-                                WriteToRow(rowCount, GOIDesc(iStep), goInAmount)
-                                taxableAmount += goInAmount
-                                totalAmount += goInAmount
-                            End If
-
+                        ' ----- We can do the Go In After here 
+                        If customerBillingObj.GoInAfter Then
+                            Dim goInAmount As Double = If(customerBillingObj.GoInAfterAmount = 0.0, 2.0, customerBillingObj.GoInAfterAmount)
+                            WriteToRow(rowCount, GOIDesc(iStep), goInAmount)
+                            taxableAmount += goInAmount
+                            totalAmount += goInAmount
                         End If
 
                     End If
+
+                End If
 
             Next
 
@@ -862,11 +862,19 @@ Public Class BillingReview
 
         End If
 
-        'Dim rpt As New BillingSheetSingle
-        Dim rpt As New BillingSheetSingleRotated
-        rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
+        If CheckBoxRotate.Checked Then
 
-        rpt.ShowPreview()
+            Dim rpt As New BillingSheetSingleRotated
+            rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
+            rpt.ShowPreview()
+
+        Else
+
+            Dim rpt As New BillingSheetSingle
+            rpt.BindingSource1.DataSource = From b In billingListing Where b.Total >= 0.01 Select b
+            rpt.ShowPreview()
+
+        End If
 
     End Sub
 
@@ -962,11 +970,11 @@ Public Class BillingReview
         adjBillDate.CustomerName = customerBillingObj.CustomerName
         adjBillDate.CustomerNumber = customerBillingObj.AccountNumber
         adjBillDate.SequenceNumber = customerBillingObj.SequenceNumber
-        adjBillDate.CurrentBillDate = billDate 
+        adjBillDate.CurrentBillDate = billDate
 
-        if adjBillDate.ShowDialog = DialogResult.OK then
-            ButtonRefresh.PerformClick
-        end if
+        If adjBillDate.ShowDialog = DialogResult.OK Then
+            ButtonRefresh.PerformClick()
+        End If
 
     End Sub
 
