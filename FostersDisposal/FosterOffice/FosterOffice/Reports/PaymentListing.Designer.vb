@@ -463,7 +463,7 @@ Partial Public Class PaymentListing
         Me.XrLabel19.StylePriority.UseFont = False
         Me.XrLabel19.StylePriority.UsePadding = False
         Me.XrLabel19.StylePriority.UseTextAlignment = False
-        Me.XrLabel19.Text = "Checks:"
+        Me.XrLabel19.Text = "Checks / Money Orders:"
         Me.XrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel18
@@ -477,7 +477,7 @@ Partial Public Class PaymentListing
         Me.XrLabel18.StylePriority.UseFont = False
         Me.XrLabel18.StylePriority.UsePadding = False
         Me.XrLabel18.StylePriority.UseTextAlignment = False
-        Me.XrLabel18.Text = "Cash/Money Orders:"
+        Me.XrLabel18.Text = "Cash:"
         Me.XrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
         'XrLabel14

@@ -1901,6 +1901,7 @@ Public Class Payments
         Public Property AutoPayAmountForReport As Single = 0.0
         Public Property CompanyCreditAmountForReport As Single = 0.0
         Public Property IsCheck As Boolean = False
+        Public Property IsMoneyOrder As Boolean = False
     End Class
 
     Public Class CRevenueListing
@@ -1973,8 +1974,9 @@ Public Class Payments
                               .PaymentAmount = p.PaymentAmount,
                               .Description = p.Description,
                               .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString)))),
+                              .IsMoneyOrder = p.MOP = 2,
                               .IsCheck = If(p.MOP = 0, False, If(p.MOP = 2, False, If(p.MOP = 4, False, If(p.PaymentAmount < 0.0, False, True)))),
-                              .CashAmountForReport = If(p.MOP = 0 Or p.MOP = 2, p.PaymentAmount, 0.0),
+                              .CashAmountForReport = If(p.MOP = 0, p.PaymentAmount, 0.0),
                               .CreditCardAmountForReport = If(p.MOP = 4, p.PaymentAmount, 0.0)
                               }
 
@@ -1982,7 +1984,7 @@ Public Class Payments
 
         For Each item As PaymentListingReport In fullListing
 
-            If item.IsCheck And item.CheckNumber <> "0" Then
+            If item.IsCheck And item.CheckNumber <> "0" Or item.IsMoneyOrder Then
                 item.CheckAmountForReport = item.PaymentAmount
             End If
 
@@ -3751,6 +3753,7 @@ Public Class RentalPayment
         Public Property AutoPayAmountForReport As Single = 0.0
         Public Property CompanyCreditAmountForReport As Single = 0.0
         Public Property IsCheck As Boolean = False
+        Public Property IsMoneyOrder As Boolean = False
     End Class
 
     Public Class CRevenueListing
@@ -3869,6 +3872,7 @@ Public Class RentalPayment
                               .PaymentAmount = p.PaymentAmount,
                               .Description = p.Description,
                               .CheckNumber = If(p.MOP = 0, "CASH", If(p.MOP = 2, "M/O", If(p.MOP = 4, "Credit", If(p.PaymentAmount < 0.0, "CR", p.CheckNumber.ToString)))),
+                              .IsMoneyOrder = p.MOP = 2,
                               .IsCheck = If(p.MOP = 0, False, If(p.MOP = 2, False, If(p.MOP = 4, False, If(p.PaymentAmount < 0.0, False, True)))),
                               .CashAmountForReport = If(p.MOP = 0 Or p.MOP = 2, p.PaymentAmount, 0.0),
                               .CreditCardAmountForReport = If(p.MOP = 4, p.PaymentAmount, 0.0)
@@ -3878,7 +3882,7 @@ Public Class RentalPayment
 
         For Each item As PaymentListingReport In fullListing
 
-            If item.IsCheck And item.CheckNumber <> "0" Then
+            If item.IsCheck And item.CheckNumber <> "0" Or item.IsMoneyOrder Then
                 item.CheckAmountForReport = item.PaymentAmount
             End If
 
