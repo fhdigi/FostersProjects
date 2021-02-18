@@ -3,6 +3,7 @@
     Dim sumOfChecks As Double = 0.0
     Dim sumOfCashOther As Double = 0.0
     Dim sumOfCredit As Double = 0.0
+    Dim sumOfAutoPay As Double = 0.0
 
     Private Sub Detail_BeforePrint(sender As Object, e As Printing.PrintEventArgs) Handles Detail.BeforePrint
 
@@ -13,6 +14,8 @@
         If Not cashOrCheck Is Nothing Then
             If cashOrCheck.Trim.ToUpper = "CASH" Then
                 sumOfCashOther += tempDepAmount + tempPayAmount
+            ElseIf cashOrCheck.Trim.ToUpper.Contains("AUTO") Then
+                sumOfAutoPay += tempDepAmount + tempPayAmount
             ElseIf cashOrCheck.Trim.ToUpper = "CREDIT" then 
                 sumOfCredit += tempDepAmount + tempPayAmount
             Else
@@ -26,7 +29,8 @@
         XrLabelTotalChecks.Text = String.Format("{0:c2}", sumOfChecks)
         XrLabelTotalCash.Text = String.Format("{0:c2}", sumOfCashOther)
         XrLabelTotalCredit.Text = String.Format("{0:c2}", sumOfCredit)
-        XrLabelTotal.Text = String.Format("{0:c2}", sumOfChecks + sumOfCashOther + sumOfCredit)
+        XrLabelTotalAutopay.Text = String.Format("{0:c2}", sumOfAutoPay)
+        XrLabelTotal.Text = String.Format("{0:c2}", sumOfChecks + sumOfCashOther + sumOfCredit + sumOfAutoPay)
     End Sub
 
 End Class

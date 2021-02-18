@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequenceNumberMove", "Seque
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailingLabelApp", "..\MailingLabelApp\MailingLabelApp.csproj", "{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterRollOff", "..\FosterRollOff\FosterRollOff\FosterRollOff.vbproj", "{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,12 +103,24 @@ Global
 		{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B}.Release|x86.ActiveCfg = Release|Any CPU
 		{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B}.Release|x86.Build.0 = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0BAE2017-970C-40C0-AA68-E85190AEB3F4}
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {0BAE2017-970C-40C0-AA68-E85190AEB3F4}
 	EndGlobalSection
 EndGlobal
