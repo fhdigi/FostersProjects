@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2018
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FosterRollOff", "FosterRollOff\FosterRollOff\FosterRollOff.vbproj", "{7A27240A-BA9D-4BA6-AC17-F1AC965881E9}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mailing Labels", "Mailing Labels", "{2AC6883E-EA66-4799-92B0-9E94CE090766}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailingLabelApp", "MailingLabelApp\MailingLabelApp.csproj", "{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Roll Off Program", "Roll Off Program", "{6ED905FE-5CF2-4EF1-92F4-028A9823E15C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +112,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{7A27240A-BA9D-4BA6-AC17-F1AC965881E9} = {6ED905FE-5CF2-4EF1-92F4-028A9823E15C}
 		{3C60F168-38B5-44E6-8FC5-555E8277C0EB} = {6A4FE02B-950F-4965-AC76-882B39BCF4BF}
 		{CD6E0C3D-5FFA-4545-97B6-20BE51177CB4} = {6A4FE02B-950F-4965-AC76-882B39BCF4BF}
 		{4D6D5B12-2CD0-485B-985A-7A41F2C3B75B} = {2AC6883E-EA66-4799-92B0-9E94CE090766}
